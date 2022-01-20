@@ -23,34 +23,97 @@
 
 <meta name="generator" content="Hexo 6.0.0"></head>
 <body id="bodyx">
-    <div class="hd posts">
-    <a href="/index.html"><i class="fa fa-home
- replay-btn" aria-hidden="true"></i></a>
-    <div class="post-title">
-        <p>
-            hexo建站
-        </p>
-        <hr>
-    </div>
-    <div class="post-content">
-        <h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎 (zhihu.com)</a></p>
-<p>记得看下评论，搭建过程遇到问题通过百度解决</p>
-<p><a target="_blank" rel="noopener" href="https://tding.top/archives/aad98408.html#more">Hexo 搭建个人博客文章汇总 | 小丁的个人博客 (tding.top)</a></p>
-<h2 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h2><p><a target="_blank" rel="noopener" href="https://mayuke.xyz/">我的博客 (mayuke.xyz)</a></p>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p><a target="_blank" rel="noopener" href="https://tding.top/archives/b48e2719.html">GitHub Pages 绑定域名 | 小丁的个人博客 (tding.top)</a></p>
-<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p><a target="_blank" rel="noopener" href="https://www.namesilo.com/">https://www.namesilo.com/</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33921436">Namesilo 域名购买及使用教程（附 Namesilo 优惠码） - 知乎 (zhihu.com)</a></p>
-<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p> <a target="_blank" rel="noopener" href="https://console.dnspod.cn/">管理控制台 - DNSPod</a></p>
-<h2 id="GitHub项目"><a href="#GitHub项目" class="headerlink" title="GitHub项目"></a>GitHub项目</h2><p><a target="_blank" rel="noopener" href="https://github.com/MayukeM/MayukeM.github.io">MayukeM/MayukeM.github.io: It is my personal website.</a></p>
-<p><img src="https://s2.loli.net/2022/01/20/HWV3TYSkjI2MOEe.png" alt="1"></p>
+    <div class="hd logodiv">
+    <img src="/img/male.png" class="logopng" alt="logo">
+    <p class="logot">
+         mayuke 
+         <span class="logo_2"></span>
+        <h3 class="words" style="font-weight: bold;font-family: Georgia;"> 
+            AI Code·Life 
+        </h3>
+    </p>
+</div>
 
-    </div>
 
+<div class="hd">
+    <ol class="breadcrumb">
+        
+            <li><a class="ba" href="/about">关于我👀</a></li>
+        
+            <li><a class="ba" href="/yuque.com/mayuke">访问主站🎉</a></li>
+        
+            <li><a class="ba" target="_blank" rel="noopener" href="https://github.com/MayukeM">GitHub🐒</a></li>
+        
+
+            
+<script src="/libs/jquery.min.js"></script>
+
+            
+<script src="/js/search.js"></script>
+
+            
+                <form class="site-search-form">
+                    <i class="fa fa-search" id="search-logo"><input type="text" id="local-search-input" class="st-search-input" /></i>
+                </form>
+                <div id="local-search-result" class="local-search-result-cls"></div>
+            
+            <script type="text/javascript" id="local.search.active">
+                var inputArea       = document.querySelector("#local-search-input");
+                var getSearchFile = function(){
+                    var path = "/search.xml";
+                    searchFunc(path, 'local-search-input', 'local-search-result');
+                }
+                inputArea.onfocus = function(){ getSearchFile() }
+
+                var $resetButton = $("#search-form .fa-times");
+                var $resultArea = $("#local-search-result");
+
+                inputArea.oninput = function(){ $resetButton.show(); }
+                resetSearch = function(){
+                    $resultArea.html("");
+                    document.querySelector("#search-form").reset();
+                    $resetButton.hide();
+                    $(".no-result").hide();
+                }
+                inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+                //No search result
+                $resultArea.bind("DOMNodeRemoved DOMNodeInserted", function(e) {
+                    if (!$(e.target).text()) {
+                        $(".no-result").show(100);
+                    } else {
+                        $(".no-result").hide();
+                    }
+                })
+            </script>
+
+    </ol>
+    <hr>
+</div>
+<div class="hd">
     
-        <hr class="fhr">
-        <div id="vcomments"></div>
+    
+        
+        
+            <div class="titlex">
+                <p><span class="jing"></span><span style="color: #6d9ee7;"> 公元</span> 
+                 2022年 🕛
+                </p>
+            </div>
+            
+        
+        <a class="flink" href="/2022/01/20/hexo%E5%BB%BA%E7%AB%99/">
+            <div class="list">
+                <div class="postname">
+                    hexo建站
+                </div>
+                <div class="posttime">
+                    一月 20日
+                </div>
+            </div>
+        </a>
     
 </div>
+
     <div class="footer" id="footer">
     <p><h4>Copyright © 2020 | Author: myk | Theme By <a class="theme-author" target="_blank" rel="noopener" href="https://github.com/Xunzhuo/hexo-theme-coder" style="font-size:14px; color: #969696">Coder</a></h4>
     
