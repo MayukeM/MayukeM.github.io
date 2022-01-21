@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>我的博客</title>
+  <icon>http://example.com/icon.png</icon>
+  <subtitle>记录生活中的点点滴滴</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-01-20T13:11:45.464Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>myk</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo建站</title>
+    <link href="http://example.com/2022/01/20/hexo%E5%BB%BA%E7%AB%99/"/>
+    <id>http://example.com/2022/01/20/hexo%E5%BB%BA%E7%AB%99/</id>
+    <published>2022-01-20T07:37:11.144Z</published>
+    <updated>2022-01-20T13:11:45.464Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;hexo建站记录&quot;&gt;&lt;a href=&quot;#hexo建站记录&quot; class=&quot;headerlink&quot; title=&quot;hexo建站记录&quot;&gt;&lt;/a&gt;hexo建站记录&lt;/h1&gt;&lt;h2 id=&quot;参考教程&quot;&gt;&lt;a href=&quot;#参考教程&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2022/01/19/hello-world/"/>
+    <id>http://example.com/2022/01/19/hello-world/</id>
+    <published>2022-01-19T08:49:02.705Z</published>
+    <updated>2022-01-19T08:49:02.705Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
