@@ -14,6 +14,8 @@
 <p><a href="https://zhuanlan.zhihu.com/p/33921436">Namesilo 域名购买及使用教程（附 Namesilo 优惠码） - 知乎 (zhihu.com)</a></p>
 <h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p> <a href="https://console.dnspod.cn/">管理控制台 - DNSPod</a></p>
 <h2 id="GitHub项目"><a href="#GitHub项目" class="headerlink" title="GitHub项目"></a>GitHub项目</h2><p><a href="https://github.com/MayukeM/MayukeM.github.io">MayukeM/MayukeM.github.io: It is my personal website.</a></p>
+<h2 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fatal: unable to access <span class="string">&#x27;https://github.com/MayukeM/MayukeM.github.io.git/&#x27;</span>: OpenSSL SSL_read: Connection was reset, errno 10054</span><br><span class="line"></span><br><span class="line">git config --global http.sslVerify <span class="string">&quot;false&quot;</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://s2.loli.net/2022/01/20/HWV3TYSkjI2MOEe.png" alt="1"></p>
 ]]></content>
       <categories>
@@ -53,6 +55,8 @@
     <url>/2022/01/22/GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="Github够用教程"><a href="#Github够用教程" class="headerlink" title="Github够用教程"></a>Github够用教程</h1><h2 id="git和Github是什么"><a href="#git和Github是什么" class="headerlink" title="git和Github是什么"></a>git和Github是什么</h2><p>git是一个运行在你电脑上的版本控制软件，Github是基于git打造的网站</p>
 <p>git的三个概念：commit 提交/ repository 仓库/ branch 分支</p>
+<span id="more"></span>
+
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
 <li>git  <a href="https://gitforwindows.org/">https://gitforwindows.org/</a></li>
 <li>vscode  <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
