@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>/2022/01/27/1.%E7%B4%A2%E5%BC%95/%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><h2 id="hexo建站常用模板"><a href="#hexo建站常用模板" class="headerlink" title="hexo建站常用模板"></a>hexo建站常用模板</h2><p><a href="post.md">post</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>[object Object]</title>
+    <url>/2022/01/27/2.%E7%AC%94%E8%AE%B0/2022-01-27/</url>
+    <content><![CDATA[<h1 id="好的"><a href="#好的" class="headerlink" title="好的"></a>好的</h1><p>#日记<br>[[日记]]</p>
+<ul>
+<li>今天看了《开端》电视剧</li>
+<li><input disabled="" type="checkbox"> 跟我一起进入循环</li>
+<li><input disabled="" type="checkbox"> 很有意思</li>
+<li><input disabled="" type="checkbox"> 这是一个未完成的项目</li>
+</ul>
+<p><img src="2%E5%8E%8B%E7%BC%A9.png"></p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitHub够用教程</title>
-    <url>/2022/01/22/GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <url>/2022/01/22/2.%E7%AC%94%E8%AE%B0/GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="Github够用教程"><a href="#Github够用教程" class="headerlink" title="Github够用教程"></a>Github够用教程</h1><h2 id="git和Github是什么"><a href="#git和Github是什么" class="headerlink" title="git和Github是什么"></a>git和Github是什么</h2><p>git是一个运行在你电脑上的版本控制软件，Github是基于git打造的网站</p>
 <p>git的三个概念：commit 提交/ repository 仓库/ branch 分支</p>
 <span id="more"></span>
@@ -50,7 +75,7 @@
   </entry>
   <entry>
     <title>PyCharm使用秘籍</title>
-    <url>/2022/01/25/PyCharm%E4%BD%BF%E7%94%A8%E7%A7%98%E7%B1%8D/</url>
+    <url>/2022/01/25/2.%E7%AC%94%E8%AE%B0/PyCharm%E4%BD%BF%E7%94%A8%E7%A7%98%E7%B1%8D/</url>
     <content><![CDATA[<span id="more"></span>
 
 <h2 id="在Pycharm下为你的Python项目配置Python解释器"><a href="#在Pycharm下为你的Python项目配置Python解释器" class="headerlink" title="在Pycharm下为你的Python项目配置Python解释器"></a>在Pycharm下为你的Python项目配置Python解释器</h2><ol>
@@ -125,33 +150,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/01/19/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<span id="more"></span>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo建站</title>
-    <url>/2022/01/20/hexo%E5%BB%BA%E7%AB%99/</url>
+    <url>/2022/01/20/2.%E7%AC%94%E8%AE%B0/hexo%E5%BB%BA%E7%AB%99/</url>
     <content><![CDATA[<h1 id="hexo建站记录"><a href="#hexo建站记录" class="headerlink" title="hexo建站记录"></a>hexo建站记录</h1><h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><p><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎 (zhihu.com)</a></p>
 <p>记得看下评论，搭建过程遇到问题通过百度解决</p>
 <p><a href="https://tding.top/archives/aad98408.html#more">Hexo 搭建个人博客文章汇总 | 小丁的个人博客 (tding.top)</a></p>
@@ -192,26 +192,33 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/01/27/2022-01-27/</url>
-    <content><![CDATA[<h1 id="好的"><a href="#好的" class="headerlink" title="好的"></a>好的</h1><p>#日记<br>[[日记]]</p>
-<ul>
-<li>今天看了《开端》电视剧</li>
-<li><input disabled="" type="checkbox"> 跟我一起进入循环</li>
-<li><input disabled="" type="checkbox"> 很有意思</li>
-<li><input disabled="" type="checkbox"> 这是一个未完成的项目</li>
-</ul>
+    <title>Hello World</title>
+    <url>/2022/01/19/2.%E7%AC%94%E8%AE%B0/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<span id="more"></span>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/01/27/%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>[[2022-01-27]]</p>
-]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
   </entry>
   <entry>
     <title>数据结构预备知识</title>
-    <url>/2022/01/27/%E4%B8%93%E4%B8%9A%E8%AF%BE/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</url>
+    <url>/2022/01/27/2.%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</url>
     <content><![CDATA[<h1 id="一、C语言常识"><a href="#一、C语言常识" class="headerlink" title="一、C语言常识"></a>一、C语言常识</h1><ul>
 <li>C程序规定一个程序中有<strong>一个或多个函数</strong>，他们是C程序的基本模块。但必须有且<strong>只有一个main函数</strong>。</li>
 <li>C程序的执行将从main函数开始，到main函数结束而停止。 </li>
