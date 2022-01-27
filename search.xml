@@ -209,7 +209,7 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构预备知识</title>
+    <title>Fri Jan 28 2022 00:00:00 GMT+0800 (中国标准时间)</title>
     <url>/2022/01/27/%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</url>
     <content><![CDATA[<h1 id="一、C语言常识"><a href="#一、C语言常识" class="headerlink" title="一、C语言常识"></a>一、C语言常识</h1><ul>
 <li>C程序规定一个程序中有<strong>一个或多个函数</strong>，他们是C程序的基本模块。但必须有且<strong>只有一个main函数</strong>。</li>
