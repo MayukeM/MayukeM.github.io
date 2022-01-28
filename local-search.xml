@@ -4,6 +4,38 @@
   
   
   <entry>
+    <title>键盘快捷键</title>
+    <link href="/2022/01/28/%E7%AC%94%E8%AE%B0/%E9%94%AE%E7%9B%98%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <url>/2022/01/28/%E7%AC%94%E8%AE%B0/%E9%94%AE%E7%9B%98%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>快捷键</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/01/28/%E7%AC%94%E8%AE%B0/%E4%B8%93%E4%B8%9A%E8%AF%BE/"/>
+    <url>/2022/01/28/%E7%AC%94%E8%AE%B0/%E4%B8%93%E4%B8%9A%E8%AF%BE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="专业课"><a href="#专业课" class="headerlink" title="专业课"></a>专业课</h1><p>数据结构<br><a href="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86.md">数据结构预备知识</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>数据结构预备知识</title>
     <link href="/2022/01/27/%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/"/>
     <url>/2022/01/27/%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</url>
@@ -129,6 +161,35 @@
     <tags>
       
       <tag>博客</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>windows常用快捷键</title>
+    <link href="/2021/01/15/%E7%AC%94%E8%AE%B0/windows%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <url>/2021/01/15/%E7%AC%94%E8%AE%B0/windows%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="键盘快捷键"><a href="#键盘快捷键" class="headerlink" title="键盘快捷键"></a>键盘快捷键</h1><p>[[键盘快捷键]]<br><a href="https://www.cnblogs.com/sao-di-seng/p/5632209.html">https://www.cnblogs.com/sao-di-seng/p/5632209.html</a><br>Vim编辑器<br><a href="http://blog.sina.com.cn/s/blog_46dac66f010005kw.html">http://blog.sina.com.cn/s/blog_46dac66f010005kw.html</a>  </p><p>快捷键Ctrl + Shift + Q，然后回车，直接电脑滑动关机<br>进入微信目录，地址栏输入cmd弹出黑框start WeChat.exe &amp; WeChat.exe 多开微信</p><span id="more"></span><table><thead><tr><th align="center">快捷键</th><th align="center">作用</th></tr></thead><tbody><tr><td align="center">Alt+Tab</td><td align="center">窗口切换</td></tr><tr><td align="center">F4</td><td align="center">关闭窗口，关机</td></tr><tr><td align="center">Ctrl+Alt+方向键</td><td align="center">窗口转向</td></tr><tr><td align="center">Alt+空格 C</td><td align="center">关闭窗口</td></tr><tr><td align="center">Alt+回车</td><td align="center">查看文件属性</td></tr><tr><td align="center">Ctrl+Shift+拖动</td><td align="center">创建快捷键</td></tr><tr><td align="center">Win+L</td><td align="center">锁屏（Lock）</td></tr><tr><td align="center">Win+D</td><td align="center">桌面（Desktop）</td></tr><tr><td align="center">Win+E</td><td align="center">资源管理器（Explorer）</td></tr><tr><td align="center">Win+S</td><td align="center">搜索</td></tr><tr><td align="center">Win+M</td><td align="center">最小化所有窗口</td></tr><tr><td align="center">Win+N</td><td align="center">快速笔记（OneNote）</td></tr><tr><td align="center">Win+W</td><td align="center">便笺 草图板 屏幕草图</td></tr><tr><td align="center">Win+T</td><td align="center">切换任务栏应用</td></tr><tr><td align="center">Win+U</td><td align="center">显示设置</td></tr><tr><td align="center">Win+I</td><td align="center">windows设置</td></tr><tr><td align="center">Win+R</td><td align="center">启动运行</td></tr><tr><td align="center">Win+方向键</td><td align="center">控制窗体大小</td></tr><tr><td align="center">win+tab 左上角新建桌面</td><td align="center">新建桌面</td></tr><tr><td align="center">ctrl + win + 方向键</td><td align="center">切换桌面</td></tr></tbody></table><h2 id="闪电启动软件的秘密"><a href="#闪电启动软件的秘密" class="headerlink" title="闪电启动软件的秘密"></a>闪电启动软件的秘密</h2><ol><li><p>在D盘建立一个文件夹，命名为QuickStart或者你喜欢的名字。</p></li><li><p>把桌面的软件快捷方式图标放到QuickStart文件夹中，并重命名成自己能记住的缩写，不重复即可。比如：</p></li></ol><table><thead><tr><th>软件名称</th><th>缩写</th></tr></thead><tbody><tr><td>腾讯QQ</td><td>qq</td></tr><tr><td>Mozilla FireFox</td><td>ff</td></tr><tr><td>Visual Studio</td><td>vs</td></tr><tr><td>SQL Server</td><td>sql</td></tr></tbody></table><ol start="3"><li><p>给QuickStart文件夹建立一个快捷方式，然后重命名为qs，并且把这个快捷方式也放到QuickStart文件夹中</p></li><li><p>在桌面对“我的电脑”点右键，然后选择属性，弹出系统属性对话框。点击左边的“高级系统设置”，在系统属性对话框中，点击“环境变量”按钮，在系统变量列表中找到Path项，然后点击“编辑”按钮，在编辑对话框中新增输入路径“D:\QuickStart”，然后一路点击“确定”按钮，关闭所有对话框。</p></li><li><p>按下Win+R键，调用运行对话框。在运行对话框中输入qq，如果你的电脑够快的话，马上就会弹出QQ的登录界面。输入qs，就会打开D:\QuickStart文件夹。</p></li><li><p>当你新安装了软件，需要把快捷方式添加进来，用qs命令就可以很快打开QuickStart文件夹。</p></li><li><p>当你有经常用到的文件夹，也可以把它的快捷方式放到QuickStart中，很方便就可以打开。</p></li></ol><figure class="highlight markdown"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></div></td><td class="code"><pre><code class="hljs markdown">Win+R运行输入<br><br>-自定义<br><span class="hljs-code">qs快速打开软件快捷方式文件夹</span><br><span class="hljs-code">rs最近文件</span><br><span class="hljs-code">    ff火狐浏览器</span><br><span class="hljs-code">    timTim</span><br><span class="hljs-code">    txsp腾讯视频</span><br><span class="hljs-code">    dngj电脑管家</span><br><span class="hljs-code">    bdwp百度网盘</span><br><span class="hljs-code">    pan百度网盘破解版</span><br><span class="hljs-code">    psPS</span><br><span class="hljs-code">    </span><br><span class="hljs-code">-常用运行命令</span><br><span class="hljs-code">    winwordWord </span><br><span class="hljs-code">    excelExcel</span><br><span class="hljs-code">    onenoteOneNote</span><br><span class="hljs-code"></span><br><span class="hljs-code">    notepad 记事本  </span><br><span class="hljs-code">    mspaint 绘图板 </span><br><span class="hljs-code">    write    写字板</span><br><span class="hljs-code"></span><br><span class="hljs-code">    regedit 注册表</span><br><span class="hljs-code">    mstsc    远程桌面</span><br><span class="hljs-code"></span><br><span class="hljs-code">    cmd命令行 之后输入</span><br><span class="hljs-code">    shutdown -s -t 00 立即关机</span><br></code></pre></td></tr></table></figure><p>下面是用Au3实现的用Alt+Q调用“运行”的代码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">HotKeySet(<span class="hljs-string">&quot;!q&quot;</span>,<span class="hljs-string">&quot;WinRun&quot;</span>)<br>Func WinRun()<br>Send(<span class="hljs-string">&quot;&#123;LWINDOWN&#125;r&#123;LWINUP&#125;&quot;</span>)<br>WinWait(<span class="hljs-string">&quot;Run&quot;</span>,<span class="hljs-string">&quot;&quot;</span>)<br>If Not WinActive(<span class="hljs-string">&quot;Run&quot;</span>,<span class="hljs-string">&quot;&quot;</span>) Then WinActivate(<span class="hljs-string">&quot;Run&quot;</span>,<span class="hljs-string">&quot;&quot;</span>)<br>EndFunc<br>Do<br>Sleep(500)<br>Until False<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术分享</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技术分享</tag>
+      
+      <tag>快捷键</tag>
+      
+      <tag>windows</tag>
       
     </tags>
     
