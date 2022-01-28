@@ -4,31 +4,6 @@
   
   
   <entry>
-    <title>2022.01.27</title>
-    <link href="/2022/01/27/%E7%AC%94%E8%AE%B0/2022-01-27/"/>
-    <url>/2022/01/27/%E7%AC%94%E8%AE%B0/2022-01-27/</url>
-    
-    <content type="html"><![CDATA[<h1 id="今日简介"><a href="#今日简介" class="headerlink" title="今日简介"></a>今日简介</h1><ul><li>今天又看了《开端》电视剧</li><li><input disabled="" type="checkbox"> 跟我一起进入循环</li><li><input disabled="" type="checkbox"> 很有意思</li><li><input disabled="" type="checkbox"> 这是一个未完成的项目</li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>日记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>日记</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>数据结构预备知识</title>
     <link href="/2022/01/27/%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/"/>
     <url>/2022/01/27/%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</url>
@@ -154,6 +129,33 @@
     <tags>
       
       <tag>博客</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Markdown语法</title>
+    <link href="/2021/01/07/%E7%AC%94%E8%AE%B0/markdown%E8%AF%AD%E6%B3%95/"/>
+    <url>/2021/01/07/%E7%AC%94%E8%AE%B0/markdown%E8%AF%AD%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Typora-Markdown语法"><a href="#Typora-Markdown语法" class="headerlink" title="Typora-Markdown语法"></a>Typora-Markdown语法</h1><h2 id="目录列表"><a href="#目录列表" class="headerlink" title="目录列表"></a>目录列表</h2><p>输入<code>[toc]</code>然后回车，将会产生一个目录，这个目录抽取了文章的所有标题，自动更新内容。</p><p>[toc]</p><span id="more"></span><h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h2><figure class="highlight markdown"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 一级标题：#+空格+标题+回车 或者ctrl+1</span><br><br><span class="hljs-section">## 二级标题：##+空格+标题+回车 或者Ctrl+2</span><br><br><span class="hljs-section">### 三级标题：###+空格+标题+回车 或者ctrl+3</span><br><br><span class="hljs-section">#### 四级标题：####+空格+标题+回车 或者ctrl+4</span><br><br><span class="hljs-section">##### 五级标题：#####+空格+标题+回车 或者ctrl+5</span><br><br><span class="hljs-section">###### 六级标题：######+空格+标题+回车 或者ctrl+6</span><br></code></pre></td></tr></table></figure><h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2.字体"></a>2.字体</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-strong">**加粗**</span> ctrl+B<br><span class="hljs-emphasis">*斜体*</span> ctrl+I<br><span class="hljs-strong">**<span class="hljs-emphasis">*粗体+斜体<span class="hljs-strong">**<span class="hljs-emphasis">*</span></span></span></span><br><span class="hljs-emphasis"><span class="hljs-strong"><span class="hljs-emphasis"><span class="hljs-strong"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">u</span>&gt;</span></span>下划线<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">u</span>&gt;</span></span> crtl+U</span></span></span></span><br><span class="hljs-emphasis"><span class="hljs-strong"><span class="hljs-emphasis"><span class="hljs-strong">~~删除线~~ alt+shift+5</span></span></span></span><br></code></pre></td></tr></table></figure><h2 id="3-引用"><a href="#3-引用" class="headerlink" title="3.引用"></a>3.引用</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-quote">&gt; 在起始位置添加一个大于&gt;符号+空格，表示引用</span><br></code></pre></td></tr></table></figure><blockquote><p>引用别人文章字句时可以使用</p></blockquote><h2 id="4-分割线"><a href="#4-分割线" class="headerlink" title="4.分割线"></a>4.分割线</h2><p>可以用<code>---</code>空格加回车</p><hr><p>也可以<code>***</code>空格加回车（这个分割线占全屏）</p><hr><h2 id="5-图片"><a href="#5-图片" class="headerlink" title="5.图片"></a>5.图片</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">格式：![<span class="hljs-string">图片名字</span>](<span class="hljs-link">输入图片路径</span>)<br></code></pre></td></tr></table></figure><p><img src="C:/Users/13740/Pictures/Camera Roll/MRV_20201229_13_25_17.jpg" alt="小猫" style="zoom:25%;" />\</p><blockquote><p>图片前敲一个空格，就能自动左对齐</p></blockquote><p><a href="https://zhuanlan.zhihu.com/p/137310314?utm_source=qq&utm_medium=social&utm_oi=1262490802221498368">图床功能</a></p><p><a href="https://baike.baidu.com/item/%E5%9B%BE%E5%BA%8A/10721348?fr=aladdin">图床是什么？</a></p><p><strong>在偏好设置，把图片保存到相对路径的方法</strong></p><p><img src="https://i.loli.net/2021/02/07/QhZ9Bs4NK2gCYAX.png" alt="image-20210131213522562"></p><h2 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6.超链接"></a>6.超链接</h2><p><strong>行内式：</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">格式：[<span class="hljs-string">超链接名字</span>](<span class="hljs-link">超链接地址</span>)<br></code></pre></td></tr></table></figure><blockquote><p>按住ctrl点击访问</p></blockquote><p><a href="https://www.baidu.com/">点击跳转</a></p><p><strong>参考式</strong>：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">格式：[链接一]：http://www.baidu.com<br>[<span class="hljs-string">百度1</span>][<span class="hljs-symbol">链接一</span>]<br>[<span class="hljs-string">百度2</span>][<span class="hljs-symbol">链接一</span>]<br></code></pre></td></tr></table></figure><p><a href="https://www.baidu.com/">百度1</a></p><p><a href="https://www.baidu.com/">百度2</a></p><h2 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h2><p><strong>有序列表</strong>： 1+.+空格</p><ol><li>第一</li><li>第二<ol><li>第二点一</li><li>第二点二</li></ol></li></ol><p><strong>无序列表</strong>：-号＋空格</p><ul><li>A</li><li>B</li><li>C</li></ul><h2 id="8-表格"><a href="#8-表格" class="headerlink" title="8.表格"></a>8.表格</h2><ol><li>可直接右键插入表格 ctrl+T</li><li>手打样式 |名字|性别|生日|</li></ol><table><thead><tr><th>名字</th><th>性别</th><th>生日</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr></tbody></table><h2 id="9-代码"><a href="#9-代码" class="headerlink" title="9.代码"></a>9.代码</h2><p>三个```后面加语言类型</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs html">​```html 回车<br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;1.jpg&quot;</span>/&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br></code></pre></td></tr></table></figure><p><strong>嵌入代码</strong></p><p>使用``</p><h2 id="10-插入表情"><a href="#10-插入表情" class="headerlink" title="10.插入表情"></a>10.插入表情</h2><p>使用<code>:happy:</code>输入高兴的表情，使用<code>:cry:</code>输入哭的表情，等等</p><p>:happy::sweat::cry:</p><h2 id="11-标注"><a href="#11-标注" class="headerlink" title="11.标注"></a>11.标注</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">某些人用过了才知道[^注释]<br>[<span class="hljs-symbol">^注释</span>]:<span class="hljs-link">Somebody that I used to know.</span><br></code></pre></td></tr></table></figure><p>某些人用过了才知道[^注释]</p><p>[^注释]:Somebody that I used to know.</p><blockquote><p>把鼠标放在<code>注释</code>上，将会有提示内容.</p></blockquote><h2 id="12-任务列表"><a href="#12-任务列表" class="headerlink" title="12.任务列表"></a>12.任务列表</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> [ ] 吃饭<br><span class="hljs-bullet">-</span> [ ] 逛街<br><span class="hljs-bullet">-</span> [ ] 看电影<br></code></pre></td></tr></table></figure><ul><li><p><input disabled="" type="checkbox">  吃饭 </p></li><li><p><input disabled="" type="checkbox">  逛街</p></li><li><p><input checked="" disabled="" type="checkbox">  看电影</p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术分享</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技术分享</tag>
+      
+      <tag>markdown</tag>
       
     </tags>
     
