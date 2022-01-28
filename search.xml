@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GitHub够用教程</title>
+    <url>/2022/01/22/%E7%AC%94%E8%AE%B0/GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="Github够用教程"><a href="#Github够用教程" class="headerlink" title="Github够用教程"></a>Github够用教程</h1><h2 id="git和Github是什么"><a href="#git和Github是什么" class="headerlink" title="git和Github是什么"></a>git和Github是什么</h2><p>git是一个运行在你电脑上的版本控制软件，Github是基于git打造的网站</p>
+<p>git的三个概念：commit 提交/ repository 仓库/ branch 分支</p>
+<span id="more"></span>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li>git  <a href="https://gitforwindows.org/">https://gitforwindows.org/</a></li>
+<li>vscode  <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+</ul>
+<h2 id="看别人的项目"><a href="#看别人的项目" class="headerlink" title="看别人的项目"></a>看别人的项目</h2><p>GoGoCode 项目地址：<a href="https://github.com/thx/gogocode">https://github.com/thx/gogocode</a></p>
+<p>git clone <a href="https://github.com/thx/gogocode.git">https://github.com/thx/gogocode.git</a></p>
+<h3 id="关注几个地方"><a href="#关注几个地方" class="headerlink" title="关注几个地方"></a>关注几个地方</h3><p>Star</p>
+<p>README.md</p>
+<p>issue</p>
+<p>LICENSE</p>
+<h2 id="提升github速度的方法"><a href="#提升github速度的方法" class="headerlink" title="提升github速度的方法"></a>提升github速度的方法</h2><ol>
+<li>利用镜像提高clone速度，在github.com后面添加 <strong>.cnpmjs.org</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com.cnpmjs.org/thx/gogocode.git<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用码云作为中转站</li>
+<li>比较适合下载单一的文件，如单独下载readme文件：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">如下载文件：https://github.com/thx/gogocode/blob/main/README.md<br><br>修改网址为：https://cdn.jsdelivr.net/gh/thx/gogocode@main/README.md<br></code></pre></td></tr></table></figure>
+
+<p>就可以直接打开，ctrl+s保存</p>
+<h2 id="找开源项目的一些途径"><a href="#找开源项目的一些途径" class="headerlink" title="找开源项目的一些途径"></a>找开源项目的一些途径</h2><p>• <a href="https://github.com/trending/">https://github.com/trending/</a></p>
+<p>  在这里你可以看到各种不同开发语言的每天/周/月的最热门的 Repositories 和 Developers</p>
+<p>• https:///github.com/521xueweihan/HelloGitHub</p>
+<p>  有趣、入门级的开源项目、开源书籍、实战项目、企业级项目等</p>
+<p>• <a href="https://github.com/ruanyf/weekly">https://github.com/ruanyf/weekly</a></p>
+<p>  记录每周值得分享的科技内容，周五发布</p>
+<p>• <a href="https://www.zhihu.com/column/mm-fe">https://www.zhihu.com/column/mm-fe</a></p>
+<p>  阿里妈妈前端快爆前端新鲜事</p>
+<h2 id="特殊的查找资源小技巧-常用前缀后缀"><a href="#特殊的查找资源小技巧-常用前缀后缀" class="headerlink" title="特殊的查找资源小技巧-常用前缀后缀"></a>特殊的查找资源小技巧-常用前缀后缀</h2><p>• 找百科大全 awesome xxx<br>• 找例子 xxx sample<br>• 找空项目架子 xxx starter / xxx boilerplate<br>• 找教程 xxx tutorial</p>
+<p><img src="https://s2.loli.net/2022/01/22/AcknhXTLDj76alK.png" alt="image-20220122172410705"></p>
+]]></content>
+      <categories>
+        <category>github</category>
+      </categories>
+      <tags>
+        <tag>技术分享</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PyCharm使用秘籍</title>
     <url>/2022/01/25/%E7%AC%94%E8%AE%B0/PyCharm%E4%BD%BF%E7%94%A8%E7%A7%98%E7%B1%8D/</url>
     <content><![CDATA[<span id="more"></span>
@@ -74,6 +122,73 @@
       </categories>
       <tags>
         <tag>pycharm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/01/19/%E7%AC%94%E8%AE%B0/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<span id="more"></span>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo建站</title>
+    <url>/2022/01/20/%E7%AC%94%E8%AE%B0/hexo%E5%BB%BA%E7%AB%99/</url>
+    <content><![CDATA[<h1 id="hexo建站记录"><a href="#hexo建站记录" class="headerlink" title="hexo建站记录"></a>hexo建站记录</h1><h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><p><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎 (zhihu.com)</a></p>
+<p>记得看下评论，搭建过程遇到问题通过百度解决</p>
+<p><a href="https://tding.top/archives/aad98408.html#more">Hexo 搭建个人博客文章汇总 | 小丁的个人博客 (tding.top)</a></p>
+<span id="more"></span>
+
+<h2 id="最新主题Fluid"><a href="#最新主题Fluid" class="headerlink" title="最新主题Fluid"></a>最新主题Fluid</h2><p><a href="https://github.com/fluid-dev/hexo-theme-fluid">fluid-dev/hexo-theme-fluid: 一款 Material Design 风格的 Hexo 主题 / An elegant Material-Design theme for Hexo (github.com)</a></p>
+<p>用户文档： <a href="https://hexo.fluid-dev.com/docs/start/">开始使用 | Hexo Fluid (fluid-dev.com)</a></p>
+<p>hexo访问优化：<a href="https://www.julydate.com/post/60859300/">你不爱我了QAQ (julydate.com)</a></p>
+<h2 id="每次使用"><a href="#每次使用" class="headerlink" title="每次使用"></a>每次使用</h2><ul>
+<li>打开博客目录blog文件夹</li>
+<li>shift+右键 在此处打开Powershell窗口</li>
+<li>输入命令 hexo new 文章名称 新建一篇博客</li>
+<li>在source &gt; _posts 文件夹下，打开刚创建的文章</li>
+<li>记录标签tags和分类categories</li>
+<li><!-- more -->之前是文章概况，或文章的前几行</li>
+<li>输入命令 hexo g -d  部署</li>
+</ul>
+<h2 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h2><p><a href="https://mayuke.xyz/">我的博客 (mayuke.xyz)</a></p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p><a href="https://tding.top/archives/b48e2719.html">GitHub Pages 绑定域名 | 小丁的个人博客 (tding.top)</a></p>
+<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p><a href="https://www.namesilo.com/">https://www.namesilo.com/</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/33921436">Namesilo 域名购买及使用教程（附 Namesilo 优惠码） - 知乎 (zhihu.com)</a></p>
+<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p> <a href="https://console.dnspod.cn/">管理控制台 - DNSPod</a></p>
+<h2 id="GitHub项目"><a href="#GitHub项目" class="headerlink" title="GitHub项目"></a>GitHub项目</h2><p><a href="https://github.com/MayukeM/MayukeM.github.io">MayukeM/MayukeM.github.io: It is my personal website.</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/143581449">一个极简、优美的Hexo主题：Coder - 知乎 (zhihu.com)</a></p>
+<h2 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h2><figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">fatal: unable <span class="hljs-keyword">to</span> <span class="hljs-keyword">access</span> <span class="hljs-string">&#x27;https://github.com/MayukeM/MayukeM.github.io.git/&#x27;</span>: OpenSSL SSL_read: <span class="hljs-keyword">Connection</span> was <span class="hljs-keyword">reset</span>, errno <span class="hljs-number">10054</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify <span class="hljs-string">&quot;false&quot;</span><br>git config --global --<span class="hljs-built_in">unset</span> http.proxy<br>git config --global --<span class="hljs-built_in">unset</span> https.proxy<br></code></pre></td></tr></table></figure>
+
+<p><a href="https://github.com/ineo6/hosts">ineo6/hosts: GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。</a></p>
+<p><a href="https://blog.csdn.net/li_magic/article/details/83140986">(55条消息) windows 下安装GIT 屏蔽ssl证书校验_li_magic的博客-CSDN博客_git关闭ssl证书验证</a></p>
+<p><img src="https://s2.loli.net/2022/01/20/HWV3TYSkjI2MOEe.png" alt="1"></p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -182,6 +297,12 @@
         <tag>技术分享</tag>
         <tag>markdown</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/01/28/%E7%AC%94%E8%AE%B0/%E4%B8%93%E4%B8%9A%E8%AF%BE/</url>
+    <content><![CDATA[<h1 id="专业课"><a href="#专业课" class="headerlink" title="专业课"></a>专业课</h1><p>数据结构<br><a href="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86.md">数据结构预备知识</a></p>
+]]></content>
   </entry>
   <entry>
     <title>windows常用快捷键</title>
@@ -338,79 +459,6 @@
         <tag>技术分享</tag>
         <tag>windows</tag>
         <tag>快捷键</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo建站</title>
-    <url>/2022/01/20/%E7%AC%94%E8%AE%B0/hexo%E5%BB%BA%E7%AB%99/</url>
-    <content><![CDATA[<h1 id="hexo建站记录"><a href="#hexo建站记录" class="headerlink" title="hexo建站记录"></a>hexo建站记录</h1><h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><p><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎 (zhihu.com)</a></p>
-<p>记得看下评论，搭建过程遇到问题通过百度解决</p>
-<p><a href="https://tding.top/archives/aad98408.html#more">Hexo 搭建个人博客文章汇总 | 小丁的个人博客 (tding.top)</a></p>
-<span id="more"></span>
-
-<h2 id="最新主题Fluid"><a href="#最新主题Fluid" class="headerlink" title="最新主题Fluid"></a>最新主题Fluid</h2><p><a href="https://github.com/fluid-dev/hexo-theme-fluid">fluid-dev/hexo-theme-fluid: 一款 Material Design 风格的 Hexo 主题 / An elegant Material-Design theme for Hexo (github.com)</a></p>
-<p>用户文档： <a href="https://hexo.fluid-dev.com/docs/start/">开始使用 | Hexo Fluid (fluid-dev.com)</a></p>
-<p>hexo访问优化：<a href="https://www.julydate.com/post/60859300/">你不爱我了QAQ (julydate.com)</a></p>
-<h2 id="每次使用"><a href="#每次使用" class="headerlink" title="每次使用"></a>每次使用</h2><ul>
-<li>打开博客目录blog文件夹</li>
-<li>shift+右键 在此处打开Powershell窗口</li>
-<li>输入命令 hexo new 文章名称 新建一篇博客</li>
-<li>在source &gt; _posts 文件夹下，打开刚创建的文章</li>
-<li>记录标签tags和分类categories</li>
-<li><!-- more -->之前是文章概况，或文章的前几行</li>
-<li>输入命令 hexo g -d  部署</li>
-</ul>
-<h2 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h2><p><a href="https://mayuke.xyz/">我的博客 (mayuke.xyz)</a></p>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p><a href="https://tding.top/archives/b48e2719.html">GitHub Pages 绑定域名 | 小丁的个人博客 (tding.top)</a></p>
-<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p><a href="https://www.namesilo.com/">https://www.namesilo.com/</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/33921436">Namesilo 域名购买及使用教程（附 Namesilo 优惠码） - 知乎 (zhihu.com)</a></p>
-<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p> <a href="https://console.dnspod.cn/">管理控制台 - DNSPod</a></p>
-<h2 id="GitHub项目"><a href="#GitHub项目" class="headerlink" title="GitHub项目"></a>GitHub项目</h2><p><a href="https://github.com/MayukeM/MayukeM.github.io">MayukeM/MayukeM.github.io: It is my personal website.</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/143581449">一个极简、优美的Hexo主题：Coder - 知乎 (zhihu.com)</a></p>
-<h2 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h2><figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">fatal: unable <span class="hljs-keyword">to</span> <span class="hljs-keyword">access</span> <span class="hljs-string">&#x27;https://github.com/MayukeM/MayukeM.github.io.git/&#x27;</span>: OpenSSL SSL_read: <span class="hljs-keyword">Connection</span> was <span class="hljs-keyword">reset</span>, errno <span class="hljs-number">10054</span><br></code></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify <span class="hljs-string">&quot;false&quot;</span><br>git config --global --<span class="hljs-built_in">unset</span> http.proxy<br>git config --global --<span class="hljs-built_in">unset</span> https.proxy<br></code></pre></td></tr></table></figure>
-
-<p><a href="https://github.com/ineo6/hosts">ineo6/hosts: GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。</a></p>
-<p><a href="https://blog.csdn.net/li_magic/article/details/83140986">(55条消息) windows 下安装GIT 屏蔽ssl证书校验_li_magic的博客-CSDN博客_git关闭ssl证书验证</a></p>
-<p><img src="https://s2.loli.net/2022/01/20/HWV3TYSkjI2MOEe.png" alt="1"></p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/01/28/%E7%AC%94%E8%AE%B0/%E4%B8%93%E4%B8%9A%E8%AF%BE/</url>
-    <content><![CDATA[<h1 id="专业课"><a href="#专业课" class="headerlink" title="专业课"></a>专业课</h1><p>数据结构<br><a href="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86.md">数据结构预备知识</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/01/19/%E7%AC%94%E8%AE%B0/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<span id="more"></span>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -904,54 +952,6 @@
         <tag>数据结构</tag>
         <tag>专业课</tag>
         <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub够用教程</title>
-    <url>/2022/01/22/%E7%AC%94%E8%AE%B0/GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="Github够用教程"><a href="#Github够用教程" class="headerlink" title="Github够用教程"></a>Github够用教程</h1><h2 id="git和Github是什么"><a href="#git和Github是什么" class="headerlink" title="git和Github是什么"></a>git和Github是什么</h2><p>git是一个运行在你电脑上的版本控制软件，Github是基于git打造的网站</p>
-<p>git的三个概念：commit 提交/ repository 仓库/ branch 分支</p>
-<span id="more"></span>
-
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
-<li>git  <a href="https://gitforwindows.org/">https://gitforwindows.org/</a></li>
-<li>vscode  <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
-</ul>
-<h2 id="看别人的项目"><a href="#看别人的项目" class="headerlink" title="看别人的项目"></a>看别人的项目</h2><p>GoGoCode 项目地址：<a href="https://github.com/thx/gogocode">https://github.com/thx/gogocode</a></p>
-<p>git clone <a href="https://github.com/thx/gogocode.git">https://github.com/thx/gogocode.git</a></p>
-<h3 id="关注几个地方"><a href="#关注几个地方" class="headerlink" title="关注几个地方"></a>关注几个地方</h3><p>Star</p>
-<p>README.md</p>
-<p>issue</p>
-<p>LICENSE</p>
-<h2 id="提升github速度的方法"><a href="#提升github速度的方法" class="headerlink" title="提升github速度的方法"></a>提升github速度的方法</h2><ol>
-<li>利用镜像提高clone速度，在github.com后面添加 <strong>.cnpmjs.org</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com.cnpmjs.org/thx/gogocode.git<br></code></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>使用码云作为中转站</li>
-<li>比较适合下载单一的文件，如单独下载readme文件：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">如下载文件：https://github.com/thx/gogocode/blob/main/README.md<br><br>修改网址为：https://cdn.jsdelivr.net/gh/thx/gogocode@main/README.md<br></code></pre></td></tr></table></figure>
-
-<p>就可以直接打开，ctrl+s保存</p>
-<h2 id="找开源项目的一些途径"><a href="#找开源项目的一些途径" class="headerlink" title="找开源项目的一些途径"></a>找开源项目的一些途径</h2><p>• <a href="https://github.com/trending/">https://github.com/trending/</a></p>
-<p>  在这里你可以看到各种不同开发语言的每天/周/月的最热门的 Repositories 和 Developers</p>
-<p>• https:///github.com/521xueweihan/HelloGitHub</p>
-<p>  有趣、入门级的开源项目、开源书籍、实战项目、企业级项目等</p>
-<p>• <a href="https://github.com/ruanyf/weekly">https://github.com/ruanyf/weekly</a></p>
-<p>  记录每周值得分享的科技内容，周五发布</p>
-<p>• <a href="https://www.zhihu.com/column/mm-fe">https://www.zhihu.com/column/mm-fe</a></p>
-<p>  阿里妈妈前端快爆前端新鲜事</p>
-<h2 id="特殊的查找资源小技巧-常用前缀后缀"><a href="#特殊的查找资源小技巧-常用前缀后缀" class="headerlink" title="特殊的查找资源小技巧-常用前缀后缀"></a>特殊的查找资源小技巧-常用前缀后缀</h2><p>• 找百科大全 awesome xxx<br>• 找例子 xxx sample<br>• 找空项目架子 xxx starter / xxx boilerplate<br>• 找教程 xxx tutorial</p>
-<p><img src="https://s2.loli.net/2022/01/22/AcknhXTLDj76alK.png" alt="image-20220122172410705"></p>
-]]></content>
-      <categories>
-        <category>github</category>
-      </categories>
-      <tags>
-        <tag>技术分享</tag>
-        <tag>github</tag>
       </tags>
   </entry>
 </search>
