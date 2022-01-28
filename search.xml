@@ -17,16 +17,14 @@
 <p>README.md</p>
 <p>issue</p>
 <p>LICENSE</p>
-<h2 id="提升github速度的方法"><a href="#提升github速度的方法" class="headerlink" title="提升github速度的方法"></a>提升github速度的方法</h2><ol>
-<li>利用镜像提高clone速度，在github.com后面添加 <strong>.cnpmjs.org</strong></li>
-</ol>
+<h2 id="提升github速度的方法"><a href="#提升github速度的方法" class="headerlink" title="提升github速度的方法"></a>提升github速度的方法</h2><h3 id="1-利用镜像提高clone速度"><a href="#1-利用镜像提高clone速度" class="headerlink" title="1. 利用镜像提高clone速度"></a>1. 利用镜像提高clone速度</h3><p>在github.com后面添加 <strong>.cnpmjs.org</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com.cnpmjs.org/thx/gogocode.git<br></code></pre></td></tr></table></figure>
 
-<ol start="2">
-<li>使用码云作为中转站</li>
-<li>比较适合下载单一的文件，如单独下载readme文件：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">如下载文件：https://github.com/thx/gogocode/blob/main/README.md<br><br>修改网址为：https://cdn.jsdelivr.net/gh/thx/gogocode@main/README.md<br></code></pre></td></tr></table></figure>
+<h3 id="2-使用码云作为中转站"><a href="#2-使用码云作为中转站" class="headerlink" title="2. 使用码云作为中转站"></a>2. 使用码云作为中转站</h3><h3 id="3-比较适合单一的文件"><a href="#3-比较适合单一的文件" class="headerlink" title="3. 比较适合单一的文件"></a>3. 比较适合单一的文件</h3><p>如单独下载readme文件，若下载地址为：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">https://github.com/thx/gogocode/blob/main/README.md<br></code></pre></td></tr></table></figure>
+
+<p>将<code>github.com</code>改成<code>cdn.jsdelivr.net/gh</code> 并将<code>/blob/</code>改成<code>@</code>得到：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">https://cdn.jsdelivr.net/gh/thx/gogocode@main/README.md<br></code></pre></td></tr></table></figure>
 
 <p>就可以直接打开，ctrl+s保存</p>
 <h2 id="找开源项目的一些途径"><a href="#找开源项目的一些途径" class="headerlink" title="找开源项目的一些途径"></a>找开源项目的一些途径</h2><p>• <a href="https://github.com/trending/">https://github.com/trending/</a></p>
@@ -160,15 +158,32 @@
 <h2 id="最新主题Fluid"><a href="#最新主题Fluid" class="headerlink" title="最新主题Fluid"></a>最新主题Fluid</h2><p><a href="https://github.com/fluid-dev/hexo-theme-fluid">fluid-dev/hexo-theme-fluid: 一款 Material Design 风格的 Hexo 主题 / An elegant Material-Design theme for Hexo (github.com)</a></p>
 <p>用户文档： <a href="https://hexo.fluid-dev.com/docs/start/">开始使用 | Hexo Fluid (fluid-dev.com)</a></p>
 <p>hexo访问优化：<a href="https://www.julydate.com/post/60859300/">你不爱我了QAQ (julydate.com)</a></p>
-<h2 id="每次使用"><a href="#每次使用" class="headerlink" title="每次使用"></a>每次使用</h2><ul>
-<li>打开博客目录blog文件夹</li>
-<li>shift+右键 在此处打开Powershell窗口</li>
-<li>输入命令 hexo new 文章名称 新建一篇博客</li>
-<li>在source &gt; _posts 文件夹下，打开刚创建的文章</li>
-<li>记录标签tags和分类categories</li>
-<li><!-- more -->之前是文章概况，或文章的前几行</li>
-<li>输入命令 hexo g -d  部署</li>
+<h2 id="每次使用"><a href="#每次使用" class="headerlink" title="每次使用"></a>每次使用</h2><h3 id="1-打开博客目录blog文件夹"><a href="#1-打开博客目录blog文件夹" class="headerlink" title="1. 打开博客目录blog文件夹"></a>1. 打开博客目录blog文件夹</h3><p>我的文件是在本地目录D:\codeWork\Personal_website\blog</p>
+<h3 id="2-在空白处-shift-右键-在此处打开Powershell窗口"><a href="#2-在空白处-shift-右键-在此处打开Powershell窗口" class="headerlink" title="2. 在空白处 shift+右键 在此处打开Powershell窗口"></a>2. 在空白处 shift+右键 在此处打开Powershell窗口</h3><p><img src="https://s2.loli.net/2022/01/28/G7IP5cvbLsNA6nD.png" alt="image-20220128183949993"></p>
+<h3 id="3-输入命令-hexo-new-文章名称"><a href="#3-输入命令-hexo-new-文章名称" class="headerlink" title="3. 输入命令 hexo new 文章名称"></a>3. 输入命令 hexo new 文章名称</h3><p>新建一篇博客</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">hexo new test<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/01/28/qIazWeDY7l1rtLB.png" alt="image-20220128184355318"></p>
+<p>hexo new 文章名，会默认创建一个以文章名命名的markdown文件，创建默认模板为 blog &gt; scaffolds &gt; post.md</p>
+<h3 id="4-在blog-gt-source-gt-posts-文件夹下"><a href="#4-在blog-gt-source-gt-posts-文件夹下" class="headerlink" title="4. 在blog &gt; source &gt; _posts 文件夹下"></a>4. 在blog &gt; source &gt; _posts 文件夹下</h3><p>打开刚创建的文章test.md</p>
+<h3 id="5-修改文件头信息"><a href="#5-修改文件头信息" class="headerlink" title="5. 修改文件头信息"></a>5. 修改文件头信息</h3><p>图片解释：这里采用了cdn加速的绝对地址，图片放在blog &gt; source &gt; img 文件夹中，图片会随部署时上传到</p>
+<p><a href="https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/">https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/</a> 这个地址下，加上文件名即可使用</p>
+<p><a href="GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B.md#%E6%8F%90%E5%8D%87github%E9%80%9F%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95#3%20%E6%AF%94%E8%BE%83%E9%80%82%E5%90%88%E5%8D%95%E4%B8%80%E7%9A%84%E6%96%87%E4%BB%B6">3 github加速 比较适合单一的文件</a></p>
+<ul>
+<li>index_img 是首页文章小图</li>
+<li>banner_img 是文章内页顶部大图</li>
 </ul>
+<figure class="highlight subunit"><table><tr><td class="code"><pre><code class="hljs subunit">title: test 文件名称默认与创建时的保持一致<br>index_img: https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/example.png <br>banner_img: &#x27;https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/b2.png&#x27;<br><span class="hljs-keyword">tags:</span>可以添加多个标签<br>  - tag1<br>  - tag2<br>categories:分类是层级关系<br>  - cate1<br>  - cate1.1<br>date: 2022<span class="hljs-string">-01</span><span class="hljs-string">-28</span> 18:41:52<br></code></pre></td></tr></table></figure>
+
+<p>文章概况，或者文章的前几行</p>
+<p><code>&lt;!-- more --&gt;</code></p>
+<p>文章主体内容</p>
+<h3 id="6-部署"><a href="#6-部署" class="headerlink" title="6. 部署"></a>6. 部署</h3><ul>
+<li>输入命令 hexo g -d  一键部署</li>
+</ul>
+<blockquote>
+<p>hexo g 生成静态文件（generate)<br>hexo s 启动服务器（server) 本地访问<a href="http://localhost:4000/">http://localhost:4000/</a><br>hexo d 部署（deploy)</p>
+</blockquote>
 <h2 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h2><p><a href="https://mayuke.xyz/">我的博客 (mayuke.xyz)</a></p>
 <h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p><a href="https://tding.top/archives/b48e2719.html">GitHub Pages 绑定域名 | 小丁的个人博客 (tding.top)</a></p>
 <h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p><a href="https://www.namesilo.com/">https://www.namesilo.com/</a></p>
