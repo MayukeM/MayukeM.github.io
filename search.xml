@@ -1356,4 +1356,40 @@
         <tag>网站</tag>
       </tags>
   </entry>
+  <entry>
+    <title>解决语雀导出markdown文件图片不显示问题</title>
+    <url>/2022/01/29/%E8%A7%A3%E5%86%B3%E8%AF%AD%E9%9B%80%E5%AF%BC%E5%87%BAmarkdown%E6%96%87%E4%BB%B6%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="解决语雀导出markdown文件图片不显示问题"><a href="#解决语雀导出markdown文件图片不显示问题" class="headerlink" title="解决语雀导出markdown文件图片不显示问题"></a>解决语雀导出markdown文件图片不显示问题</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用语雀记笔记发现导出markdown文件后，图片无法正常显示</p>
+<p><img src="https://s2.loli.net/2022/01/29/6JEv4bna1Z7dOty.png" alt="image-20220129102813109"></p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>语雀转成md文件导出，图片无法正常显示。把url地址中png后面的部分，即#clientId开始全部删掉即可。</p>
+<span id="more"></span>
+
+<h2 id="脚本解决"><a href="#脚本解决" class="headerlink" title="脚本解决"></a>脚本解决</h2><p>但是一个一个删除还是太麻烦，所以还是写python脚本来完成这项工作，代码如下：</p>
+<p>注意没有使用绝对路径，所以使用时将该脚本与文件放在同一目录下</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- encoding: utf-8 -*-</span><br><span class="hljs-keyword">import</span> re<br><br>new_md = []<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">title</span>():</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;+------------------------------------------&#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  功  能: 语雀文档导出md文件后图片修复 &#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  注  意: 将该脚本与文件放在同一目录下 &#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;+------------------------------------------&#x27;</span>)<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deal_yuque</span>(<span class="hljs-params">new_md, old_path</span>):</span><br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(old_path, <span class="hljs-string">&#x27;r&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>, errors=<span class="hljs-string">&#x27;ignore&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> f.readlines():<br>            line = re.sub(<span class="hljs-string">r&#x27;png#(.*)+&#x27;</span>, <span class="hljs-string">&#x27;png)&#x27;</span>, line)<br>            <span class="hljs-comment"># print(line)</span><br>            new_md.append(line)<br><br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(old_path, <span class="hljs-string">&#x27;w&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>, errors=<span class="hljs-string">&#x27;ignore&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>        <span class="hljs-keyword">for</span> new_md <span class="hljs-keyword">in</span> new_md:<br>            f.write(<span class="hljs-built_in">str</span>(new_md))<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    title()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  请输入您的文件名称, 如：文件名称.md&#x27;</span>)<br>    old_path = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;[+]  文件名称：&#x27;</span>)<br>    <span class="hljs-comment"># new_path = &#x27;new_&#x27; + old_path</span><br>    deal_yuque(new_md, old_path)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  \033[36m修复完成 &#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="生成exe可执行文件"><a href="#生成exe可执行文件" class="headerlink" title="生成exe可执行文件"></a>生成exe可执行文件</h2><h3 id="1-pyinstaller-介绍"><a href="#1-pyinstaller-介绍" class="headerlink" title="1. pyinstaller 介绍"></a>1. pyinstaller 介绍</h3><p>pyinstaller将Python脚本打包成可执行程序，使在没有Python环境的机器上运行</p>
+<h3 id="2-pyinstaller在windows下的安装"><a href="#2-pyinstaller在windows下的安装" class="headerlink" title="2. pyinstaller在windows下的安装"></a>2. pyinstaller在windows下的安装</h3><p>使用命令pip install pyinstaller即可</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">pip install pyinstaller<br></code></pre></td></tr></table></figure>
+
+<p>出现Successfully installed pyinstaller-3.1.1 pypiwin32-219即表示安装成功</p>
+<h3 id="3-打包"><a href="#3-打包" class="headerlink" title="3. 打包"></a>3. 打包</h3><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">pyinstaller --onefile --nowindowed 要打包的文件.py<br></code></pre></td></tr></table></figure>
+
+<p>就会在当前文件下形成build文件夹、dist文件夹和.spec文件。<br>dist里就是guess_exe.exe可执行文件。</p>
+<blockquote>
+<p>附基本语法</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">pyinstaller options myscript.py<br>常用的可选参数如下：<br>--onefile 将结果打包成一个可执行文件<br>--onedir 将所有结果打包到一个文件夹中，该文件夹包括一个可执行文件和可执行文件执行时需要的依赖文件（默认）<br>--paths=DIR 设置导入路径<br>--distpath=DIR 设置将打包的结果文件放置的路径<br>--specpath=DIR 设置将spec文件放置的路径<br>--windowed 使用windows子系统执行，不会打开命令行（只对windows有效）<br>--nowindowed 使用控制台子系统执行（默认）（只对windows有效）<br>--icon=&lt;FILE.ICO&gt; 将file.ico添加为可执行文件的资源(只对windows有效）<br></code></pre></td></tr></table></figure>
+
+<h2 id="愉快使用"><a href="#愉快使用" class="headerlink" title="愉快使用"></a>愉快使用</h2><p>将生成的exe文件放到笔记文件夹同目录，双击即可使用</p>
+<p><img src="https://s2.loli.net/2022/01/29/ND4rpefxtGQPUSH.png" alt="image-20220129103839267"></p>
+]]></content>
+      <categories>
+        <category>技术分享</category>
+      </categories>
+      <tags>
+        <tag>技术分享</tag>
+        <tag>工具</tag>
+      </tags>
+  </entry>
 </search>
