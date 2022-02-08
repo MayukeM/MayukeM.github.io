@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-03T09:56:04.897Z</updated>
+  <updated>2022-02-08T07:06:52.327Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手把手搭建一个简易神经网络</title>
+    <link href="http://example.com/2022/02/08/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    <id>http://example.com/2022/02/08/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</id>
+    <published>2022-02-08T03:29:36.000Z</published>
+    <updated>2022-02-08T07:06:52.327Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;搭建一个简易神经网络&quot;&gt;&lt;a href=&quot;#搭建一个简易神经网络&quot; class=&quot;headerlink&quot; title=&quot;搭建一个简易神经网络&quot;&gt;&lt;/a&gt;搭建一个简易神经网络&lt;/h1&gt;&lt;p&gt;了解神经网络工作方式的最佳途径莫过于亲自创建一个神经网络，本文将利用感知机解决&lt;strong&gt;异或&lt;/strong&gt;问题。&lt;/p&gt;
+&lt;p&gt;神经网络(NN)又称人工神经网络(ANN)，是机器学习领域中基于生物神经网络概念的学习算法的一个子集。&lt;/p&gt;
+&lt;p&gt;拥有五年以上经验的德国机器学习专家Andrey Bulezyuk声称：&lt;strong&gt;“神经网络正在彻底改变机器学习，因为它们能够在广泛的学科和行业中为抽象对象高效建模。”&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="人工智能" scheme="http://example.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    
+    <category term="神经网络" scheme="http://example.com/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Cypher语句从入门到上天</title>
