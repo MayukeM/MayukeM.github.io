@@ -829,6 +829,7 @@
 <p><a href="https://zhuanlan.zhihu.com/p/143581449">一个极简、优美的Hexo主题：Coder - 知乎 (zhihu.com)</a></p>
 <h2 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h2><figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">fatal: unable <span class="hljs-keyword">to</span> <span class="hljs-keyword">access</span> <span class="hljs-string">&#x27;https://github.com/MayukeM/MayukeM.github.io.git/&#x27;</span>: OpenSSL SSL_read: <span class="hljs-keyword">Connection</span> was <span class="hljs-keyword">reset</span>, errno <span class="hljs-number">10054</span><br></code></pre></td></tr></table></figure>
 
+<p>部署失败多试几次就好，一般是网络问题</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify <span class="hljs-string">&quot;false&quot;</span><br>git config --global --<span class="hljs-built_in">unset</span> http.proxy<br>git config --global --<span class="hljs-built_in">unset</span> https.proxy<br></code></pre></td></tr></table></figure>
 
 <p><a href="https://github.com/ineo6/hosts">ineo6/hosts: GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。</a></p>
