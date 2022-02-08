@@ -552,7 +552,7 @@
 <p>如图我们可以看到其结果为0，满足<strong>异或</strong>的功能，神经网络搭建完成，剩下的就是更改输入即可，无需更改任何公式，一切都是自动更新计算的，读者可以自行尝试，我们可以感性认识到，网络层次越深，神经网络的表征能力越强。</p>
 <p>或许你会疑惑，神经网络的权值和阈值时怎么知道的，在这个案例中我们直接给了出来，而实际上，他们是需要神经网络自己反复“试错”<br>学习而来的，而且能完成“异或”功能的网络权重也不唯一。</p>
 <h2 id="python版本实现"><a href="#python版本实现" class="headerlink" title="python版本实现"></a>python版本实现</h2><p>MLPClassifier是一个监督学习算法，下图是只有1个隐藏层的MLP模型 ，左侧是输入层，右侧是输出层。</p>
-<img src="https://s2.loli.net/2022/02/08/uFc1A3Wm7j92SVO.png" alt="MLP模型" style="zoom: 50%; margin:auto;" />
+<img src="https://s2.loli.net/2022/02/08/uFc1A3Wm7j92SVO.png" alt="MLP模型" style="zoom: 50%; display:block; margin:auto;" />
 
 <p>上图的整体结构可以简单的理解为下图所示：</p>
 <img src="https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png" alt="image-20220208153609189" style="zoom:67%; display:block;margin:auto;" />
