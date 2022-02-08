@@ -2029,4 +2029,23 @@
         <tag>工具</tag>
       </tags>
   </entry>
+  <entry>
+    <title>img margin 0 auto; 图片水平居中布局无效</title>
+    <url>/2022/02/08/img%20margin%200%20auto%20%E5%9B%BE%E7%89%87%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E6%97%A0%E6%95%88/</url>
+    <content><![CDATA[<h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><p>在<code>typora</code>中插入图片使用<code>style=&quot;zoom:67%;&quot;</code>缩放属性，在<code>typora</code>中仍是居中显示的，但是发布博客之后就没有了居中效果，于是添加样式<code>margin:0 auto; </code>发现仍然无法居中</p>
+<p><code>&lt;img src=&quot;https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png&quot; alt=&quot;image-20220208153609189&quot; style=&quot;zoom:67%; margin:auto;&quot; /&gt;</code></p>
+<h1 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h1><p><code>img</code>是一种可替换元素，虽然它可以设置宽高，但其本质上还是一个行内元素，所以在使用<code>margin：0 auto</code>的方式设置其水平居中时、必须先将<code>img</code>设置<code>display:block;</code>再设置<code>margin：0 auto</code>才会生效；于是改成下面的写法</p>
+<p><code>&lt;img src=&quot;https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png&quot; alt=&quot;image-20220208153609189&quot; style=&quot;zoom:67%; display:block; margin:auto;&quot; /&gt;</code></p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://blog.csdn.net/weixin_45944877/article/details/119581116">(55条消息) 图片的垂直水平居中；vertical-align：middle；margin:0 auto和text-align:center失效的问题_CoderLittleWhite的博客-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>html</tag>
+        <tag>前端</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
 </search>

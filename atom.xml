@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-08T08:13:57.037Z</updated>
+  <updated>2022-02-08T08:39:10.792Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>img margin 0 auto; 图片水平居中布局无效</title>
+    <link href="http://example.com/2022/02/08/img%20margin%200%20auto%20%E5%9B%BE%E7%89%87%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E6%97%A0%E6%95%88/"/>
+    <id>http://example.com/2022/02/08/img%20margin%200%20auto%20%E5%9B%BE%E7%89%87%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E6%97%A0%E6%95%88/</id>
+    <published>2022-02-08T08:19:36.000Z</published>
+    <updated>2022-02-08T08:39:10.792Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;发现问题&quot;&gt;&lt;a href=&quot;#发现问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="http://example.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="html" scheme="http://example.com/tags/html/"/>
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>手把手搭建一个简易神经网络</title>
