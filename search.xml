@@ -1,340 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>img margin 0 auto; 图片水平居中布局无效</title>
-    <url>/2022/02/08/img%20margin%200%20auto%20%E5%9B%BE%E7%89%87%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E6%97%A0%E6%95%88/</url>
-    <content><![CDATA[<h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><p>在<code>typora</code>中插入图片使用<code>style=&quot;zoom:67%;&quot;</code>缩放属性，在<code>typora</code>中仍是居中显示的，但是发布博客之后就没有了居中效果，于是添加样式<code>margin:0 auto; </code>发现仍然无法居中</p>
-<p><code>&lt;img src=&quot;https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png&quot; alt=&quot;image-20220208153609189&quot; style=&quot;zoom:67%; margin:auto;&quot; /&gt;</code></p>
-<h1 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h1><p><code>img</code>是一种可替换元素，虽然它可以设置宽高，但其本质上还是一个行内元素，所以在使用<code>margin：0 auto</code>的方式设置其水平居中时、必须先将<code>img</code>设置<code>display:block;</code>再设置<code>margin：0 auto</code>才会生效；于是改成下面的写法</p>
-<p><code>&lt;img src=&quot;https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png&quot; alt=&quot;image-20220208153609189&quot; style=&quot;zoom:67%; display:block; margin:auto;&quot; /&gt;</code></p>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://blog.csdn.net/weixin_45944877/article/details/119581116">(55条消息) 图片的垂直水平居中；vertical-align：middle；margin:0 auto和text-align:center失效的问题_CoderLittleWhite的博客-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>html</tag>
-        <tag>前端</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>手把手搭建一个简易神经网络</title>
-    <url>/2022/02/08/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[<h1 id="搭建一个简易神经网络"><a href="#搭建一个简易神经网络" class="headerlink" title="搭建一个简易神经网络"></a>搭建一个简易神经网络</h1><p>了解神经网络工作方式的最佳途径莫过于亲自创建一个神经网络，本文将利用感知机解决<strong>异或</strong>问题。</p>
-<p>神经网络(NN)又称人工神经网络(ANN)，是机器学习领域中基于生物神经网络概念的学习算法的一个子集。</p>
-<p>拥有五年以上经验的德国机器学习专家Andrey Bulezyuk声称：<strong>“神经网络正在彻底改变机器学习，因为它们能够在广泛的学科和行业中为抽象对象高效建模。”</strong></p>
-<span id="more"></span>
-
-<h2 id="神经网络的发展历史"><a href="#神经网络的发展历史" class="headerlink" title="神经网络的发展历史"></a>神经网络的发展历史</h2><p>追根溯源，神经网络诞生于人类对于人脑和智能的追问。而这个追问经历了旷远蒙昧的精神至上学说，直到 19 世纪 20 年代。</p>
-<p>奥地利医生 Franz Joseph Gall （ 1758-1828 ） 推测人类的精神活动是由脑的功能活动而实现的，这才使人们认识到意识和精神活动具有物质基础，从而使人们对精神活动的认识从唯心主义的错误观点转到了唯物主义的正确轨道上来。</p>
-<p>意大利细胞学家 Camillo Golgi （ 1843~1926 ）徒手将脑组织切成薄片，用重铬酸钾 - 硝酸银浸染法染色，第一次在显微镜下观察到了神经细胞和神经胶质细胞。这为神经科学的研究提供了最为基本的组织学方法。</p>
-<p>西班牙神经组织学家 Santiago Ramón y Cajal （ 1852~1934 ）在掌握了 Golgi 染色法后，又进一步改良了 Golgi 染色法，并发明了独创的银染法——还原硝酸银染色法， 此法可显示神经纤维的微细结构 。他发现神经细胞之间没有原生质的联系，因而提出神经细胞是整个神经活动最基本的单位（故称神经元），从而使复杂的神经系统有了进一步研究的切入口。他对于大脑的微观结构研究是开创性的，被许多人认为是现代神经科学之父。他绘图技能出众，他的关于脑细胞的几百个插图至今用于教学。</p>
-<p>为此，Santiago Ramón y Cajal 和 Camillo Golgi 两人共享了 1906 年诺贝尔生理学或医学奖。</p>
-<p>此后， Cajal 经过大量精细的实验，创立了 “ 神经元学说 ” ，该学说的创立为神经科学的进一步发展开创了新纪元。</p>
-<p>对智能机器的探索和计算机的历史一样古老。尽管中文里“电脑”一开始就拥有了“脑”的头衔，但事实上与真正的智能相去甚远。艾伦图灵在他的文章《COMPUTING MACHINERY AND INTELLIGENCE》中提出了几个标准来评估一台机器是否可以被认为是智能的，从而被称为“图灵测试”。</p>
-<p>神经元及其连接里也许藏着智能的隐喻，沿着这条路线前进的人被称为<strong>连接主义</strong>。</p>
-<p>1943年，Warren McCulloch 和 Walter Pitts 发表题为《A Logical Calculus of the Ideas Immanent in Nervous Activity》的论文，首次提出神经元的M-P模型。该模型借鉴了已知的神经细胞生物过程原理，是第一个神经元数学模型，是人类历史上第一次对大脑工作原理描述的尝试。</p>
-<p><img src="https://s2.loli.net/2022/02/08/6D7UCLBGSAWj8mo.png" alt="M-P模型"></p>
-<p>M-P模型的工作原理是神经元的<strong>输入信号加权求和</strong>，与<strong>阈值</strong>比较再决定神经元是否输出。这是从原理上证明了人工神经网络可以计算任何算术和逻辑函数。</p>
-<p>20世纪40年代末，Donald Olding Hebb在《The Organization of Behavior》中对神经元之间连接强度的变化进行了分析，首次提出来一种调整权值的方法，称为Hebb学习规则。</p>
-<p>Hebb学习规则主要假定机体的行为可以由神经元的行为来解释。Hebb受启发于巴普罗夫的条件反射实验，认为如果两个神经元在同一时刻被激发，则它们之间的联系应该被强化。这就是Hebb提出的生物神经元的学习机制，在这种学习中，由对神经元的重复刺激，使得神经元之间的突触强度增加。</p>
-<p>Hebb学习规则隶属于无监督学习算法的范畴，其主要思想是根据两个神经元的激发状态来调整期连接关系，以此实现对简单神经活动的模拟。继Hebb学习规则之后，神经元的有监督Delta学习规则被提出，用于解决在输入输出已知的情况下神经元权值的学习问题。</p>
-<p>1958年，就职于Cornell航空实验室的Frank Rosenblatt发明了的一种称为<strong>感知器</strong>（Perceptron）的人工神经网络。它可以被视为一种最简单形式的前馈神经网络，是一种<strong>二元线性分类器（激活函数为sign(x)）</strong>。感知机是人工神经网络的第一个实际应用，标志着神经网络进入了新的发展阶段。</p>
-<p>这次成功的应用也引起了许多学者对神经网络的研究兴趣。1960年，斯坦福大学教授Bernard Widrow教授和他的研究生Ted Hoff开发了Adaline（Adaptive Linear Neuron 或  Adaptive Linear Element）和最小均方滤波器（LMS）。Adaline网络和感知机的区别就是将感知机的Step函数换为Linear线性函数。同一时期，Steinbuch等还提出了称为学习矩阵的二进制联想网络。</p>
-<p><img src="https://s2.loli.net/2022/02/08/yTUFi5l3WO6eQcS.png" alt="Adaline和Perceptron对比"></p>
-<p>周志华《机器学习》第5章神经网络解释了BP算法实质是LMS算法（Least Mean Square）算法的推广。LMS试图使网络的输出均方差最小化，可用于神经元激活函数可微的感知机学习；将LMS推广到由非线性可微神经元组成的多层前馈神经网络，就得到BP算法，因此BP算法也被称为广义δ规则。</p>
-<p>1969年，Marvin Minsky 和 Seymour Papert 发表《Perceptrons: an introduction to computational geometry》一书，从数学的角度<strong>证明了单层神经网络具有有限的功能，甚至在面对简单的“异或”逻辑问题时也显得无能为力。此后，神经网络的研究陷入了很长一段时间的低迷期。</strong></p>
-<p>1972年，芬兰的KohonenT.教授，提出了自组织神经网络SOM(Self-Organizing feature map)。</p>
-<p>1974 年，Paul Werbos在哈佛大学攻读博士学位期间，就在其博士论文中发明了影响深远的著名<strong>BP神经网络学习算法</strong>。但没有引起重视。</p>
-<p>1976年，美国Grossberg教授提出了著名的自适应共振理论ART(Adaptive Resonance Theory)，其学习过程具有自组织和自稳定的特征。</p>
-<p>1982年，David Parker<strong>重新发现了BP神经网络学习算法</strong>。</p>
-<p>1982年，John Hopfield提出了连续和离散的Hopfield神经网络模型，并采用全互联型神经网络尝试对非多项式复杂度的旅行商问题进行了求解，促进神经网络的研究再次进入了蓬勃发展的时期。</p>
-<p>1983年，Hinton, G. E. 和 Sejnowski, T. J.设计了玻尔兹曼机，<strong>首次提出了“隐单元”的概念。在全连接的反馈神经网络中，包含了可见层和一个隐层，这就是玻尔兹曼机。</strong></p>
-<p><strong>层数的增加可以为神经网络提供更大的灵活性，但参数的训练算法一直是制约多层神经网络发展的一个重要瓶颈。</strong></p>
-<p>一个沉睡十年的伟大算法即将被唤醒。</p>
-<p>1986年，David E. Rumelhart, Geoffrey E. Hinton 和 Ronald J. Williams发表文章《Learning representations by back-propagating errors》，重新报道这一方法，<strong>BP神经网络学习算法</strong>才受到重视。BP算法引入了可微分非线性神经元或者sigmod函数神经元，克服了早期神经元的弱点，为多层神经网络的学习训练与实现提供了一种切实可行的解决途径。</p>
-<p>1988年，继BP算法之后，David Broomhead 和 David Lowe 将径向基函数引入到神经网络的设计中，形成了径向基神经网络（RBF）。RBF网络是神经网络真正走向实用化的一个重要标志。</p>
-<p>1989年，一系列文章对BP神经网络的非线性函数逼近性能进行了分析，并证明对于具有单隐层，传递函数为sigmod的连续型前馈神经网络可以以任意精度逼近任意复杂的连续映射。这样，BP神经网络凭借能够保证对复杂函数连续映射关系的刻画能力（只要引入隐层神经元的个数足够多），打开了Marvin Minsky 和 Seymour Papert 早已关闭的研究大门。</p>
-<p>统计学习理论是一种专门研究小样本情况下机器学习规律的理论。Vapnik, V.N.等人从六、七十年代开始致力于此方面研究。到九十年代中期，随着其理论的不断发展和成熟，也由于神经网络等学习方法在理论上缺乏实质性进展，统计学习理论开始受到越来越广泛的重视。同时, 在这一理论基础上发展了一种新的通用学习方法——支持向量机( SVM )，它已初步表现出很多优于已有方法的性能。</p>
-<p>此后的近十年时间，神经网络由于其浅层结构，容易过拟合以及参数训练速度慢等原因，曾经火热的神经网络又慢慢的淡出了人们的视线。值得一提的是，1997年，Sepp Hochreiter和Jurgen Schmidhuber首先提出长短期记忆（LSTM）模型。</p>
-<p>直到2006年，计算机处理速度和存储能力大大提高，为深度学习的提出铺平了道路。G. E. Hinton 和他的学生 R. R. Salakhutdinov 在《科学》杂志上发表题为《Reducing the Dimensionality of Data with Neural Networks》的文章，掀起了深度学习在学术界和工业界的研究热潮。文章摘要阐述了两个重要观点：一是多隐层的神经网络可以学习到能刻画数据本质属性的特征，对数据可视化和分类等任务有很大帮助；二是可以借助于无监督的“逐层初始化”策略来有效克服深层神经网络在训练上存在的难度。</p>
-<p>这篇文章是一个分水岭，拉开了深度学习大幕，标志着深度学习的诞生。从此，历史这样写就：从感知机提出，到BP算法应用以及2006年以前的历史被称为浅层学习，以后的历史被称为深度学习。</p>
-<p>总结起来，典型的浅层学习模型包括：传统隐马尔可夫模型（HMM）、条件随机场（CRFs）、最大熵模型（MaxEnt）、boosting、支持向量机（SVM）、核回归及仅含单隐层的多层感知器（MLP）等。</p>
-<p>同年，G. E. Hinton 又提出了深度信念网络(Deep BeliefNetwork, DBN) 。深度信念网络基于受限玻尔兹曼机构建。</p>
-<p>限制玻尔兹曼机（RBM）是一种玻尔兹曼机的变体，但限定模型必须为二分图。模型中包含对应输入参数的输入（可见）单元和对应训练结果的隐单元，图中的每条边必须连接一个可见单元和一个隐单元。与此相对，“无限制”玻尔兹曼机(BM)包含隐单元间的边，使之成为递归神经网络。BM 由Geoffrey Hinton 和 Terry Sejnowski 在1985年发明，1986年Paul Smolensky 命名了RBM，但直到Geoffrey Hinton及其合作者在2006年左右发明快速学习算法后，受限玻兹曼机才变得知名。</p>
-<p>自动编码器早在1986年就被Rumelhart等人提出（也有资料说第一个自动感应器是福岛神经认知机），2006年之后，G. E. Hinton 等人又对自动编码器进行改造，出现了深度自编码器，稀疏自编码器等。2008年，Pascal Vincent和 Yoshua Bengio 等人在《Extracting and composing robust features with denoising autoencoders》中提出了去噪自编码器，2010年又提出来层叠去噪自编码器。2011年，Richard Socher等人也提出了递归自编码器 (RAE)。</p>
-<p>目前，卷积神经网络作为深度学习的一种，已经成为当前图像理解领域研究的热点。早在1989年，Yann Le Cun在贝尔实验室就开始使用卷积神经网络识别手写数字；1998年，Yann Le Cun提出了用于字符识别的卷积神经网络LeNet5，并在小规模手写数字识别中取得了较好的结果。基于这些工作，Yann Le Cun也被称为卷积网络之父。2012年，Alex Krizhevsky等使用采用卷积神经网络的AlexNet在ImageNet竞赛图像分类任务中取得了最好成绩，是卷积神经网络在图像分类中的巨大成功。随后Alex Krizhevsky.，Ilya Sutskever.和 Geoffrey Hinton.发表了文章《ImageNet Classification with Deep Convolutional Neural Networks》 。</p>
-<p>2013年，Graves 证明，结合了长短时记忆(long short terms memory, LSTM) 的递归神经网络(recurrent neural network, RNN)比传统的递归神经网络在语音处理方面更有效。2014年至今， 深度学习在很多领域都取得了突破性进展，发展出了包括注意力(attention)，RNN–CNN， 以及深度残差网络等多种模型。</p>
-<p>最后，给出一个神经网络发展历史的回顾总结：</p>
-<img src="https://s2.loli.net/2022/02/08/L6tYnipbTzFkrER.png" alt="神经网络发展回顾" style="zoom:80%; display:block;margin:auto;" />
-
- 
-
-<p>人工神经网络基本上由以下组件组成：</p>
-<ul>
-<li><strong>输入层：</strong>接收并传递数据</li>
-<li><strong>隐藏层</strong>（隐含层）</li>
-<li><strong>输出层</strong></li>
-<li>各层之间的<strong>权重</strong></li>
-<li>每个隐藏层都有一个<strong>激活函数</strong>。</li>
-</ul>
-<p>我们搭建一个包含隐含层的神经网络来解决”异或“问题，所谓”异或“，就是输入两个值不同，输出为1，输入两个值相同，输出为0.</p>
-<h2 id="excel版本实现"><a href="#excel版本实现" class="headerlink" title="excel版本实现"></a>excel版本实现</h2><img src="https://s2.loli.net/2022/02/08/Xao9YhnxBeQmWwT.png" alt="实现异或的网络结构" style="zoom:67%;display:block;margin:auto;" />
-
-<p>如上图所示的神经元（即实心圆）中，其激活函数是阶跃函数（<code>sgn</code>函数，x&gt;=0时f(x)=1,else f(x) = 0 )，假设各个神经元的阈值θ均为0.5</p>
-<p>当x1和x2相同（假设均为1时），对于隐含层的神经元1来说，输出可以表述为</p>
-<p><code>f1 = sgn(x1*w1 + x2*w3 - θ) = sgn(1*1 + 1*(-1) - 0.5 ) = sgn(-0.5) = 0</code></p>
-<p>激活函数的作用体现在Excel单元格<code>E2</code>中输入的公式上</p>
-<figure class="highlight excel"><table><tr><td class="code"><pre><code class="hljs excel">=<span class="hljs-built_in">IF</span>(<span class="hljs-symbol">C2</span>*<span class="hljs-symbol">D2</span>+<span class="hljs-symbol">C4</span>*<span class="hljs-symbol">D4</span>-<span class="hljs-symbol">D6</span>&gt;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>)<br></code></pre></td></tr></table></figure>
-
-<p> 类似地，对于隐含层的神经元2有</p>
-<p><code>f2 = sgn(x1*w2 + x2*w4 - θ) = sgn(1*1 + 1*(-1) - 0.5 ) = sgn(-0.5) = 0</code></p>
-<p>激活函数的作用体现在Excel单元格<code>E4</code>中输入的公式上</p>
-<figure class="highlight excel"><table><tr><td class="code"><pre><code class="hljs excel">=<span class="hljs-built_in">IF</span>(<span class="hljs-symbol">C2</span>*<span class="hljs-symbol">D3</span>+<span class="hljs-symbol">C4</span>*<span class="hljs-symbol">D5</span>-<span class="hljs-symbol">D6</span>&gt;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>)<br></code></pre></td></tr></table></figure>
-
-<p>接着对于输出层的输出神经元y而言，隐含层的f1和f2都是它的输入，于是有：</p>
-<p><code>y =  f3 = sgn(f1*w5 + f2*w6 - θ) = sgn(0*1 + 0*1 - 0.5) = sgn(-0.5) = 0</code></p>
-<p>对应体现在Excel单元格<code>H3</code>中输入的公式上</p>
-<figure class="highlight excel"><table><tr><td class="code"><pre><code class="hljs excel">=<span class="hljs-built_in">IF</span>(<span class="hljs-symbol">E2</span>*<span class="hljs-symbol">F2</span>+<span class="hljs-symbol">E4</span>*<span class="hljs-symbol">F4</span>-<span class="hljs-symbol">G6</span>&gt;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>)<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2022/02/08/gzJkQe62ROB1DtH.png" alt="image-20220208134520558"></p>
-<p>如图我们可以看到其结果为0，满足<strong>异或</strong>的功能，神经网络搭建完成，剩下的就是更改输入即可，无需更改任何公式，一切都是自动更新计算的，读者可以自行尝试，我们可以感性认识到，网络层次越深，神经网络的表征能力越强。</p>
-<p>或许你会疑惑，神经网络的权值和阈值时怎么知道的，在这个案例中我们直接给了出来，而实际上，他们是需要神经网络自己反复“试错”<br>学习而来的，而且能完成“异或”功能的网络权重也不唯一。</p>
-<h2 id="python版本实现"><a href="#python版本实现" class="headerlink" title="python版本实现"></a>python版本实现</h2><p>MLPClassifier是一个监督学习算法，下图是只有1个隐藏层的MLP模型 ，左侧是输入层，右侧是输出层。</p>
-<img src="https://s2.loli.net/2022/02/08/uFc1A3Wm7j92SVO.png" alt="MLP模型" style="zoom: 50%; display:block; margin:auto;" />
-
-<p>上图的整体结构可以简单的理解为下图所示：</p>
-<img src="https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png" alt="image-20220208153609189" style="zoom:67%; display:block;margin:auto;" />
-
-<p>MLP又名多层感知机，也叫人工神经网络（ANN，Artificial Neural Network），除了输入输出层，它中间可以有多个隐藏层，如果没有隐藏层即可解决线性可划分的数据问题。最简单的MLP模型只包含一个隐藏层，即三层的结构，如上图。</p>
-<p>从上图可以看到，多层感知机的层与层之间是全连接的（全连接的意思就是：上一层的任何一个神经元与下一层的所有神经元都有连接）。多层感知机最底层是输入层，中间是隐藏层，最后是输出层。</p>
-<p>输入层没什么好说，你输入什么就是什么，比如输入是一个n维向量，就有n个神经元。</p>
-<p>隐藏层的神经元怎么得来？首先它与输入层是全连接的，假设输入层用向量X表示，则隐藏层的输出就是</p>
-<p>f(W1X+b1)，W1是权重（也叫连接系数），b1是偏置，函数f 可以是常用的激活函数如 sigmoid函数或者tanh函数</p>
-<p>最后就是输出层，输出层与隐藏层是什么关系？其实隐藏层到输出层可以看成是一个多类别的逻辑回归，也即softmax回归，所以输出层的输出就是softmax(W2X1+b2)，X1表示隐藏层的输出f(W1X+b1)。</p>
-<p>因此，MLP所有的参数就是各个层之间的连接权重以及偏置，包括W1、b1、W2、b2。对于一个具体的问题，怎么确定这些参数？求解最佳的参数是一个最优化问题，解决最优化问题，最简单的就是梯度下降法了（sgd）：首先随机初始化所有参数，然后迭代地训练，不断地计算梯度和更新参数，直到满足某个条件为止（比如误差足够小、迭代次数足够多时）。这个过程涉及到代价函数、规则化（Regularization）、学习速率（learning rate）、梯度计算等。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/env python3</span><br><span class="hljs-comment"># -*- coding: utf-8 -*-</span><br><br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-comment"># （1）导入模型</span><br><span class="hljs-keyword">from</span> sklearn.neural_network <span class="hljs-keyword">import</span> MLPClassifier<br><br><span class="hljs-comment"># （2）方案1：创建多层感知机分类器:注意，此时激活函数使用relu或tanh和solver（默认的adam）匹配</span><br><span class="hljs-comment"># model = MLPClassifier(hidden_layer_sizes=(4,2,), activation=&#x27;tanh&#x27;,</span><br><span class="hljs-comment">#                     max_iter = 10000)</span><br><br><span class="hljs-comment"># 方案2：不同的激活函数，使用不同的solver，需要不断尝试</span><br><span class="hljs-comment"># default = &#x27;adam&#x27; and works well for large data sets.</span><br><br>model = MLPClassifier(activation=<span class="hljs-string">&#x27;logistic&#x27;</span>, max_iter=<span class="hljs-number">1000</span>,<br>                      hidden_layer_sizes=(<span class="hljs-number">3</span>,),<br>                      solver=<span class="hljs-string">&#x27;lbfgs&#x27;</span>)<br><br><span class="hljs-comment"># （3）构造所需训练数据</span><br>X = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>],<br>              [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>],<br>              [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>],<br>              [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]])<br>y = np.array([<span class="hljs-number">0</span>,<br>              <span class="hljs-number">0</span>,<br>              <span class="hljs-number">1</span>,<br>              <span class="hljs-number">1</span>])<br><br><span class="hljs-comment"># （4）训练模型</span><br>model.fit(X, y)<br><br><span class="hljs-comment"># （5）模型预测</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;1 xor 1 = %d&#x27;</span> % model.predict([[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;0 xor 0 = %d&#x27;</span> % model.predict([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>]]))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;1 xor 0 = %d&#x27;</span> % model.predict([[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>]]))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;0 xor 1 = %d&#x27;</span> % model.predict([[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]]))<br></code></pre></td></tr></table></figure>
-
-<p>输出结果：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-number">1</span> xor <span class="hljs-number">1</span> = <span class="hljs-number">0</span><br><span class="hljs-number">0</span> xor <span class="hljs-number">0</span> = <span class="hljs-number">0</span><br><span class="hljs-number">1</span> xor <span class="hljs-number">0</span> = <span class="hljs-number">1</span><br><span class="hljs-number">0</span> xor <span class="hljs-number">1</span> = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-
-<p><code>MLPClassifier</code>参数说明：</p>
-<p>activation:激活函数</p>
-<p>max_iter：int 最大迭代次数默认200</p>
-<p>例如hidden_layer_sizes=(50, 50)，表示有两层隐藏层，第一层隐藏层有50个神经元，第二层也有50个神经元。</p>
-<p>solver用来优化权重    lbfgs：quasi-Newton方法的优化器</p>
-<h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><p>编程实现：通过如下数据集，预测输入[1, 1, 0]的输出</p>
-<table>
-<thead>
-<tr>
-<th align="center">样本编号</th>
-<th align="center">输入</th>
-<th align="center">输出</th>
-<th align="center">样本编号</th>
-<th align="center">输入</th>
-<th align="center">输出</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">样本1</td>
-<td align="center">0 0 1</td>
-<td align="center">0</td>
-<td align="center">样本5</td>
-<td align="center">1 0 0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">样本2</td>
-<td align="center">0 1 1</td>
-<td align="center">1</td>
-<td align="center">样本6</td>
-<td align="center">1 1 1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">样本3</td>
-<td align="center">1 0 1</td>
-<td align="center">1</td>
-<td align="center">样本7</td>
-<td align="center">0 0 0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">样本4</td>
-<td align="center">0 1 0</td>
-<td align="center">1</td>
-<td align="center">新样本</td>
-<td align="center">1 1 0</td>
-<td align="center">？</td>
-</tr>
-</tbody></table>
-<p>代码实现：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span><br><br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><br><span class="hljs-comment">#（1）导入模型</span><br><span class="hljs-keyword">from</span> sklearn.neural_network <span class="hljs-keyword">import</span> MLPClassifier<br><br><span class="hljs-comment">#（2）方案1：创建多层感知机分类器:注意，此时激活函数使用relu或tanh和solver（默认的adam）匹配</span><br>model = MLPClassifier(hidden_layer_sizes=(<span class="hljs-number">4</span>,<span class="hljs-number">4</span>), activation=<span class="hljs-string">&#x27;relu&#x27;</span>, <br>                    max_iter = <span class="hljs-number">10000</span>)<br><br><span class="hljs-comment">#方案2：不同的激活函数，使用不同的solver，需要不断尝试</span><br><span class="hljs-comment"># default = &#x27;adam&#x27; and works well for large data sets.  </span><br><span class="hljs-comment"># model = MLPClassifier(activation=&#x27;logistic&#x27;, max_iter=10000, </span><br><span class="hljs-comment">#               hidden_layer_sizes=(4,),</span><br><span class="hljs-comment">#               solver=&#x27;lbfgs&#x27;)</span><br><br><span class="hljs-comment">#（3）构造所需训练数据</span><br>X = np.array([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>], <br>              [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], <br>              [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>], <br>              [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], <br>              [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>], <br>              [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], <br>              [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]])<br>y = np.array([ <span class="hljs-number">0</span>, <br>              <span class="hljs-number">1</span>, <br>              <span class="hljs-number">1</span>, <br>              <span class="hljs-number">1</span>, <br>              <span class="hljs-number">1</span>, <br>              <span class="hljs-number">0</span>, <br>              <span class="hljs-number">0</span>])<br><span class="hljs-comment">#（4）训练模型</span><br>model.fit(X, y)<br><br><span class="hljs-comment">#（4）模型预测</span><br><span class="hljs-built_in">print</span> (<span class="hljs-string">&#x27;[1，1，0] = %d&#x27;</span> % model.predict([[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>]]))<br><br><span class="hljs-comment">#(5)输出结果</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">[1，1，0] = 0</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jianshu.com/p/8aacc7f201f2">神经网络简史 - 简书 (jianshu.com)</a></p>
-<p><a href="https://www.jiqizhixin.com/articles/2018-12-13-3">手把手教你用Python创建简单的神经网络（附代码） | 机器之心 (jiqizhixin.com)</a></p>
-<p>人工智能极简入门-张玉宏著<a href="https://www.zhihu.com/people/yulaiyuhong">(12 封私信 / 80 条消息) 玉来愈宏 - 知乎 (zhihu.com)</a></p>
-<p><a href="https://www.jianshu.com/p/71fde5d90136">sklearn 神经网络 MLPClassifier简单应用与参数说明 - 简书 (jianshu.com)</a></p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>神经网络</tag>
-        <tag>人工智能</tag>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub够用教程</title>
-    <url>/2022/01/22/%E7%AC%94%E8%AE%B0/GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="Github够用教程"><a href="#Github够用教程" class="headerlink" title="Github够用教程"></a>Github够用教程</h1><h2 id="git和Github是什么"><a href="#git和Github是什么" class="headerlink" title="git和Github是什么"></a>git和Github是什么</h2><p>git是一个运行在你电脑上的版本控制软件，Github是基于git打造的网站</p>
-<p>git的三个概念：commit 提交/ repository 仓库/ branch 分支</p>
-<span id="more"></span>
-
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
-<li>git  <a href="https://gitforwindows.org/">https://gitforwindows.org/</a></li>
-<li>vscode  <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
-</ul>
-<h2 id="看别人的项目"><a href="#看别人的项目" class="headerlink" title="看别人的项目"></a>看别人的项目</h2><p>GoGoCode 项目地址：<a href="https://github.com/thx/gogocode">https://github.com/thx/gogocode</a></p>
-<p>git clone <a href="https://github.com/thx/gogocode.git">https://github.com/thx/gogocode.git</a></p>
-<h3 id="关注几个地方"><a href="#关注几个地方" class="headerlink" title="关注几个地方"></a>关注几个地方</h3><p>Star</p>
-<p>README.md</p>
-<p>issue</p>
-<p>LICENSE</p>
-<h2 id="提升github速度的方法"><a href="#提升github速度的方法" class="headerlink" title="提升github速度的方法"></a>提升github速度的方法</h2><h3 id="1-利用镜像提高clone速度"><a href="#1-利用镜像提高clone速度" class="headerlink" title="1. 利用镜像提高clone速度"></a>1. 利用镜像提高clone速度</h3><p>在github.com后面添加 <strong>.cnpmjs.org</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com.cnpmjs.org/thx/gogocode.git<br></code></pre></td></tr></table></figure>
-
-<h3 id="2-使用码云作为中转站"><a href="#2-使用码云作为中转站" class="headerlink" title="2. 使用码云作为中转站"></a>2. 使用码云作为中转站</h3><h3 id="3-比较适合单一的文件"><a href="#3-比较适合单一的文件" class="headerlink" title="3. 比较适合单一的文件"></a>3. 比较适合单一的文件</h3><p>如单独下载readme文件，若下载地址为：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">https://github.com/thx/gogocode/blob/main/README.md<br></code></pre></td></tr></table></figure>
-
-<p>将<code>github.com</code>改成<code>cdn.jsdelivr.net/gh</code> 并将<code>/blob/</code>改成<code>@</code>得到：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">https://cdn.jsdelivr.net/gh/thx/gogocode@main/README.md<br></code></pre></td></tr></table></figure>
-
-<p>就可以直接打开，ctrl+s保存</p>
-<h2 id="找开源项目的一些途径"><a href="#找开源项目的一些途径" class="headerlink" title="找开源项目的一些途径"></a>找开源项目的一些途径</h2><p>• <a href="https://github.com/trending/">https://github.com/trending/</a></p>
-<p>  在这里你可以看到各种不同开发语言的每天/周/月的最热门的 Repositories 和 Developers</p>
-<p>• https:///github.com/521xueweihan/HelloGitHub</p>
-<p>  有趣、入门级的开源项目、开源书籍、实战项目、企业级项目等</p>
-<p>• <a href="https://github.com/ruanyf/weekly">https://github.com/ruanyf/weekly</a></p>
-<p>  记录每周值得分享的科技内容，周五发布</p>
-<p>• <a href="https://www.zhihu.com/column/mm-fe">https://www.zhihu.com/column/mm-fe</a></p>
-<p>  阿里妈妈前端快爆前端新鲜事</p>
-<h2 id="特殊的查找资源小技巧-常用前缀后缀"><a href="#特殊的查找资源小技巧-常用前缀后缀" class="headerlink" title="特殊的查找资源小技巧-常用前缀后缀"></a>特殊的查找资源小技巧-常用前缀后缀</h2><p>• 找百科大全 awesome xxx<br>• 找例子 xxx sample<br>• 找空项目架子 xxx starter / xxx boilerplate<br>• 找教程 xxx tutorial</p>
-<p><img src="https://s2.loli.net/2022/01/22/AcknhXTLDj76alK.png" alt="image-20220122172410705"></p>
-]]></content>
-      <categories>
-        <category>github</category>
-      </categories>
-      <tags>
-        <tag>github</tag>
-        <tag>技术分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PyCharm使用秘籍</title>
-    <url>/2022/01/25/%E7%AC%94%E8%AE%B0/PyCharm%E4%BD%BF%E7%94%A8%E7%A7%98%E7%B1%8D/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="在Pycharm下为你的Python项目配置Python解释器"><a href="#在Pycharm下为你的Python项目配置Python解释器" class="headerlink" title="在Pycharm下为你的Python项目配置Python解释器"></a>在Pycharm下为你的Python项目配置Python解释器</h2><ol>
-<li>File&gt;Settings&gt;Project:当前项目名&gt;Project Interpreter&gt;add Local</li>
-</ol>
-<h2 id="在Pycharm下创建Python文件、Python模块"><a href="#在Pycharm下创建Python文件、Python模块" class="headerlink" title="在Pycharm下创建Python文件、Python模块"></a>在Pycharm下创建Python文件、Python模块</h2><ol>
-<li>File&gt;New&gt;Python File</li>
-<li>File&gt;New&gt;Python Package</li>
-</ol>
-<h2 id="使用Pycharm安装Python第三方模块"><a href="#使用Pycharm安装Python第三方模块" class="headerlink" title="使用Pycharm安装Python第三方模块"></a>使用Pycharm安装Python第三方模块</h2><ol>
-<li>File&gt;Settings&gt;Project:当前项目名&gt;Project Interpreter&gt;点击右侧绿色小加号</li>
-</ol>
-<h2 id="Pycharm基本设置，例如不使用tab、tab-4空格、字体、字体颜色、主题、脚本头设置、显示行号等。如何导出和导入自定义设置。"><a href="#Pycharm基本设置，例如不使用tab、tab-4空格、字体、字体颜色、主题、脚本头设置、显示行号等。如何导出和导入自定义设置。" class="headerlink" title="Pycharm基本设置，例如不使用tab、tab=4空格、字体、字体颜色、主题、脚本头设置、显示行号等。如何导出和导入自定义设置。"></a>Pycharm基本设置，例如不使用tab、tab=4空格、字体、字体颜色、主题、脚本头设置、显示行号等。如何导出和导入自定义设置。</h2><ol>
-<li>不使用tab、tab=4空格：Editor&gt;Code Style&gt;Python</li>
-<li>字体、字体颜色：Edit&gt;Colors &amp; Fonts&gt;Python</li>
-<li>关闭自动更新：Appearance &amp; Behavior&gt;System Settings&gt;Updates</li>
-<li>脚本头设置：Edit&gt;File and Code Templates&gt;Python Script 注：其他类似</li>
-<li>显示行号：Edit&gt;General&gt;Appearance&gt;Show line numbers 注：2016.2默认显示行号</li>
-<li>右侧竖线是PEP8的代码规范，提示一行不要超过120个字符</li>
-<li>导出、导入你自定义的配置： File&gt;Export Settings、Import Settings</li>
-</ol>
-<h2 id="常用快捷键，例如复制当前行、删除当前行、批量注释、缩进、查找和替换。"><a href="#常用快捷键，例如复制当前行、删除当前行、批量注释、缩进、查找和替换。" class="headerlink" title="常用快捷键，例如复制当前行、删除当前行、批量注释、缩进、查找和替换。"></a>常用快捷键，例如复制当前行、删除当前行、批量注释、缩进、查找和替换。</h2><ol>
-<li>Ctrl + D：复制当前行</li>
-<li>Ctrl + E：删除当前行</li>
-<li>Shift + Enter：快速换行</li>
-<li>Ctrl + /：快速注释（选中多行后可以批量注释）</li>
-<li>Tab：缩进当前行（选中多行后可以批量缩进）</li>
-<li>Shift + Tab：取消缩进（选中多行后可以批量取消缩进）</li>
-<li>Ctrl + F：查找</li>
-<li>Ctrl + H：替换</li>
-</ol>
-<h2 id="Pycharm安装插件，例如Markdown-support、数据库支持插件等。"><a href="#Pycharm安装插件，例如Markdown-support、数据库支持插件等。" class="headerlink" title="Pycharm安装插件，例如Markdown support、数据库支持插件等。"></a>Pycharm安装插件，例如Markdown support、数据库支持插件等。</h2><ol>
-<li>Plugins&gt;Browse repositories（下方三个按钮中间那个）&gt;搜索‘markdown support’&gt;install</li>
-<li>右上角View有三个选项可选，一般我们都用中间那个左侧编写，右侧实时预览</li>
-</ol>
-<h2 id="Git配置？"><a href="#Git配置？" class="headerlink" title="Git配置？"></a>Git配置？</h2><ol>
-<li>需要本地安装好Git</li>
-<li>Version Control&gt;Git</li>
-<li>配置了Git等版本控制系统之后，可以很方便的diff查看文件的不用</li>
-</ol>
-<h2 id="常用操作指南。例如复制文件路径、在文件管理器中打开、快速定位、查看模块结构视图、tab批量换space、TODO的使用、Debug的使用。"><a href="#常用操作指南。例如复制文件路径、在文件管理器中打开、快速定位、查看模块结构视图、tab批量换space、TODO的使用、Debug的使用。" class="headerlink" title="常用操作指南。例如复制文件路径、在文件管理器中打开、快速定位、查看模块结构视图、tab批量换space、TODO的使用、Debug的使用。"></a>常用操作指南。例如复制文件路径、在文件管理器中打开、快速定位、查看模块结构视图、tab批量换space、TODO的使用、Debug的使用。</h2><ol>
-<li>复制文件路径：左侧文件列表右键选中的文件&gt;Copy Path</li>
-<li>在文件管理器中打开：右键选中的文件&gt;往下找到Show In Explorer</li>
-<li>快速定位：Ctrl + 某些内建模块之后，点击在源文件中展开</li>
-<li>查看结构：IDE左侧边栏Structure 查看当前项目的结构</li>
-<li>tab批量换space：Edit&gt;Convert Indents</li>
-<li>TODO的使用：# TODO 要记录的事情</li>
-<li>Debug设置断点，直接点击行号与代码之间的空白处即可设置断点</li>
-<li>Tab页上右键&gt;Move Right（Down），把当前Tab页移到窗口右边（下边），方便对比</li>
-<li>文件中右键&gt;Local History能够查看文件修改前后的对比</li>
-<li>IDE右下角能看到一些有用的信息，光标当前在第几行的第几个字符、当前回车换行、当前编码类型、当前Git分支</li>
-<li>IDE右侧边栏&gt;Database</li>
-</ol>
-<h2 id="如何去掉烦人的波浪线？PEP8又是什么？"><a href="#如何去掉烦人的波浪线？PEP8又是什么？" class="headerlink" title="如何去掉烦人的波浪线？PEP8又是什么？"></a>如何去掉烦人的波浪线？PEP8又是什么？</h2><ol>
-<li>单独一行的注释：#+1空格+注释内容</li>
-<li>代码后跟着的注释：2空格+#+1空格+注释内容</li>
-<li>牢记快捷键 <code>ctrl+alt+L</code></li>
-</ol>
-<h2 id="SSH-Terminal：-Default-encoding-UTF-8"><a href="#SSH-Terminal：-Default-encoding-UTF-8" class="headerlink" title="SSH Terminal： Default encoding:UTF-8"></a>SSH Terminal： Default encoding:UTF-8</h2><ol>
-<li>Settings&gt;Tools&gt;SSH Terminal&gt;最后一行Default encoding:选择UTF-8</li>
-</ol>
-<h2 id="善用搜索！善用搜索！善用搜索！"><a href="#善用搜索！善用搜索！善用搜索！" class="headerlink" title="善用搜索！善用搜索！善用搜索！"></a>善用搜索！善用搜索！善用搜索！</h2><ol>
-<li>遇到不懂问题，先自己搜索。这样才记得更牢！</li>
-<li>推荐使用sogou英文搜索<a href="http://english.sogou.com/">http://english.sogou.com/</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>pycharm</category>
-      </categories>
-      <tags>
-        <tag>pycharm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/01/19/%E7%AC%94%E8%AE%B0/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<span id="more"></span>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Cypher语句从入门到上天</title>
     <url>/2022/02/02/Cypher%E8%AF%AD%E5%8F%A5%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E4%B8%8A%E5%A4%A9/</url>
     <content><![CDATA[<h1 id="cypher语句大全"><a href="#cypher语句大全" class="headerlink" title="cypher语句大全"></a>cypher语句大全</h1><h2 id="下载和安装"><a href="#下载和安装" class="headerlink" title="下载和安装"></a><strong>下载和安装</strong></h2><p><a href="https://www.w3cschool.cn/neo4j/">neo4j 教程_w3cschool</a></p>
@@ -803,6 +469,400 @@
       </tags>
   </entry>
   <entry>
+    <title>img margin 0 auto; 图片水平居中布局无效</title>
+    <url>/2022/02/08/img%20margin%200%20auto%20%E5%9B%BE%E7%89%87%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E6%97%A0%E6%95%88/</url>
+    <content><![CDATA[<h1 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h1><p>在<code>typora</code>中插入图片使用<code>style=&quot;zoom:67%;&quot;</code>缩放属性，在<code>typora</code>中仍是居中显示的，但是发布博客之后就没有了居中效果，于是添加样式<code>margin:0 auto; </code>发现仍然无法居中</p>
+<p><code>&lt;img src=&quot;https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png&quot; alt=&quot;image-20220208153609189&quot; style=&quot;zoom:67%; margin:auto;&quot; /&gt;</code></p>
+<h1 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h1><p><code>img</code>是一种可替换元素，虽然它可以设置宽高，但其本质上还是一个行内元素，所以在使用<code>margin：0 auto</code>的方式设置其水平居中时、必须先将<code>img</code>设置<code>display:block;</code>再设置<code>margin：0 auto</code>才会生效；于是改成下面的写法</p>
+<p><code>&lt;img src=&quot;https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png&quot; alt=&quot;image-20220208153609189&quot; style=&quot;zoom:67%; display:block; margin:auto;&quot; /&gt;</code></p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://blog.csdn.net/weixin_45944877/article/details/119581116">(55条消息) 图片的垂直水平居中；vertical-align：middle；margin:0 auto和text-align:center失效的问题_CoderLittleWhite的博客-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>html</tag>
+        <tag>前端</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>手把手搭建一个简易神经网络</title>
+    <url>/2022/02/08/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<h1 id="搭建一个简易神经网络"><a href="#搭建一个简易神经网络" class="headerlink" title="搭建一个简易神经网络"></a>搭建一个简易神经网络</h1><p>了解神经网络工作方式的最佳途径莫过于亲自创建一个神经网络，本文将利用感知机解决<strong>异或</strong>问题。</p>
+<p>神经网络(NN)又称人工神经网络(ANN)，是机器学习领域中基于生物神经网络概念的学习算法的一个子集。</p>
+<p>拥有五年以上经验的德国机器学习专家Andrey Bulezyuk声称：<strong>“神经网络正在彻底改变机器学习，因为它们能够在广泛的学科和行业中为抽象对象高效建模。”</strong></p>
+<span id="more"></span>
+
+<h2 id="神经网络的发展历史"><a href="#神经网络的发展历史" class="headerlink" title="神经网络的发展历史"></a>神经网络的发展历史</h2><p>追根溯源，神经网络诞生于人类对于人脑和智能的追问。而这个追问经历了旷远蒙昧的精神至上学说，直到 19 世纪 20 年代。</p>
+<p>奥地利医生 Franz Joseph Gall （ 1758-1828 ） 推测人类的精神活动是由脑的功能活动而实现的，这才使人们认识到意识和精神活动具有物质基础，从而使人们对精神活动的认识从唯心主义的错误观点转到了唯物主义的正确轨道上来。</p>
+<p>意大利细胞学家 Camillo Golgi （ 1843~1926 ）徒手将脑组织切成薄片，用重铬酸钾 - 硝酸银浸染法染色，第一次在显微镜下观察到了神经细胞和神经胶质细胞。这为神经科学的研究提供了最为基本的组织学方法。</p>
+<p>西班牙神经组织学家 Santiago Ramón y Cajal （ 1852~1934 ）在掌握了 Golgi 染色法后，又进一步改良了 Golgi 染色法，并发明了独创的银染法——还原硝酸银染色法， 此法可显示神经纤维的微细结构 。他发现神经细胞之间没有原生质的联系，因而提出神经细胞是整个神经活动最基本的单位（故称神经元），从而使复杂的神经系统有了进一步研究的切入口。他对于大脑的微观结构研究是开创性的，被许多人认为是现代神经科学之父。他绘图技能出众，他的关于脑细胞的几百个插图至今用于教学。</p>
+<p>为此，Santiago Ramón y Cajal 和 Camillo Golgi 两人共享了 1906 年诺贝尔生理学或医学奖。</p>
+<p>此后， Cajal 经过大量精细的实验，创立了 “ 神经元学说 ” ，该学说的创立为神经科学的进一步发展开创了新纪元。</p>
+<p>对智能机器的探索和计算机的历史一样古老。尽管中文里“电脑”一开始就拥有了“脑”的头衔，但事实上与真正的智能相去甚远。艾伦图灵在他的文章《COMPUTING MACHINERY AND INTELLIGENCE》中提出了几个标准来评估一台机器是否可以被认为是智能的，从而被称为“图灵测试”。</p>
+<p>神经元及其连接里也许藏着智能的隐喻，沿着这条路线前进的人被称为<strong>连接主义</strong>。</p>
+<p>1943年，Warren McCulloch 和 Walter Pitts 发表题为《A Logical Calculus of the Ideas Immanent in Nervous Activity》的论文，首次提出神经元的M-P模型。该模型借鉴了已知的神经细胞生物过程原理，是第一个神经元数学模型，是人类历史上第一次对大脑工作原理描述的尝试。</p>
+<p><img src="https://s2.loli.net/2022/02/08/6D7UCLBGSAWj8mo.png" alt="M-P模型"></p>
+<p>M-P模型的工作原理是神经元的<strong>输入信号加权求和</strong>，与<strong>阈值</strong>比较再决定神经元是否输出。这是从原理上证明了人工神经网络可以计算任何算术和逻辑函数。</p>
+<p>20世纪40年代末，Donald Olding Hebb在《The Organization of Behavior》中对神经元之间连接强度的变化进行了分析，首次提出来一种调整权值的方法，称为Hebb学习规则。</p>
+<p>Hebb学习规则主要假定机体的行为可以由神经元的行为来解释。Hebb受启发于巴普罗夫的条件反射实验，认为如果两个神经元在同一时刻被激发，则它们之间的联系应该被强化。这就是Hebb提出的生物神经元的学习机制，在这种学习中，由对神经元的重复刺激，使得神经元之间的突触强度增加。</p>
+<p>Hebb学习规则隶属于无监督学习算法的范畴，其主要思想是根据两个神经元的激发状态来调整期连接关系，以此实现对简单神经活动的模拟。继Hebb学习规则之后，神经元的有监督Delta学习规则被提出，用于解决在输入输出已知的情况下神经元权值的学习问题。</p>
+<p>1958年，就职于Cornell航空实验室的Frank Rosenblatt发明了的一种称为<strong>感知器</strong>（Perceptron）的人工神经网络。它可以被视为一种最简单形式的前馈神经网络，是一种<strong>二元线性分类器（激活函数为sign(x)）</strong>。感知机是人工神经网络的第一个实际应用，标志着神经网络进入了新的发展阶段。</p>
+<p>这次成功的应用也引起了许多学者对神经网络的研究兴趣。1960年，斯坦福大学教授Bernard Widrow教授和他的研究生Ted Hoff开发了Adaline（Adaptive Linear Neuron 或  Adaptive Linear Element）和最小均方滤波器（LMS）。Adaline网络和感知机的区别就是将感知机的Step函数换为Linear线性函数。同一时期，Steinbuch等还提出了称为学习矩阵的二进制联想网络。</p>
+<p><img src="https://s2.loli.net/2022/02/08/yTUFi5l3WO6eQcS.png" alt="Adaline和Perceptron对比"></p>
+<p>周志华《机器学习》第5章神经网络解释了BP算法实质是LMS算法（Least Mean Square）算法的推广。LMS试图使网络的输出均方差最小化，可用于神经元激活函数可微的感知机学习；将LMS推广到由非线性可微神经元组成的多层前馈神经网络，就得到BP算法，因此BP算法也被称为广义δ规则。</p>
+<p>1969年，Marvin Minsky 和 Seymour Papert 发表《Perceptrons: an introduction to computational geometry》一书，从数学的角度<strong>证明了单层神经网络具有有限的功能，甚至在面对简单的“异或”逻辑问题时也显得无能为力。此后，神经网络的研究陷入了很长一段时间的低迷期。</strong></p>
+<p>1972年，芬兰的KohonenT.教授，提出了自组织神经网络SOM(Self-Organizing feature map)。</p>
+<p>1974 年，Paul Werbos在哈佛大学攻读博士学位期间，就在其博士论文中发明了影响深远的著名<strong>BP神经网络学习算法</strong>。但没有引起重视。</p>
+<p>1976年，美国Grossberg教授提出了著名的自适应共振理论ART(Adaptive Resonance Theory)，其学习过程具有自组织和自稳定的特征。</p>
+<p>1982年，David Parker<strong>重新发现了BP神经网络学习算法</strong>。</p>
+<p>1982年，John Hopfield提出了连续和离散的Hopfield神经网络模型，并采用全互联型神经网络尝试对非多项式复杂度的旅行商问题进行了求解，促进神经网络的研究再次进入了蓬勃发展的时期。</p>
+<p>1983年，Hinton, G. E. 和 Sejnowski, T. J.设计了玻尔兹曼机，<strong>首次提出了“隐单元”的概念。在全连接的反馈神经网络中，包含了可见层和一个隐层，这就是玻尔兹曼机。</strong></p>
+<p><strong>层数的增加可以为神经网络提供更大的灵活性，但参数的训练算法一直是制约多层神经网络发展的一个重要瓶颈。</strong></p>
+<p>一个沉睡十年的伟大算法即将被唤醒。</p>
+<p>1986年，David E. Rumelhart, Geoffrey E. Hinton 和 Ronald J. Williams发表文章《Learning representations by back-propagating errors》，重新报道这一方法，<strong>BP神经网络学习算法</strong>才受到重视。BP算法引入了可微分非线性神经元或者sigmod函数神经元，克服了早期神经元的弱点，为多层神经网络的学习训练与实现提供了一种切实可行的解决途径。</p>
+<p>1988年，继BP算法之后，David Broomhead 和 David Lowe 将径向基函数引入到神经网络的设计中，形成了径向基神经网络（RBF）。RBF网络是神经网络真正走向实用化的一个重要标志。</p>
+<p>1989年，一系列文章对BP神经网络的非线性函数逼近性能进行了分析，并证明对于具有单隐层，传递函数为sigmod的连续型前馈神经网络可以以任意精度逼近任意复杂的连续映射。这样，BP神经网络凭借能够保证对复杂函数连续映射关系的刻画能力（只要引入隐层神经元的个数足够多），打开了Marvin Minsky 和 Seymour Papert 早已关闭的研究大门。</p>
+<p>统计学习理论是一种专门研究小样本情况下机器学习规律的理论。Vapnik, V.N.等人从六、七十年代开始致力于此方面研究。到九十年代中期，随着其理论的不断发展和成熟，也由于神经网络等学习方法在理论上缺乏实质性进展，统计学习理论开始受到越来越广泛的重视。同时, 在这一理论基础上发展了一种新的通用学习方法——支持向量机( SVM )，它已初步表现出很多优于已有方法的性能。</p>
+<p>此后的近十年时间，神经网络由于其浅层结构，容易过拟合以及参数训练速度慢等原因，曾经火热的神经网络又慢慢的淡出了人们的视线。值得一提的是，1997年，Sepp Hochreiter和Jurgen Schmidhuber首先提出长短期记忆（LSTM）模型。</p>
+<p>直到2006年，计算机处理速度和存储能力大大提高，为深度学习的提出铺平了道路。G. E. Hinton 和他的学生 R. R. Salakhutdinov 在《科学》杂志上发表题为《Reducing the Dimensionality of Data with Neural Networks》的文章，掀起了深度学习在学术界和工业界的研究热潮。文章摘要阐述了两个重要观点：一是多隐层的神经网络可以学习到能刻画数据本质属性的特征，对数据可视化和分类等任务有很大帮助；二是可以借助于无监督的“逐层初始化”策略来有效克服深层神经网络在训练上存在的难度。</p>
+<p>这篇文章是一个分水岭，拉开了深度学习大幕，标志着深度学习的诞生。从此，历史这样写就：从感知机提出，到BP算法应用以及2006年以前的历史被称为浅层学习，以后的历史被称为深度学习。</p>
+<p>总结起来，典型的浅层学习模型包括：传统隐马尔可夫模型（HMM）、条件随机场（CRFs）、最大熵模型（MaxEnt）、boosting、支持向量机（SVM）、核回归及仅含单隐层的多层感知器（MLP）等。</p>
+<p>同年，G. E. Hinton 又提出了深度信念网络(Deep BeliefNetwork, DBN) 。深度信念网络基于受限玻尔兹曼机构建。</p>
+<p>限制玻尔兹曼机（RBM）是一种玻尔兹曼机的变体，但限定模型必须为二分图。模型中包含对应输入参数的输入（可见）单元和对应训练结果的隐单元，图中的每条边必须连接一个可见单元和一个隐单元。与此相对，“无限制”玻尔兹曼机(BM)包含隐单元间的边，使之成为递归神经网络。BM 由Geoffrey Hinton 和 Terry Sejnowski 在1985年发明，1986年Paul Smolensky 命名了RBM，但直到Geoffrey Hinton及其合作者在2006年左右发明快速学习算法后，受限玻兹曼机才变得知名。</p>
+<p>自动编码器早在1986年就被Rumelhart等人提出（也有资料说第一个自动感应器是福岛神经认知机），2006年之后，G. E. Hinton 等人又对自动编码器进行改造，出现了深度自编码器，稀疏自编码器等。2008年，Pascal Vincent和 Yoshua Bengio 等人在《Extracting and composing robust features with denoising autoencoders》中提出了去噪自编码器，2010年又提出来层叠去噪自编码器。2011年，Richard Socher等人也提出了递归自编码器 (RAE)。</p>
+<p>目前，卷积神经网络作为深度学习的一种，已经成为当前图像理解领域研究的热点。早在1989年，Yann Le Cun在贝尔实验室就开始使用卷积神经网络识别手写数字；1998年，Yann Le Cun提出了用于字符识别的卷积神经网络LeNet5，并在小规模手写数字识别中取得了较好的结果。基于这些工作，Yann Le Cun也被称为卷积网络之父。2012年，Alex Krizhevsky等使用采用卷积神经网络的AlexNet在ImageNet竞赛图像分类任务中取得了最好成绩，是卷积神经网络在图像分类中的巨大成功。随后Alex Krizhevsky.，Ilya Sutskever.和 Geoffrey Hinton.发表了文章《ImageNet Classification with Deep Convolutional Neural Networks》 。</p>
+<p>2013年，Graves 证明，结合了长短时记忆(long short terms memory, LSTM) 的递归神经网络(recurrent neural network, RNN)比传统的递归神经网络在语音处理方面更有效。2014年至今， 深度学习在很多领域都取得了突破性进展，发展出了包括注意力(attention)，RNN–CNN， 以及深度残差网络等多种模型。</p>
+<p>最后，给出一个神经网络发展历史的回顾总结：</p>
+<img src="https://s2.loli.net/2022/02/08/L6tYnipbTzFkrER.png" alt="神经网络发展回顾" style="zoom:80%; display:block;margin:auto;" />
+
+ 
+
+<p>人工神经网络基本上由以下组件组成：</p>
+<ul>
+<li><strong>输入层：</strong>接收并传递数据</li>
+<li><strong>隐藏层</strong>（隐含层）</li>
+<li><strong>输出层</strong></li>
+<li>各层之间的<strong>权重</strong></li>
+<li>每个隐藏层都有一个<strong>激活函数</strong>。</li>
+</ul>
+<p>我们搭建一个包含隐含层的神经网络来解决”异或“问题，所谓”异或“，就是输入两个值不同，输出为1，输入两个值相同，输出为0.</p>
+<h2 id="excel版本实现"><a href="#excel版本实现" class="headerlink" title="excel版本实现"></a>excel版本实现</h2><img src="https://s2.loli.net/2022/02/08/Xao9YhnxBeQmWwT.png" alt="实现异或的网络结构" style="zoom:67%;display:block;margin:auto;" />
+
+<p>如上图所示的神经元（即实心圆）中，其激活函数是阶跃函数（<code>sgn</code>函数，x&gt;=0时f(x)=1,else f(x) = 0 )，假设各个神经元的阈值θ均为0.5</p>
+<p>当x1和x2相同（假设均为1时），对于隐含层的神经元1来说，输出可以表述为</p>
+<p><code>f1 = sgn(x1*w1 + x2*w3 - θ) = sgn(1*1 + 1*(-1) - 0.5 ) = sgn(-0.5) = 0</code></p>
+<p>激活函数的作用体现在Excel单元格<code>E2</code>中输入的公式上</p>
+<figure class="highlight excel"><table><tr><td class="code"><pre><code class="hljs excel">=<span class="hljs-built_in">IF</span>(<span class="hljs-symbol">C2</span>*<span class="hljs-symbol">D2</span>+<span class="hljs-symbol">C4</span>*<span class="hljs-symbol">D4</span>-<span class="hljs-symbol">D6</span>&gt;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>)<br></code></pre></td></tr></table></figure>
+
+<p> 类似地，对于隐含层的神经元2有</p>
+<p><code>f2 = sgn(x1*w2 + x2*w4 - θ) = sgn(1*1 + 1*(-1) - 0.5 ) = sgn(-0.5) = 0</code></p>
+<p>激活函数的作用体现在Excel单元格<code>E4</code>中输入的公式上</p>
+<figure class="highlight excel"><table><tr><td class="code"><pre><code class="hljs excel">=<span class="hljs-built_in">IF</span>(<span class="hljs-symbol">C2</span>*<span class="hljs-symbol">D3</span>+<span class="hljs-symbol">C4</span>*<span class="hljs-symbol">D5</span>-<span class="hljs-symbol">D6</span>&gt;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>)<br></code></pre></td></tr></table></figure>
+
+<p>接着对于输出层的输出神经元y而言，隐含层的f1和f2都是它的输入，于是有：</p>
+<p><code>y =  f3 = sgn(f1*w5 + f2*w6 - θ) = sgn(0*1 + 0*1 - 0.5) = sgn(-0.5) = 0</code></p>
+<p>对应体现在Excel单元格<code>H3</code>中输入的公式上</p>
+<figure class="highlight excel"><table><tr><td class="code"><pre><code class="hljs excel">=<span class="hljs-built_in">IF</span>(<span class="hljs-symbol">E2</span>*<span class="hljs-symbol">F2</span>+<span class="hljs-symbol">E4</span>*<span class="hljs-symbol">F4</span>-<span class="hljs-symbol">G6</span>&gt;<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>)<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/02/08/gzJkQe62ROB1DtH.png" alt="image-20220208134520558"></p>
+<p>如图我们可以看到其结果为0，满足<strong>异或</strong>的功能，神经网络搭建完成，剩下的就是更改输入即可，无需更改任何公式，一切都是自动更新计算的，读者可以自行尝试，我们可以感性认识到，网络层次越深，神经网络的表征能力越强。</p>
+<p>或许你会疑惑，神经网络的权值和阈值时怎么知道的，在这个案例中我们直接给了出来，而实际上，他们是需要神经网络自己反复“试错”学习而来的，而且能完成“异或”功能的网络权重也不唯一。</p>
+<h2 id="python版本实现"><a href="#python版本实现" class="headerlink" title="python版本实现"></a>python版本实现</h2><p>MLPClassifier是一个监督学习算法，下图是只有1个隐藏层的MLP模型 ，左侧是输入层，右侧是输出层。</p>
+<img src="https://s2.loli.net/2022/02/08/uFc1A3Wm7j92SVO.png" alt="MLP模型" style="zoom: 50%; display:block; margin:auto;" />
+
+<p>上图的整体结构可以简单的理解为下图所示：</p>
+<img src="https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png" alt="image-20220208153609189" style="zoom:67%; display:block;margin:auto;" />
+
+<p>MLP又名多层感知机，也叫人工神经网络（ANN，Artificial Neural Network），除了输入输出层，它中间可以有多个隐藏层，如果没有隐藏层即可解决线性可划分的数据问题。最简单的MLP模型只包含一个隐藏层，即三层的结构，如上图。</p>
+<p>从上图可以看到，多层感知机的层与层之间是全连接的（全连接的意思就是：上一层的任何一个神经元与下一层的所有神经元都有连接）。多层感知机最底层是输入层，中间是隐藏层，最后是输出层。</p>
+<p>输入层没什么好说，你输入什么就是什么，比如输入是一个n维向量，就有n个神经元。</p>
+<p>隐藏层的神经元怎么得来？首先它与输入层是全连接的，假设输入层用向量X表示，则隐藏层的输出就是</p>
+<p>f(W1X+b1)，W1是权重（也叫连接系数），b1是偏置，函数f 可以是常用的激活函数如 sigmoid函数或者tanh函数</p>
+<p>最后就是输出层，输出层与隐藏层是什么关系？其实隐藏层到输出层可以看成是一个多类别的逻辑回归，也即softmax回归，所以输出层的输出就是softmax(W2X1+b2)，X1表示隐藏层的输出f(W1X+b1)。</p>
+<p>因此，MLP所有的参数就是各个层之间的连接权重以及偏置，包括W1、b1、W2、b2。对于一个具体的问题，怎么确定这些参数？求解最佳的参数是一个最优化问题，解决最优化问题，最简单的就是梯度下降法了（sgd）：首先随机初始化所有参数，然后迭代地训练，不断地计算梯度和更新参数，直到满足某个条件为止（比如误差足够小、迭代次数足够多时）。这个过程涉及到代价函数、规则化（Regularization）、学习速率（learning rate）、梯度计算等。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/env python3</span><br><span class="hljs-comment"># -*- coding: utf-8 -*-</span><br><br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-comment"># （1）导入模型</span><br><span class="hljs-keyword">from</span> sklearn.neural_network <span class="hljs-keyword">import</span> MLPClassifier<br><br><span class="hljs-comment"># （2）方案1：创建多层感知机分类器:注意，此时激活函数使用relu或tanh和solver（默认的adam）匹配</span><br><span class="hljs-comment"># model = MLPClassifier(hidden_layer_sizes=(4,2,), activation=&#x27;tanh&#x27;,</span><br><span class="hljs-comment">#                     max_iter = 10000)</span><br><br><span class="hljs-comment"># 方案2：不同的激活函数，使用不同的solver，需要不断尝试</span><br><span class="hljs-comment"># default = &#x27;adam&#x27; and works well for large data sets.</span><br><br>model = MLPClassifier(activation=<span class="hljs-string">&#x27;logistic&#x27;</span>, max_iter=<span class="hljs-number">1000</span>,<br>                      hidden_layer_sizes=(<span class="hljs-number">3</span>,),<br>                      solver=<span class="hljs-string">&#x27;lbfgs&#x27;</span>)<br><br><span class="hljs-comment"># （3）构造所需训练数据</span><br>X = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>],<br>              [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>],<br>              [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>],<br>              [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]])<br>y = np.array([<span class="hljs-number">0</span>,<br>              <span class="hljs-number">0</span>,<br>              <span class="hljs-number">1</span>,<br>              <span class="hljs-number">1</span>])<br><br><span class="hljs-comment"># （4）训练模型</span><br>model.fit(X, y)<br><br><span class="hljs-comment"># （5）模型预测</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;1 xor 1 = %d&#x27;</span> % model.predict([[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;0 xor 0 = %d&#x27;</span> % model.predict([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>]]))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;1 xor 0 = %d&#x27;</span> % model.predict([[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>]]))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;0 xor 1 = %d&#x27;</span> % model.predict([[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]]))<br></code></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-number">1</span> xor <span class="hljs-number">1</span> = <span class="hljs-number">0</span><br><span class="hljs-number">0</span> xor <span class="hljs-number">0</span> = <span class="hljs-number">0</span><br><span class="hljs-number">1</span> xor <span class="hljs-number">0</span> = <span class="hljs-number">1</span><br><span class="hljs-number">0</span> xor <span class="hljs-number">1</span> = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<p><code>MLPClassifier</code>参数说明：</p>
+<p>activation:激活函数</p>
+<p>max_iter：int 最大迭代次数默认200</p>
+<p>例如hidden_layer_sizes=(50, 50)，表示有两层隐藏层，第一层隐藏层有50个神经元，第二层也有50个神经元。</p>
+<p>solver用来优化权重    lbfgs：quasi-Newton方法的优化器</p>
+<h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><p>编程实现：通过如下数据集，预测输入[1, 1, 0]的输出</p>
+<table>
+<thead>
+<tr>
+<th align="center">样本编号</th>
+<th align="center">输入</th>
+<th align="center">输出</th>
+<th align="center">样本编号</th>
+<th align="center">输入</th>
+<th align="center">输出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">样本1</td>
+<td align="center">0 0 1</td>
+<td align="center">0</td>
+<td align="center">样本5</td>
+<td align="center">1 0 0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">样本2</td>
+<td align="center">0 1 1</td>
+<td align="center">1</td>
+<td align="center">样本6</td>
+<td align="center">1 1 1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">样本3</td>
+<td align="center">1 0 1</td>
+<td align="center">1</td>
+<td align="center">样本7</td>
+<td align="center">0 0 0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">样本4</td>
+<td align="center">0 1 0</td>
+<td align="center">1</td>
+<td align="center">新样本</td>
+<td align="center">1 1 0</td>
+<td align="center">？</td>
+</tr>
+</tbody></table>
+<p>代码实现：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span><br><br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><br><span class="hljs-comment">#（1）导入模型</span><br><span class="hljs-keyword">from</span> sklearn.neural_network <span class="hljs-keyword">import</span> MLPClassifier<br><br><span class="hljs-comment">#（2）方案1：创建多层感知机分类器:注意，此时激活函数使用relu或tanh和solver（默认的adam）匹配</span><br>model = MLPClassifier(hidden_layer_sizes=(<span class="hljs-number">4</span>,<span class="hljs-number">4</span>), activation=<span class="hljs-string">&#x27;relu&#x27;</span>, <br>                    max_iter = <span class="hljs-number">10000</span>)<br><br><span class="hljs-comment">#方案2：不同的激活函数，使用不同的solver，需要不断尝试</span><br><span class="hljs-comment"># default = &#x27;adam&#x27; and works well for large data sets.  </span><br><span class="hljs-comment"># model = MLPClassifier(activation=&#x27;logistic&#x27;, max_iter=10000, </span><br><span class="hljs-comment">#               hidden_layer_sizes=(4,),</span><br><span class="hljs-comment">#               solver=&#x27;lbfgs&#x27;)</span><br><br><span class="hljs-comment">#（3）构造所需训练数据</span><br>X = np.array([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>], <br>              [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], <br>              [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>], <br>              [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], <br>              [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>], <br>              [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>], <br>              [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]])<br>y = np.array([ <span class="hljs-number">0</span>, <br>              <span class="hljs-number">1</span>, <br>              <span class="hljs-number">1</span>, <br>              <span class="hljs-number">1</span>, <br>              <span class="hljs-number">1</span>, <br>              <span class="hljs-number">0</span>, <br>              <span class="hljs-number">0</span>])<br><span class="hljs-comment">#（4）训练模型</span><br>model.fit(X, y)<br><br><span class="hljs-comment">#（4）模型预测</span><br><span class="hljs-built_in">print</span> (<span class="hljs-string">&#x27;[1，1，0] = %d&#x27;</span> % model.predict([[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>]]))<br><br><span class="hljs-comment">#(5)输出结果</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">[1，1，0] = 0</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jianshu.com/p/8aacc7f201f2">神经网络简史 - 简书 (jianshu.com)</a></p>
+<p><a href="https://www.jiqizhixin.com/articles/2018-12-13-3">手把手教你用Python创建简单的神经网络（附代码） | 机器之心 (jiqizhixin.com)</a></p>
+<p>人工智能极简入门-张玉宏著<a href="https://www.zhihu.com/people/yulaiyuhong">(12 封私信 / 80 条消息) 玉来愈宏 - 知乎 (zhihu.com)</a></p>
+<p><a href="https://www.jianshu.com/p/71fde5d90136">sklearn 神经网络 MLPClassifier简单应用与参数说明 - 简书 (jianshu.com)</a></p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>神经网络</tag>
+        <tag>人工智能</tag>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub够用教程</title>
+    <url>/2022/01/22/%E7%AC%94%E8%AE%B0/GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="Github够用教程"><a href="#Github够用教程" class="headerlink" title="Github够用教程"></a>Github够用教程</h1><h2 id="git和Github是什么"><a href="#git和Github是什么" class="headerlink" title="git和Github是什么"></a>git和Github是什么</h2><p>git是一个运行在你电脑上的版本控制软件，Github是基于git打造的网站</p>
+<p>git的三个概念：commit 提交/ repository 仓库/ branch 分支</p>
+<span id="more"></span>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
+<li>git  <a href="https://gitforwindows.org/">https://gitforwindows.org/</a></li>
+<li>vscode  <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+</ul>
+<h2 id="看别人的项目"><a href="#看别人的项目" class="headerlink" title="看别人的项目"></a>看别人的项目</h2><p>GoGoCode 项目地址：<a href="https://github.com/thx/gogocode">https://github.com/thx/gogocode</a></p>
+<p>git clone <a href="https://github.com/thx/gogocode.git">https://github.com/thx/gogocode.git</a></p>
+<h3 id="关注几个地方"><a href="#关注几个地方" class="headerlink" title="关注几个地方"></a>关注几个地方</h3><p>Star</p>
+<p>README.md</p>
+<p>issue</p>
+<p>LICENSE</p>
+<h2 id="提升github速度的方法"><a href="#提升github速度的方法" class="headerlink" title="提升github速度的方法"></a>提升github速度的方法</h2><h3 id="1-利用镜像提高clone速度"><a href="#1-利用镜像提高clone速度" class="headerlink" title="1. 利用镜像提高clone速度"></a>1. 利用镜像提高clone速度</h3><p>在github.com后面添加 <strong>.cnpmjs.org</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com.cnpmjs.org/thx/gogocode.git<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-使用码云作为中转站"><a href="#2-使用码云作为中转站" class="headerlink" title="2. 使用码云作为中转站"></a>2. 使用码云作为中转站</h3><h3 id="3-比较适合单一的文件"><a href="#3-比较适合单一的文件" class="headerlink" title="3. 比较适合单一的文件"></a>3. 比较适合单一的文件</h3><p>如单独下载readme文件，若下载地址为：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">https://github.com/thx/gogocode/blob/main/README.md<br></code></pre></td></tr></table></figure>
+
+<p>将<code>github.com</code>改成<code>cdn.jsdelivr.net/gh</code> 并将<code>/blob/</code>改成<code>@</code>得到：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">https://cdn.jsdelivr.net/gh/thx/gogocode@main/README.md<br></code></pre></td></tr></table></figure>
+
+<p>就可以直接打开，ctrl+s保存</p>
+<h2 id="找开源项目的一些途径"><a href="#找开源项目的一些途径" class="headerlink" title="找开源项目的一些途径"></a>找开源项目的一些途径</h2><p>• <a href="https://github.com/trending/">https://github.com/trending/</a></p>
+<p>  在这里你可以看到各种不同开发语言的每天/周/月的最热门的 Repositories 和 Developers</p>
+<p>• https:///github.com/521xueweihan/HelloGitHub</p>
+<p>  有趣、入门级的开源项目、开源书籍、实战项目、企业级项目等</p>
+<p>• <a href="https://github.com/ruanyf/weekly">https://github.com/ruanyf/weekly</a></p>
+<p>  记录每周值得分享的科技内容，周五发布</p>
+<p>• <a href="https://www.zhihu.com/column/mm-fe">https://www.zhihu.com/column/mm-fe</a></p>
+<p>  阿里妈妈前端快爆前端新鲜事</p>
+<h2 id="特殊的查找资源小技巧-常用前缀后缀"><a href="#特殊的查找资源小技巧-常用前缀后缀" class="headerlink" title="特殊的查找资源小技巧-常用前缀后缀"></a>特殊的查找资源小技巧-常用前缀后缀</h2><p>• 找百科大全 awesome xxx<br>• 找例子 xxx sample<br>• 找空项目架子 xxx starter / xxx boilerplate<br>• 找教程 xxx tutorial</p>
+<p><img src="https://s2.loli.net/2022/01/22/AcknhXTLDj76alK.png" alt="image-20220122172410705"></p>
+]]></content>
+      <categories>
+        <category>github</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+        <tag>技术分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PyCharm使用秘籍</title>
+    <url>/2022/01/25/%E7%AC%94%E8%AE%B0/PyCharm%E4%BD%BF%E7%94%A8%E7%A7%98%E7%B1%8D/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="在Pycharm下为你的Python项目配置Python解释器"><a href="#在Pycharm下为你的Python项目配置Python解释器" class="headerlink" title="在Pycharm下为你的Python项目配置Python解释器"></a>在Pycharm下为你的Python项目配置Python解释器</h2><ol>
+<li>File&gt;Settings&gt;Project:当前项目名&gt;Project Interpreter&gt;add Local</li>
+</ol>
+<h2 id="在Pycharm下创建Python文件、Python模块"><a href="#在Pycharm下创建Python文件、Python模块" class="headerlink" title="在Pycharm下创建Python文件、Python模块"></a>在Pycharm下创建Python文件、Python模块</h2><ol>
+<li>File&gt;New&gt;Python File</li>
+<li>File&gt;New&gt;Python Package</li>
+</ol>
+<h2 id="使用Pycharm安装Python第三方模块"><a href="#使用Pycharm安装Python第三方模块" class="headerlink" title="使用Pycharm安装Python第三方模块"></a>使用Pycharm安装Python第三方模块</h2><ol>
+<li>File&gt;Settings&gt;Project:当前项目名&gt;Project Interpreter&gt;点击右侧绿色小加号</li>
+</ol>
+<h2 id="Pycharm基本设置，例如不使用tab、tab-4空格、字体、字体颜色、主题、脚本头设置、显示行号等。如何导出和导入自定义设置。"><a href="#Pycharm基本设置，例如不使用tab、tab-4空格、字体、字体颜色、主题、脚本头设置、显示行号等。如何导出和导入自定义设置。" class="headerlink" title="Pycharm基本设置，例如不使用tab、tab=4空格、字体、字体颜色、主题、脚本头设置、显示行号等。如何导出和导入自定义设置。"></a>Pycharm基本设置，例如不使用tab、tab=4空格、字体、字体颜色、主题、脚本头设置、显示行号等。如何导出和导入自定义设置。</h2><ol>
+<li>不使用tab、tab=4空格：Editor&gt;Code Style&gt;Python</li>
+<li>字体、字体颜色：Edit&gt;Colors &amp; Fonts&gt;Python</li>
+<li>关闭自动更新：Appearance &amp; Behavior&gt;System Settings&gt;Updates</li>
+<li>脚本头设置：Edit&gt;File and Code Templates&gt;Python Script 注：其他类似</li>
+<li>显示行号：Edit&gt;General&gt;Appearance&gt;Show line numbers 注：2016.2默认显示行号</li>
+<li>右侧竖线是PEP8的代码规范，提示一行不要超过120个字符</li>
+<li>导出、导入你自定义的配置： File&gt;Export Settings、Import Settings</li>
+</ol>
+<h2 id="常用快捷键，例如复制当前行、删除当前行、批量注释、缩进、查找和替换。"><a href="#常用快捷键，例如复制当前行、删除当前行、批量注释、缩进、查找和替换。" class="headerlink" title="常用快捷键，例如复制当前行、删除当前行、批量注释、缩进、查找和替换。"></a>常用快捷键，例如复制当前行、删除当前行、批量注释、缩进、查找和替换。</h2><ol>
+<li>Ctrl + D：复制当前行</li>
+<li>Ctrl + E：删除当前行</li>
+<li>Shift + Enter：快速换行</li>
+<li>Ctrl + /：快速注释（选中多行后可以批量注释）</li>
+<li>Tab：缩进当前行（选中多行后可以批量缩进）</li>
+<li>Shift + Tab：取消缩进（选中多行后可以批量取消缩进）</li>
+<li>Ctrl + F：查找</li>
+<li>Ctrl + H：替换</li>
+</ol>
+<h2 id="Pycharm安装插件，例如Markdown-support、数据库支持插件等。"><a href="#Pycharm安装插件，例如Markdown-support、数据库支持插件等。" class="headerlink" title="Pycharm安装插件，例如Markdown support、数据库支持插件等。"></a>Pycharm安装插件，例如Markdown support、数据库支持插件等。</h2><ol>
+<li>Plugins&gt;Browse repositories（下方三个按钮中间那个）&gt;搜索‘markdown support’&gt;install</li>
+<li>右上角View有三个选项可选，一般我们都用中间那个左侧编写，右侧实时预览</li>
+</ol>
+<h2 id="Git配置？"><a href="#Git配置？" class="headerlink" title="Git配置？"></a>Git配置？</h2><ol>
+<li>需要本地安装好Git</li>
+<li>Version Control&gt;Git</li>
+<li>配置了Git等版本控制系统之后，可以很方便的diff查看文件的不用</li>
+</ol>
+<h2 id="常用操作指南。例如复制文件路径、在文件管理器中打开、快速定位、查看模块结构视图、tab批量换space、TODO的使用、Debug的使用。"><a href="#常用操作指南。例如复制文件路径、在文件管理器中打开、快速定位、查看模块结构视图、tab批量换space、TODO的使用、Debug的使用。" class="headerlink" title="常用操作指南。例如复制文件路径、在文件管理器中打开、快速定位、查看模块结构视图、tab批量换space、TODO的使用、Debug的使用。"></a>常用操作指南。例如复制文件路径、在文件管理器中打开、快速定位、查看模块结构视图、tab批量换space、TODO的使用、Debug的使用。</h2><ol>
+<li>复制文件路径：左侧文件列表右键选中的文件&gt;Copy Path</li>
+<li>在文件管理器中打开：右键选中的文件&gt;往下找到Show In Explorer</li>
+<li>快速定位：Ctrl + 某些内建模块之后，点击在源文件中展开</li>
+<li>查看结构：IDE左侧边栏Structure 查看当前项目的结构</li>
+<li>tab批量换space：Edit&gt;Convert Indents</li>
+<li>TODO的使用：# TODO 要记录的事情</li>
+<li>Debug设置断点，直接点击行号与代码之间的空白处即可设置断点</li>
+<li>Tab页上右键&gt;Move Right（Down），把当前Tab页移到窗口右边（下边），方便对比</li>
+<li>文件中右键&gt;Local History能够查看文件修改前后的对比</li>
+<li>IDE右下角能看到一些有用的信息，光标当前在第几行的第几个字符、当前回车换行、当前编码类型、当前Git分支</li>
+<li>IDE右侧边栏&gt;Database</li>
+</ol>
+<h2 id="如何去掉烦人的波浪线？PEP8又是什么？"><a href="#如何去掉烦人的波浪线？PEP8又是什么？" class="headerlink" title="如何去掉烦人的波浪线？PEP8又是什么？"></a>如何去掉烦人的波浪线？PEP8又是什么？</h2><ol>
+<li>单独一行的注释：#+1空格+注释内容</li>
+<li>代码后跟着的注释：2空格+#+1空格+注释内容</li>
+<li>牢记快捷键 <code>ctrl+alt+L</code></li>
+</ol>
+<h2 id="SSH-Terminal：-Default-encoding-UTF-8"><a href="#SSH-Terminal：-Default-encoding-UTF-8" class="headerlink" title="SSH Terminal： Default encoding:UTF-8"></a>SSH Terminal： Default encoding:UTF-8</h2><ol>
+<li>Settings&gt;Tools&gt;SSH Terminal&gt;最后一行Default encoding:选择UTF-8</li>
+</ol>
+<h2 id="善用搜索！善用搜索！善用搜索！"><a href="#善用搜索！善用搜索！善用搜索！" class="headerlink" title="善用搜索！善用搜索！善用搜索！"></a>善用搜索！善用搜索！善用搜索！</h2><ol>
+<li>遇到不懂问题，先自己搜索。这样才记得更牢！</li>
+<li>推荐使用sogou英文搜索<a href="http://english.sogou.com/">http://english.sogou.com/</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>pycharm</category>
+      </categories>
+      <tags>
+        <tag>pycharm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/01/19/%E7%AC%94%E8%AE%B0/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<span id="more"></span>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo建站</title>
+    <url>/2022/01/20/%E7%AC%94%E8%AE%B0/hexo%E5%BB%BA%E7%AB%99/</url>
+    <content><![CDATA[<h1 id="hexo建站记录"><a href="#hexo建站记录" class="headerlink" title="hexo建站记录"></a>hexo建站记录</h1><h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><p><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎 (zhihu.com)</a></p>
+<p>记得看下评论，搭建过程遇到问题通过百度解决</p>
+<p><a href="https://tding.top/archives/aad98408.html#more">Hexo 搭建个人博客文章汇总 | 小丁的个人博客 (tding.top)</a></p>
+<span id="more"></span>
+
+<h2 id="最新主题Fluid"><a href="#最新主题Fluid" class="headerlink" title="最新主题Fluid"></a>最新主题Fluid</h2><p><a href="https://github.com/fluid-dev/hexo-theme-fluid">fluid-dev/hexo-theme-fluid: 一款 Material Design 风格的 Hexo 主题 / An elegant Material-Design theme for Hexo (github.com)</a></p>
+<p>用户文档： <a href="https://hexo.fluid-dev.com/docs/start/">开始使用 | Hexo Fluid (fluid-dev.com)</a></p>
+<p>hexo访问优化：<a href="https://www.julydate.com/post/60859300/">你不爱我了QAQ (julydate.com)</a></p>
+<h2 id="每次使用"><a href="#每次使用" class="headerlink" title="每次使用"></a>每次使用</h2><h3 id="1-打开博客目录blog文件夹"><a href="#1-打开博客目录blog文件夹" class="headerlink" title="1. 打开博客目录blog文件夹"></a>1. 打开博客目录blog文件夹</h3><p>我的文件是在本地目录D:\codeWork\Personal_website\blog</p>
+<h3 id="2-在空白处-shift-右键-在此处打开Powershell窗口"><a href="#2-在空白处-shift-右键-在此处打开Powershell窗口" class="headerlink" title="2. 在空白处 shift+右键 在此处打开Powershell窗口"></a>2. 在空白处 shift+右键 在此处打开Powershell窗口</h3><p><img src="https://s2.loli.net/2022/01/28/G7IP5cvbLsNA6nD.png" alt="image-20220128183949993"></p>
+<h3 id="3-输入命令-hexo-new-文章名称"><a href="#3-输入命令-hexo-new-文章名称" class="headerlink" title="3. 输入命令 hexo new 文章名称"></a>3. 输入命令 hexo new 文章名称</h3><p>新建一篇博客</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">hexo new test<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/01/28/qIazWeDY7l1rtLB.png" alt="image-20220128184355318"></p>
+<p>hexo new 文章名，会默认创建一个以文章名命名的markdown文件，创建默认模板为 blog &gt; scaffolds &gt; post.md</p>
+<h3 id="4-在blog-gt-source-gt-posts-文件夹下"><a href="#4-在blog-gt-source-gt-posts-文件夹下" class="headerlink" title="4. 在blog &gt; source &gt; _posts 文件夹下"></a>4. 在blog &gt; source &gt; _posts 文件夹下</h3><p>打开刚创建的文章test.md</p>
+<h3 id="5-修改文件头信息"><a href="#5-修改文件头信息" class="headerlink" title="5. 修改文件头信息"></a>5. 修改文件头信息</h3><p>图片解释：这里采用了cdn加速的绝对地址，图片放在blog &gt; source &gt; img 文件夹中，图片会随部署时上传到</p>
+<p><a href="https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/">https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/</a> 这个地址下，加上文件名即可使用</p>
+<p><a href="GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B.md#%E6%8F%90%E5%8D%87github%E9%80%9F%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95#3%20%E6%AF%94%E8%BE%83%E9%80%82%E5%90%88%E5%8D%95%E4%B8%80%E7%9A%84%E6%96%87%E4%BB%B6">3 github加速 比较适合单一的文件</a></p>
+<ul>
+<li>index_img 是首页文章小图</li>
+<li>banner_img 是文章内页顶部大图</li>
+</ul>
+<figure class="highlight subunit"><table><tr><td class="code"><pre><code class="hljs subunit">title: test 文件名称默认与创建时的保持一致<br>index_img: https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/example.png <br>banner_img: &#x27;https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/b2.png&#x27;<br><span class="hljs-keyword">tags:</span>可以添加多个标签<br>  - tag1<br>  - tag2<br>categories:分类是层级关系<br>  - cate1<br>  - cate1.1<br>date: 2022<span class="hljs-string">-01</span><span class="hljs-string">-28</span> 18:41:52<br></code></pre></td></tr></table></figure>
+
+<p>文章概况，或者文章的前几行</p>
+<p><code>&lt;!-- more --&gt;</code></p>
+<p>文章主体内容</p>
+<h3 id="6-部署"><a href="#6-部署" class="headerlink" title="6. 部署"></a>6. 部署</h3><ul>
+<li>输入命令 hexo g -d  一键部署</li>
+</ul>
+<blockquote>
+<p>hexo g 生成静态文件（generate)<br>hexo s 启动服务器（server) 本地访问<a href="http://localhost:4000/">http://localhost:4000/</a><br>hexo d 部署（deploy)</p>
+</blockquote>
+<h2 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h2><p><a href="https://mayuke.xyz/">我的博客 (mayuke.xyz)</a></p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p><a href="https://tding.top/archives/b48e2719.html">GitHub Pages 绑定域名 | 小丁的个人博客 (tding.top)</a></p>
+<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p><a href="https://www.namesilo.com/">https://www.namesilo.com/</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/33921436">Namesilo 域名购买及使用教程（附 Namesilo 优惠码） - 知乎 (zhihu.com)</a></p>
+<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p> <a href="https://console.dnspod.cn/">管理控制台 - DNSPod</a></p>
+<h2 id="GitHub项目"><a href="#GitHub项目" class="headerlink" title="GitHub项目"></a>GitHub项目</h2><p><a href="https://github.com/MayukeM/MayukeM.github.io">MayukeM/MayukeM.github.io: It is my personal website.</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/143581449">一个极简、优美的Hexo主题：Coder - 知乎 (zhihu.com)</a></p>
+<h2 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h2><figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">fatal: unable <span class="hljs-keyword">to</span> <span class="hljs-keyword">access</span> <span class="hljs-string">&#x27;https://github.com/MayukeM/MayukeM.github.io.git/&#x27;</span>: OpenSSL SSL_read: <span class="hljs-keyword">Connection</span> was <span class="hljs-keyword">reset</span>, errno <span class="hljs-number">10054</span><br></code></pre></td></tr></table></figure>
+
+<p>部署失败多试几次就好，一般是网络问题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify <span class="hljs-string">&quot;false&quot;</span><br>git config --global --<span class="hljs-built_in">unset</span> http.proxy<br>git config --global --<span class="hljs-built_in">unset</span> https.proxy<br></code></pre></td></tr></table></figure>
+
+<p><a href="https://github.com/ineo6/hosts">ineo6/hosts: GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。</a></p>
+<p><a href="https://blog.csdn.net/li_magic/article/details/83140986">(55条消息) windows 下安装GIT 屏蔽ssl证书校验_li_magic的博客-CSDN博客_git关闭ssl证书验证</a></p>
+<p><img src="https://s2.loli.net/2022/01/20/HWV3TYSkjI2MOEe.png" alt="1"></p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown语法</title>
     <url>/2021/01/07/%E7%AC%94%E8%AE%B0/markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="Typora-Markdown语法"><a href="#Typora-Markdown语法" class="headerlink" title="Typora-Markdown语法"></a>Typora-Markdown语法</h1><h2 id="目录列表"><a href="#目录列表" class="headerlink" title="目录列表"></a>目录列表</h2><p>输入<code>[toc]</code>然后回车，将会产生一个目录，这个目录抽取了文章的所有标题，自动更新内容。</p>
@@ -905,66 +965,6 @@
       <tags>
         <tag>技术分享</tag>
         <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo建站</title>
-    <url>/2022/01/20/%E7%AC%94%E8%AE%B0/hexo%E5%BB%BA%E7%AB%99/</url>
-    <content><![CDATA[<h1 id="hexo建站记录"><a href="#hexo建站记录" class="headerlink" title="hexo建站记录"></a>hexo建站记录</h1><h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><p><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎 (zhihu.com)</a></p>
-<p>记得看下评论，搭建过程遇到问题通过百度解决</p>
-<p><a href="https://tding.top/archives/aad98408.html#more">Hexo 搭建个人博客文章汇总 | 小丁的个人博客 (tding.top)</a></p>
-<span id="more"></span>
-
-<h2 id="最新主题Fluid"><a href="#最新主题Fluid" class="headerlink" title="最新主题Fluid"></a>最新主题Fluid</h2><p><a href="https://github.com/fluid-dev/hexo-theme-fluid">fluid-dev/hexo-theme-fluid: 一款 Material Design 风格的 Hexo 主题 / An elegant Material-Design theme for Hexo (github.com)</a></p>
-<p>用户文档： <a href="https://hexo.fluid-dev.com/docs/start/">开始使用 | Hexo Fluid (fluid-dev.com)</a></p>
-<p>hexo访问优化：<a href="https://www.julydate.com/post/60859300/">你不爱我了QAQ (julydate.com)</a></p>
-<h2 id="每次使用"><a href="#每次使用" class="headerlink" title="每次使用"></a>每次使用</h2><h3 id="1-打开博客目录blog文件夹"><a href="#1-打开博客目录blog文件夹" class="headerlink" title="1. 打开博客目录blog文件夹"></a>1. 打开博客目录blog文件夹</h3><p>我的文件是在本地目录D:\codeWork\Personal_website\blog</p>
-<h3 id="2-在空白处-shift-右键-在此处打开Powershell窗口"><a href="#2-在空白处-shift-右键-在此处打开Powershell窗口" class="headerlink" title="2. 在空白处 shift+右键 在此处打开Powershell窗口"></a>2. 在空白处 shift+右键 在此处打开Powershell窗口</h3><p><img src="https://s2.loli.net/2022/01/28/G7IP5cvbLsNA6nD.png" alt="image-20220128183949993"></p>
-<h3 id="3-输入命令-hexo-new-文章名称"><a href="#3-输入命令-hexo-new-文章名称" class="headerlink" title="3. 输入命令 hexo new 文章名称"></a>3. 输入命令 hexo new 文章名称</h3><p>新建一篇博客</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">hexo new test<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2022/01/28/qIazWeDY7l1rtLB.png" alt="image-20220128184355318"></p>
-<p>hexo new 文章名，会默认创建一个以文章名命名的markdown文件，创建默认模板为 blog &gt; scaffolds &gt; post.md</p>
-<h3 id="4-在blog-gt-source-gt-posts-文件夹下"><a href="#4-在blog-gt-source-gt-posts-文件夹下" class="headerlink" title="4. 在blog &gt; source &gt; _posts 文件夹下"></a>4. 在blog &gt; source &gt; _posts 文件夹下</h3><p>打开刚创建的文章test.md</p>
-<h3 id="5-修改文件头信息"><a href="#5-修改文件头信息" class="headerlink" title="5. 修改文件头信息"></a>5. 修改文件头信息</h3><p>图片解释：这里采用了cdn加速的绝对地址，图片放在blog &gt; source &gt; img 文件夹中，图片会随部署时上传到</p>
-<p><a href="https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/">https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/</a> 这个地址下，加上文件名即可使用</p>
-<p><a href="GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B.md#%E6%8F%90%E5%8D%87github%E9%80%9F%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95#3%20%E6%AF%94%E8%BE%83%E9%80%82%E5%90%88%E5%8D%95%E4%B8%80%E7%9A%84%E6%96%87%E4%BB%B6">3 github加速 比较适合单一的文件</a></p>
-<ul>
-<li>index_img 是首页文章小图</li>
-<li>banner_img 是文章内页顶部大图</li>
-</ul>
-<figure class="highlight subunit"><table><tr><td class="code"><pre><code class="hljs subunit">title: test 文件名称默认与创建时的保持一致<br>index_img: https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/example.png <br>banner_img: &#x27;https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/b2.png&#x27;<br><span class="hljs-keyword">tags:</span>可以添加多个标签<br>  - tag1<br>  - tag2<br>categories:分类是层级关系<br>  - cate1<br>  - cate1.1<br>date: 2022<span class="hljs-string">-01</span><span class="hljs-string">-28</span> 18:41:52<br></code></pre></td></tr></table></figure>
-
-<p>文章概况，或者文章的前几行</p>
-<p><code>&lt;!-- more --&gt;</code></p>
-<p>文章主体内容</p>
-<h3 id="6-部署"><a href="#6-部署" class="headerlink" title="6. 部署"></a>6. 部署</h3><ul>
-<li>输入命令 hexo g -d  一键部署</li>
-</ul>
-<blockquote>
-<p>hexo g 生成静态文件（generate)<br>hexo s 启动服务器（server) 本地访问<a href="http://localhost:4000/">http://localhost:4000/</a><br>hexo d 部署（deploy)</p>
-</blockquote>
-<h2 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h2><p><a href="https://mayuke.xyz/">我的博客 (mayuke.xyz)</a></p>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p><a href="https://tding.top/archives/b48e2719.html">GitHub Pages 绑定域名 | 小丁的个人博客 (tding.top)</a></p>
-<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p><a href="https://www.namesilo.com/">https://www.namesilo.com/</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/33921436">Namesilo 域名购买及使用教程（附 Namesilo 优惠码） - 知乎 (zhihu.com)</a></p>
-<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p> <a href="https://console.dnspod.cn/">管理控制台 - DNSPod</a></p>
-<h2 id="GitHub项目"><a href="#GitHub项目" class="headerlink" title="GitHub项目"></a>GitHub项目</h2><p><a href="https://github.com/MayukeM/MayukeM.github.io">MayukeM/MayukeM.github.io: It is my personal website.</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/143581449">一个极简、优美的Hexo主题：Coder - 知乎 (zhihu.com)</a></p>
-<h2 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h2><figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">fatal: unable <span class="hljs-keyword">to</span> <span class="hljs-keyword">access</span> <span class="hljs-string">&#x27;https://github.com/MayukeM/MayukeM.github.io.git/&#x27;</span>: OpenSSL SSL_read: <span class="hljs-keyword">Connection</span> was <span class="hljs-keyword">reset</span>, errno <span class="hljs-number">10054</span><br></code></pre></td></tr></table></figure>
-
-<p>部署失败多试几次就好，一般是网络问题</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git config --global http.sslVerify <span class="hljs-string">&quot;false&quot;</span><br>git config --global --<span class="hljs-built_in">unset</span> http.proxy<br>git config --global --<span class="hljs-built_in">unset</span> https.proxy<br></code></pre></td></tr></table></figure>
-
-<p><a href="https://github.com/ineo6/hosts">ineo6/hosts: GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。</a></p>
-<p><a href="https://blog.csdn.net/li_magic/article/details/83140986">(55条消息) windows 下安装GIT 屏蔽ssl证书校验_li_magic的博客-CSDN博客_git关闭ssl证书验证</a></p>
-<p><img src="https://s2.loli.net/2022/01/20/HWV3TYSkjI2MOEe.png" alt="1"></p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -1122,42 +1122,6 @@
         <tag>技术分享</tag>
         <tag>windows</tag>
         <tag>快捷键</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决语雀导出markdown文件图片不显示问题</title>
-    <url>/2022/01/29/%E7%AC%94%E8%AE%B0/%E8%A7%A3%E5%86%B3%E8%AF%AD%E9%9B%80%E5%AF%BC%E5%87%BAmarkdown%E6%96%87%E4%BB%B6%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="解决语雀导出markdown文件图片不显示问题"><a href="#解决语雀导出markdown文件图片不显示问题" class="headerlink" title="解决语雀导出markdown文件图片不显示问题"></a>解决语雀导出markdown文件图片不显示问题</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用语雀记笔记发现导出markdown文件后，图片无法正常显示</p>
-<p><img src="https://s2.loli.net/2022/01/29/6JEv4bna1Z7dOty.png" alt="image-20220129102813109"></p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>语雀转成md文件导出，图片无法正常显示。把url地址中png后面的部分，即#clientId开始全部删掉即可。</p>
-<span id="more"></span>
-
-<h2 id="脚本解决"><a href="#脚本解决" class="headerlink" title="脚本解决"></a>脚本解决</h2><p>但是一个一个删除还是太麻烦，所以还是写python脚本来完成这项工作，代码如下：</p>
-<p>注意没有使用绝对路径，所以使用时将该脚本与文件放在同一目录下</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- encoding: utf-8 -*-</span><br><span class="hljs-keyword">import</span> re<br><br>new_md = []<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">title</span>():</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;+------------------------------------------&#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  功  能: 语雀文档导出md文件后图片修复 &#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  注  意: 将该脚本与文件放在同一目录下 &#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;+------------------------------------------&#x27;</span>)<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deal_yuque</span>(<span class="hljs-params">new_md, old_path</span>):</span><br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(old_path, <span class="hljs-string">&#x27;r&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>, errors=<span class="hljs-string">&#x27;ignore&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> f.readlines():<br>            line = re.sub(<span class="hljs-string">r&#x27;png#(.*)+&#x27;</span>, <span class="hljs-string">&#x27;png)&#x27;</span>, line)<br>            <span class="hljs-comment"># print(line)</span><br>            new_md.append(line)<br><br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(old_path, <span class="hljs-string">&#x27;w&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>, errors=<span class="hljs-string">&#x27;ignore&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>        <span class="hljs-keyword">for</span> new_md <span class="hljs-keyword">in</span> new_md:<br>            f.write(<span class="hljs-built_in">str</span>(new_md))<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    title()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  请输入您的文件名称, 如：文件名称.md&#x27;</span>)<br>    old_path = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;[+]  文件名称：&#x27;</span>)<br>    <span class="hljs-comment"># new_path = &#x27;new_&#x27; + old_path</span><br>    deal_yuque(new_md, old_path)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  \033[36m修复完成 &#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="生成exe可执行文件"><a href="#生成exe可执行文件" class="headerlink" title="生成exe可执行文件"></a>生成exe可执行文件</h2><h3 id="1-pyinstaller-介绍"><a href="#1-pyinstaller-介绍" class="headerlink" title="1. pyinstaller 介绍"></a>1. pyinstaller 介绍</h3><p>pyinstaller将Python脚本打包成可执行程序，使在没有Python环境的机器上运行</p>
-<h3 id="2-pyinstaller在windows下的安装"><a href="#2-pyinstaller在windows下的安装" class="headerlink" title="2. pyinstaller在windows下的安装"></a>2. pyinstaller在windows下的安装</h3><p>使用命令pip install pyinstaller即可</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">pip install pyinstaller<br></code></pre></td></tr></table></figure>
-
-<p>出现Successfully installed pyinstaller-3.1.1 pypiwin32-219即表示安装成功</p>
-<h3 id="3-打包"><a href="#3-打包" class="headerlink" title="3. 打包"></a>3. 打包</h3><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">pyinstaller --onefile --nowindowed 要打包的文件.py<br></code></pre></td></tr></table></figure>
-
-<p>就会在当前文件下形成build文件夹、dist文件夹和.spec文件。<br>dist里就是guess_exe.exe可执行文件。</p>
-<blockquote>
-<p>附基本语法</p>
-</blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">pyinstaller options myscript.py<br>常用的可选参数如下：<br>--onefile 将结果打包成一个可执行文件<br>--onedir 将所有结果打包到一个文件夹中，该文件夹包括一个可执行文件和可执行文件执行时需要的依赖文件（默认）<br>--paths=DIR 设置导入路径<br>--distpath=DIR 设置将打包的结果文件放置的路径<br>--specpath=DIR 设置将spec文件放置的路径<br>--windowed 使用windows子系统执行，不会打开命令行（只对windows有效）<br>--nowindowed 使用控制台子系统执行（默认）（只对windows有效）<br>--icon=&lt;FILE.ICO&gt; 将file.ico添加为可执行文件的资源(只对windows有效）<br></code></pre></td></tr></table></figure>
-
-<h2 id="愉快使用"><a href="#愉快使用" class="headerlink" title="愉快使用"></a>愉快使用</h2><p>将生成的exe文件放到笔记文件夹同目录，双击即可使用</p>
-<p><img src="https://s2.loli.net/2022/01/29/ND4rpefxtGQPUSH.png" alt="image-20220129103839267"></p>
-]]></content>
-      <categories>
-        <category>技术分享</category>
-      </categories>
-      <tags>
-        <tag>技术分享</tag>
-        <tag>工具</tag>
       </tags>
   </entry>
   <entry>
@@ -2046,6 +2010,42 @@
         <tag>数据结构</tag>
         <tag>专业课</tag>
         <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决语雀导出markdown文件图片不显示问题</title>
+    <url>/2022/01/29/%E7%AC%94%E8%AE%B0/%E8%A7%A3%E5%86%B3%E8%AF%AD%E9%9B%80%E5%AF%BC%E5%87%BAmarkdown%E6%96%87%E4%BB%B6%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="解决语雀导出markdown文件图片不显示问题"><a href="#解决语雀导出markdown文件图片不显示问题" class="headerlink" title="解决语雀导出markdown文件图片不显示问题"></a>解决语雀导出markdown文件图片不显示问题</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用语雀记笔记发现导出markdown文件后，图片无法正常显示</p>
+<p><img src="https://s2.loli.net/2022/01/29/6JEv4bna1Z7dOty.png" alt="image-20220129102813109"></p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>语雀转成md文件导出，图片无法正常显示。把url地址中png后面的部分，即#clientId开始全部删掉即可。</p>
+<span id="more"></span>
+
+<h2 id="脚本解决"><a href="#脚本解决" class="headerlink" title="脚本解决"></a>脚本解决</h2><p>但是一个一个删除还是太麻烦，所以还是写python脚本来完成这项工作，代码如下：</p>
+<p>注意没有使用绝对路径，所以使用时将该脚本与文件放在同一目录下</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- encoding: utf-8 -*-</span><br><span class="hljs-keyword">import</span> re<br><br>new_md = []<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">title</span>():</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;+------------------------------------------&#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  功  能: 语雀文档导出md文件后图片修复 &#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  注  意: 将该脚本与文件放在同一目录下 &#x27;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;+------------------------------------------&#x27;</span>)<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deal_yuque</span>(<span class="hljs-params">new_md, old_path</span>):</span><br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(old_path, <span class="hljs-string">&#x27;r&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>, errors=<span class="hljs-string">&#x27;ignore&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> f.readlines():<br>            line = re.sub(<span class="hljs-string">r&#x27;png#(.*)+&#x27;</span>, <span class="hljs-string">&#x27;png)&#x27;</span>, line)<br>            <span class="hljs-comment"># print(line)</span><br>            new_md.append(line)<br><br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(old_path, <span class="hljs-string">&#x27;w&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>, errors=<span class="hljs-string">&#x27;ignore&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>        <span class="hljs-keyword">for</span> new_md <span class="hljs-keyword">in</span> new_md:<br>            f.write(<span class="hljs-built_in">str</span>(new_md))<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    title()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  请输入您的文件名称, 如：文件名称.md&#x27;</span>)<br>    old_path = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;[+]  文件名称：&#x27;</span>)<br>    <span class="hljs-comment"># new_path = &#x27;new_&#x27; + old_path</span><br>    deal_yuque(new_md, old_path)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[+]  \033[36m修复完成 &#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="生成exe可执行文件"><a href="#生成exe可执行文件" class="headerlink" title="生成exe可执行文件"></a>生成exe可执行文件</h2><h3 id="1-pyinstaller-介绍"><a href="#1-pyinstaller-介绍" class="headerlink" title="1. pyinstaller 介绍"></a>1. pyinstaller 介绍</h3><p>pyinstaller将Python脚本打包成可执行程序，使在没有Python环境的机器上运行</p>
+<h3 id="2-pyinstaller在windows下的安装"><a href="#2-pyinstaller在windows下的安装" class="headerlink" title="2. pyinstaller在windows下的安装"></a>2. pyinstaller在windows下的安装</h3><p>使用命令pip install pyinstaller即可</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">pip install pyinstaller<br></code></pre></td></tr></table></figure>
+
+<p>出现Successfully installed pyinstaller-3.1.1 pypiwin32-219即表示安装成功</p>
+<h3 id="3-打包"><a href="#3-打包" class="headerlink" title="3. 打包"></a>3. 打包</h3><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">pyinstaller --onefile --nowindowed 要打包的文件.py<br></code></pre></td></tr></table></figure>
+
+<p>就会在当前文件下形成build文件夹、dist文件夹和.spec文件。<br>dist里就是guess_exe.exe可执行文件。</p>
+<blockquote>
+<p>附基本语法</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">pyinstaller options myscript.py<br>常用的可选参数如下：<br>--onefile 将结果打包成一个可执行文件<br>--onedir 将所有结果打包到一个文件夹中，该文件夹包括一个可执行文件和可执行文件执行时需要的依赖文件（默认）<br>--paths=DIR 设置导入路径<br>--distpath=DIR 设置将打包的结果文件放置的路径<br>--specpath=DIR 设置将spec文件放置的路径<br>--windowed 使用windows子系统执行，不会打开命令行（只对windows有效）<br>--nowindowed 使用控制台子系统执行（默认）（只对windows有效）<br>--icon=&lt;FILE.ICO&gt; 将file.ico添加为可执行文件的资源(只对windows有效）<br></code></pre></td></tr></table></figure>
+
+<h2 id="愉快使用"><a href="#愉快使用" class="headerlink" title="愉快使用"></a>愉快使用</h2><p>将生成的exe文件放到笔记文件夹同目录，双击即可使用</p>
+<p><img src="https://s2.loli.net/2022/01/29/ND4rpefxtGQPUSH.png" alt="image-20220129103839267"></p>
+]]></content>
+      <categories>
+        <category>技术分享</category>
+      </categories>
+      <tags>
+        <tag>技术分享</tag>
+        <tag>工具</tag>
       </tags>
   </entry>
 </search>
