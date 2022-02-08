@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://s2.loli.net/2022/02/08/uFc1A3Wm7j92SVO.png">
 <meta property="og:image" content="https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png">
 <meta property="article:published_time" content="2022-02-08T03:29:36.000Z">
-<meta property="article:modified_time" content="2022-02-08T07:36:23.206Z">
+<meta property="article:modified_time" content="2022-02-08T07:59:34.279Z">
 <meta property="article:author" content="myk">
 <meta property="article:tag" content="神经网络">
 <meta property="article:tag" content="人工智能">
@@ -354,7 +354,7 @@
 <p>目前，卷积神经网络作为深度学习的一种，已经成为当前图像理解领域研究的热点。早在1989年，Yann Le Cun在贝尔实验室就开始使用卷积神经网络识别手写数字；1998年，Yann Le Cun提出了用于字符识别的卷积神经网络LeNet5，并在小规模手写数字识别中取得了较好的结果。基于这些工作，Yann Le Cun也被称为卷积网络之父。2012年，Alex Krizhevsky等使用采用卷积神经网络的AlexNet在ImageNet竞赛图像分类任务中取得了最好成绩，是卷积神经网络在图像分类中的巨大成功。随后Alex Krizhevsky.，Ilya Sutskever.和 Geoffrey Hinton.发表了文章《ImageNet Classification with Deep Convolutional Neural Networks》 。</p>
 <p>2013年，Graves 证明，结合了长短时记忆(long short terms memory, LSTM) 的递归神经网络(recurrent neural network, RNN)比传统的递归神经网络在语音处理方面更有效。2014年至今， 深度学习在很多领域都取得了突破性进展，发展出了包括注意力(attention)，RNN–CNN， 以及深度残差网络等多种模型。</p>
 <p>最后，给出一个神经网络发展历史的回顾总结：</p>
-<img src="https://s2.loli.net/2022/02/08/L6tYnipbTzFkrER.png" srcset="/img/loading.gif" lazyload alt="神经网络发展回顾" style="zoom:80%;" />
+<img src="https://s2.loli.net/2022/02/08/L6tYnipbTzFkrER.png" srcset="/img/loading.gif" lazyload alt="神经网络发展回顾" style="zoom:80%; margin:auto;" />
 
  
 
@@ -389,10 +389,10 @@
 <p>如图我们可以看到其结果为0，满足<strong>异或</strong>的功能，神经网络搭建完成，剩下的就是更改输入即可，无需更改任何公式，一切都是自动更新计算的，读者可以自行尝试，我们可以感性认识到，网络层次越深，神经网络的表征能力越强。</p>
 <p>或许你会疑惑，神经网络的权值和阈值时怎么知道的，在这个案例中我们直接给了出来，而实际上，他们是需要神经网络自己反复“试错”<br>学习而来的，而且能完成“异或”功能的网络权重也不唯一。</p>
 <h2 id="python版本实现"><a href="#python版本实现" class="headerlink" title="python版本实现"></a>python版本实现</h2><p>MLPClassifier是一个监督学习算法，下图是只有1个隐藏层的MLP模型 ，左侧是输入层，右侧是输出层。</p>
-<img src="https://s2.loli.net/2022/02/08/uFc1A3Wm7j92SVO.png" srcset="/img/loading.gif" lazyload alt="MLP模型" style="zoom: 50%;" />
+<img src="https://s2.loli.net/2022/02/08/uFc1A3Wm7j92SVO.png" srcset="/img/loading.gif" lazyload alt="MLP模型" style="zoom: 50%; margin:auto;" />
 
 <p>上图的整体结构可以简单的理解为下图所示：</p>
-<img src="https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png" srcset="/img/loading.gif" lazyload alt="image-20220208153609189" style="zoom:67%;" />
+<img src="https://s2.loli.net/2022/02/08/zW6XYcisfp5QHTR.png" srcset="/img/loading.gif" lazyload alt="image-20220208153609189" style="zoom:67%; margin:auto;" />
 
 <p>MLP又名多层感知机，也叫人工神经网络（ANN，Artificial Neural Network），除了输入输出层，它中间可以有多个隐藏层，如果没有隐藏层即可解决线性可划分的数据问题。最简单的MLP模型只包含一个隐藏层，即三层的结构，如上图。</p>
 <p>从上图可以看到，多层感知机的层与层之间是全连接的（全连接的意思就是：上一层的任何一个神经元与下一层的所有神经元都有连接）。多层感知机最底层是输入层，中间是隐藏层，最后是输出层。</p>
@@ -418,44 +418,39 @@
 <th align="center">样本编号</th>
 <th align="center">输入</th>
 <th align="center">输出</th>
+<th align="center">样本编号</th>
+<th align="center">输入</th>
+<th align="center">输出</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center">样本1</td>
 <td align="center">0 0 1</td>
 <td align="center">0</td>
-</tr>
-<tr>
-<td align="center">样本2</td>
-<td align="center">0 1 1</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">样本3</td>
-<td align="center">1 0 1</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">样本4</td>
-<td align="center">0 1 0</td>
-<td align="center">1</td>
-</tr>
-<tr>
 <td align="center">样本5</td>
 <td align="center">1 0 0</td>
 <td align="center">0</td>
 </tr>
 <tr>
+<td align="center">样本2</td>
+<td align="center">0 1 1</td>
+<td align="center">1</td>
 <td align="center">样本6</td>
 <td align="center">1 1 1</td>
 <td align="center">0</td>
 </tr>
 <tr>
+<td align="center">样本3</td>
+<td align="center">1 0 1</td>
+<td align="center">1</td>
 <td align="center">样本7</td>
 <td align="center">0 0 0</td>
 <td align="center">0</td>
 </tr>
 <tr>
+<td align="center">样本4</td>
+<td align="center">0 1 0</td>
+<td align="center">1</td>
 <td align="center">新样本</td>
 <td align="center">1 1 0</td>
 <td align="center">？</td>
