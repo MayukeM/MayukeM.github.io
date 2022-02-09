@@ -1,0 +1,623 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="myk">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="冰墩墩简介冰墩墩（英文：Bing Dwen Dwen，汉语拼音：bīng dūn dūn），是2022年北京冬季奥运会的吉祥物。 将熊猫形象与富有超能量的冰晶外壳相结合，头部外壳造型取自冰雪运动头盔，装饰彩色光环，整体形象酷似航天员。 2018年8月8日，北京冬奥会和冬残奥会吉祥物全球征集启动仪式举行。2019年9月17日晚，冰墩墩正式亮相  。 冰墩墩寓意创造非凡、探索未来，体现了追求卓越、引领">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python绘制奥运吉祥物冰墩墩">
+<meta property="og:url" content="http://example.com/2022/02/09/python%E7%BB%98%E5%88%B6%E5%A5%A5%E8%BF%90%E5%90%89%E7%A5%A5%E7%89%A9%E5%86%B0%E5%A2%A9%E5%A2%A9/index.html">
+<meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="冰墩墩简介冰墩墩（英文：Bing Dwen Dwen，汉语拼音：bīng dūn dūn），是2022年北京冬季奥运会的吉祥物。 将熊猫形象与富有超能量的冰晶外壳相结合，头部外壳造型取自冰雪运动头盔，装饰彩色光环，整体形象酷似航天员。 2018年8月8日，北京冬奥会和冬残奥会吉祥物全球征集启动仪式举行。2019年9月17日晚，冰墩墩正式亮相  。 冰墩墩寓意创造非凡、探索未来，体现了追求卓越、引领">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/02/09/wbQG6azJodDFBZq.png">
+<meta property="og:image" content="https://s2.loli.net/2022/02/09/2NgdixPQ3yZKkBC.png">
+<meta property="og:image" content="https://s2.loli.net/2022/02/09/QnazJM9qhvcuTij.png">
+<meta property="article:published_time" content="2022-02-09T06:35:39.000Z">
+<meta property="article:modified_time" content="2022-02-09T07:30:02.510Z">
+<meta property="article:author" content="myk">
+<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="turtle">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://s2.loli.net/2022/02/09/wbQG6azJodDFBZq.png">
+  
+  
+  <title>python绘制奥运吉祥物冰墩墩 - 我的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>myk</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                更多
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="http://124.222.11.46:2021/#/home">
+                    
+                    公司官网
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.yuque.com/mayuke">
+                    
+                    访问主站
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/MayukeM/">
+                    
+                    GitHub
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/b8.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="python绘制奥运吉祥物冰墩墩">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-02-09 14:35" pubdate>
+        2022年2月9日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      13k 字
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">python绘制奥运吉祥物冰墩墩</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2022年2月9日 下午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="冰墩墩简介"><a href="#冰墩墩简介" class="headerlink" title="冰墩墩简介"></a>冰墩墩简介</h1><p>冰墩墩（英文：<code>Bing Dwen Dwen</code>，汉语拼音：<code>bīng dūn dūn</code>），是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/2022%E5%B9%B4%E5%8C%97%E4%BA%AC%E5%86%AC%E5%AD%A3%E5%A5%A5%E8%BF%90%E4%BC%9A/12061628">2022年北京冬季奥运会</a>的吉祥物。 将熊猫形象与富有超能量的冰晶外壳相结合，头部外壳造型取自冰雪运动头盔，装饰彩色光环，整体形象酷似<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%88%AA%E5%A4%A9%E5%91%98/10130759">航天员</a>。</p>
+<p>2018年8月8日，北京冬奥会和冬残奥会吉祥物全球征集启动仪式举行。2019年9月17日晚，冰墩墩正式亮相  。</p>
+<p>冰墩墩寓意创造非凡、探索未来，体现了追求卓越、引领时代，以及面向未来的无限可能。 </p>
+<span id="more"></span>
+
+<h1 id="python-turtle绘图"><a href="#python-turtle绘图" class="headerlink" title="python turtle绘图"></a>python turtle绘图</h1><p>主要用的是 Python 自带的 <strong>turtle</strong>库</p>
+<h2 id="turtle库的基础命令介绍"><a href="#turtle库的基础命令介绍" class="headerlink" title="turtle库的基础命令介绍"></a><strong>turtle库的基础命令介绍</strong></h2><h3 id="（1）画布"><a href="#（1）画布" class="headerlink" title="（1）画布"></a>（1）<strong>画布</strong></h3><p>画布是绘图区域，可以设置它的大小和初始位置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><pre><code class="hljs text">turtle.screensize(1000,600,&#x27;red&#x27;)    大小的设置<br>turtle.setup(width=0.5,height=0.75)  初始位置<br></code></pre></td></tr></table></figure>
+
+<h3 id="（2）画笔"><a href="#（2）画笔" class="headerlink" title="（2）画笔"></a><strong>（2）画笔</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs text">（1）画笔运动的命令<br>turtle.forward(a)   向当前画笔方向移动a像素长度<br>turtle.backward(a)  向当前画笔相反方向移动a像素长度<br>turtle.right(a)     顺时针移动<br>aturtle.left(a)     逆时针移动<br>aturtle.pendown()   移动时绘制图形<br>turtle.goto(x,y)    将画笔移动到坐标为x,y的位置<br>turtle.penup()      移动时不绘制图形，提起笔<br>turtle.speed(a)     画笔绘制的速度范围<br>turtle.circle()     画图，半径为正，表示圆心在画笔的左边画圈<br><br>（2）画笔控制命令<br>turtle.pensize(width)   绘制图形的宽度<br>turtle.pencolor()       画笔的颜色<br>turtle.fillcolor(a)     绘制图形的填充颜色<br>turtle.color(a1,a2)     同时设置pencolor=a1,fillcolor=a2<br>turtle.filling()        返回当前是否在填充状态<br>turtle.begin_fill()     准备开始填充图形<br>turtle.end_fill()       填充完成<br>turtle.hideturtle()     隐藏箭头显示<br>turtle.showturtle()     显示箭头<br><br>（3）全局控制命令<br>turtle.clear()   清空turtle窗口,但是turtle的位置和状态不会改变<br>turtle.reset()   清空窗口，重置turtle状态为起始位置<br>turtle.undo()    撤销上一个turtle动作<br></code></pre></td></tr></table></figure>
+
+<h1 id="硬“肝”不断调整曲线"><a href="#硬“肝”不断调整曲线" class="headerlink" title="硬“肝”不断调整曲线"></a>硬“肝”不断调整曲线</h1><h2 id="turtle绘图小技巧"><a href="#turtle绘图小技巧" class="headerlink" title="turtle绘图小技巧"></a>turtle绘图小技巧</h2><p>通过下面这个语句把你要参考的图先绘制在窗口中，然后再对照着进行绘制调整，就方便许多了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">turtle.bgpic(<span class="hljs-string">&#x27;bg.png&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="https://s2.loli.net/2022/02/09/wbQG6azJodDFBZq.png" srcset="/img/loading.gif" lazyload alt="image-20220209145209162"></p>
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> turtle<br><br>turtle.title(<span class="hljs-string">&#x27;画个冰墩墩--小马&#x27;</span>)<br><br>turtle.speed(<span class="hljs-number">10</span>)  <span class="hljs-comment"># 速度</span><br><br><span class="hljs-comment"># 左手</span><br>turtle.penup()<br>turtle.goto(<span class="hljs-number">177</span>, <span class="hljs-number">112</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;lightgray&quot;</span>)<br>turtle.pensize(<span class="hljs-number">3</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;white&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">80</span>)<br>turtle.circle(-<span class="hljs-number">45</span>, <span class="hljs-number">200</span>)<br>turtle.circle(-<span class="hljs-number">300</span>, <span class="hljs-number">23</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 左手内</span><br>turtle.penup()<br>turtle.goto(<span class="hljs-number">182</span>, <span class="hljs-number">95</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.pensize(<span class="hljs-number">1</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.begin_fill()<br>turtle.setheading(<span class="hljs-number">95</span>)<br>turtle.pendown()<br>turtle.circle(-<span class="hljs-number">37</span>, <span class="hljs-number">160</span>)<br>turtle.circle(-<span class="hljs-number">20</span>, <span class="hljs-number">50</span>)<br>turtle.circle(-<span class="hljs-number">200</span>, <span class="hljs-number">30</span>)<br>turtle.end_fill()<br><span class="hljs-comment"># 轮廓</span><br><span class="hljs-comment"># 头顶</span><br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">73</span>, <span class="hljs-number">230</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;lightgray&quot;</span>)<br>turtle.pensize(<span class="hljs-number">3</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;white&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">20</span>)<br>turtle.circle(-<span class="hljs-number">250</span>, <span class="hljs-number">35</span>)<br><span class="hljs-comment"># 左耳</span><br>turtle.setheading(<span class="hljs-number">50</span>)<br>turtle.circle(-<span class="hljs-number">42</span>, <span class="hljs-number">180</span>)<br><span class="hljs-comment"># 左侧</span><br>turtle.setheading(-<span class="hljs-number">50</span>)<br>turtle.circle(-<span class="hljs-number">190</span>, <span class="hljs-number">30</span>)<br>turtle.circle(-<span class="hljs-number">320</span>, <span class="hljs-number">45</span>)<br><span class="hljs-comment"># 左腿</span><br>turtle.circle(<span class="hljs-number">120</span>, <span class="hljs-number">30</span>)<br>turtle.circle(<span class="hljs-number">200</span>, <span class="hljs-number">12</span>)<br>turtle.circle(-<span class="hljs-number">18</span>, <span class="hljs-number">85</span>)<br>turtle.circle(-<span class="hljs-number">180</span>, <span class="hljs-number">23</span>)<br>turtle.circle(-<span class="hljs-number">20</span>, <span class="hljs-number">110</span>)<br>turtle.circle(<span class="hljs-number">15</span>, <span class="hljs-number">115</span>)<br>turtle.circle(<span class="hljs-number">100</span>, <span class="hljs-number">12</span>)<br><span class="hljs-comment"># 右腿</span><br>turtle.circle(<span class="hljs-number">15</span>, <span class="hljs-number">120</span>)<br>turtle.circle(-<span class="hljs-number">15</span>, <span class="hljs-number">110</span>)<br>turtle.circle(-<span class="hljs-number">150</span>, <span class="hljs-number">30</span>)<br>turtle.circle(-<span class="hljs-number">15</span>, <span class="hljs-number">70</span>)<br>turtle.circle(-<span class="hljs-number">150</span>, <span class="hljs-number">10</span>)<br>turtle.circle(<span class="hljs-number">200</span>, <span class="hljs-number">35</span>)<br>turtle.circle(-<span class="hljs-number">150</span>, <span class="hljs-number">20</span>)<br><span class="hljs-comment"># 右手</span><br>turtle.setheading(-<span class="hljs-number">120</span>)<br>turtle.circle(<span class="hljs-number">50</span>, <span class="hljs-number">30</span>)<br>turtle.circle(-<span class="hljs-number">35</span>, <span class="hljs-number">200</span>)<br>turtle.circle(-<span class="hljs-number">300</span>, <span class="hljs-number">23</span>)<br><span class="hljs-comment"># 右侧</span><br>turtle.setheading(<span class="hljs-number">86</span>)<br>turtle.circle(-<span class="hljs-number">300</span>, <span class="hljs-number">26</span>)<br><span class="hljs-comment"># 右耳</span><br>turtle.setheading(<span class="hljs-number">122</span>)<br>turtle.circle(-<span class="hljs-number">53</span>, <span class="hljs-number">160</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 右耳内</span><br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">130</span>, <span class="hljs-number">180</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.pensize(<span class="hljs-number">1</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">120</span>)<br>turtle.circle(-<span class="hljs-number">28</span>, <span class="hljs-number">160</span>)<br>turtle.setheading(<span class="hljs-number">210</span>)<br>turtle.circle(<span class="hljs-number">150</span>, <span class="hljs-number">20</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 左耳内</span><br>turtle.penup()<br>turtle.goto(<span class="hljs-number">90</span>, <span class="hljs-number">230</span>)<br>turtle.setheading(<span class="hljs-number">40</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.circle(-<span class="hljs-number">30</span>, <span class="hljs-number">170</span>)<br>turtle.setheading(<span class="hljs-number">125</span>)<br>turtle.circle(<span class="hljs-number">150</span>, <span class="hljs-number">23</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 右手内</span><br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">180</span>, -<span class="hljs-number">55</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.begin_fill()<br>turtle.setheading(-<span class="hljs-number">120</span>)<br>turtle.pendown()<br>turtle.circle(<span class="hljs-number">50</span>, <span class="hljs-number">30</span>)<br>turtle.circle(-<span class="hljs-number">27</span>, <span class="hljs-number">200</span>)<br>turtle.circle(-<span class="hljs-number">300</span>, <span class="hljs-number">20</span>)<br>turtle.setheading(-<span class="hljs-number">90</span>)<br>turtle.circle(<span class="hljs-number">300</span>, <span class="hljs-number">14</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 左腿内</span><br>turtle.penup()<br>turtle.goto(<span class="hljs-number">108</span>, -<span class="hljs-number">168</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(-<span class="hljs-number">115</span>)<br>turtle.circle(<span class="hljs-number">110</span>, <span class="hljs-number">15</span>)<br>turtle.circle(<span class="hljs-number">200</span>, <span class="hljs-number">10</span>)<br>turtle.circle(-<span class="hljs-number">18</span>, <span class="hljs-number">80</span>)<br>turtle.circle(-<span class="hljs-number">180</span>, <span class="hljs-number">13</span>)<br>turtle.circle(-<span class="hljs-number">20</span>, <span class="hljs-number">90</span>)<br>turtle.circle(<span class="hljs-number">15</span>, <span class="hljs-number">60</span>)<br>turtle.setheading(<span class="hljs-number">42</span>)<br>turtle.circle(-<span class="hljs-number">200</span>, <span class="hljs-number">29</span>)<br>turtle.end_fill()<br><span class="hljs-comment"># 右腿内</span><br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">38</span>, -<span class="hljs-number">210</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(-<span class="hljs-number">155</span>)<br>turtle.circle(<span class="hljs-number">15</span>, <span class="hljs-number">100</span>)<br>turtle.circle(-<span class="hljs-number">10</span>, <span class="hljs-number">110</span>)<br>turtle.circle(-<span class="hljs-number">100</span>, <span class="hljs-number">30</span>)<br>turtle.circle(-<span class="hljs-number">15</span>, <span class="hljs-number">65</span>)<br>turtle.circle(-<span class="hljs-number">100</span>, <span class="hljs-number">10</span>)<br>turtle.circle(<span class="hljs-number">200</span>, <span class="hljs-number">15</span>)<br>turtle.setheading(-<span class="hljs-number">14</span>)<br>turtle.circle(-<span class="hljs-number">200</span>, <span class="hljs-number">27</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 右眼</span><br><span class="hljs-comment"># 眼圈</span><br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">64</span>, <span class="hljs-number">120</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">40</span>)<br>turtle.circle(-<span class="hljs-number">35</span>, <span class="hljs-number">152</span>)<br>turtle.circle(-<span class="hljs-number">100</span>, <span class="hljs-number">50</span>)<br>turtle.circle(-<span class="hljs-number">35</span>, <span class="hljs-number">130</span>)<br>turtle.circle(-<span class="hljs-number">100</span>, <span class="hljs-number">50</span>)<br>turtle.end_fill()<br><span class="hljs-comment"># 眼珠</span><br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">47</span>, <span class="hljs-number">55</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;white&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">0</span>)<br>turtle.circle(<span class="hljs-number">25</span>, <span class="hljs-number">360</span>)<br>turtle.end_fill()<br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">45</span>, <span class="hljs-number">62</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;darkslategray&quot;</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;darkslategray&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">0</span>)<br>turtle.circle(<span class="hljs-number">19</span>, <span class="hljs-number">360</span>)<br>turtle.end_fill()<br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">45</span>, <span class="hljs-number">68</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">0</span>)<br>turtle.circle(<span class="hljs-number">10</span>, <span class="hljs-number">360</span>)<br>turtle.end_fill()<br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">47</span>, <span class="hljs-number">86</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;white&quot;</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;white&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">0</span>)<br>turtle.circle(<span class="hljs-number">5</span>, <span class="hljs-number">360</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 左眼</span><br><span class="hljs-comment"># 眼圈</span><br>turtle.penup()<br>turtle.goto(<span class="hljs-number">51</span>, <span class="hljs-number">82</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">120</span>)<br>turtle.circle(-<span class="hljs-number">32</span>, <span class="hljs-number">152</span>)<br>turtle.circle(-<span class="hljs-number">100</span>, <span class="hljs-number">55</span>)<br>turtle.circle(-<span class="hljs-number">25</span>, <span class="hljs-number">120</span>)<br>turtle.circle(-<span class="hljs-number">120</span>, <span class="hljs-number">45</span>)<br>turtle.end_fill()<br><span class="hljs-comment"># 眼珠</span><br>turtle.penup()<br>turtle.goto(<span class="hljs-number">79</span>, <span class="hljs-number">60</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;white&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">0</span>)<br>turtle.circle(<span class="hljs-number">24</span>, <span class="hljs-number">360</span>)<br>turtle.end_fill()<br>turtle.penup()<br>turtle.goto(<span class="hljs-number">79</span>, <span class="hljs-number">64</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;darkslategray&quot;</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;darkslategray&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">0</span>)<br>turtle.circle(<span class="hljs-number">19</span>, <span class="hljs-number">360</span>)<br>turtle.end_fill()<br>turtle.penup()<br>turtle.goto(<span class="hljs-number">79</span>, <span class="hljs-number">70</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">0</span>)<br>turtle.circle(<span class="hljs-number">10</span>, <span class="hljs-number">360</span>)<br>turtle.end_fill()<br>turtle.penup()<br>turtle.goto(<span class="hljs-number">79</span>, <span class="hljs-number">88</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;white&quot;</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;white&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">0</span>)<br>turtle.circle(<span class="hljs-number">5</span>, <span class="hljs-number">360</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 鼻子</span><br>turtle.penup()<br>turtle.goto(<span class="hljs-number">37</span>, <span class="hljs-number">80</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.circle(-<span class="hljs-number">8</span>, <span class="hljs-number">130</span>)<br>turtle.circle(-<span class="hljs-number">22</span>, <span class="hljs-number">100</span>)<br>turtle.circle(-<span class="hljs-number">8</span>, <span class="hljs-number">130</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 嘴</span><br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">15</span>, <span class="hljs-number">48</span>)<br>turtle.setheading(-<span class="hljs-number">36</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.circle(<span class="hljs-number">60</span>, <span class="hljs-number">70</span>)<br>turtle.setheading(-<span class="hljs-number">132</span>)<br>turtle.circle(-<span class="hljs-number">45</span>, <span class="hljs-number">100</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 彩虹圈</span><br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">135</span>, <span class="hljs-number">120</span>)<br>turtle.pensize(<span class="hljs-number">5</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;cyan&quot;</span>)<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">60</span>)<br>turtle.circle(-<span class="hljs-number">165</span>, <span class="hljs-number">150</span>)<br>turtle.circle(-<span class="hljs-number">130</span>, <span class="hljs-number">78</span>)<br>turtle.circle(-<span class="hljs-number">250</span>, <span class="hljs-number">30</span>)<br>turtle.circle(-<span class="hljs-number">138</span>, <span class="hljs-number">105</span>)<br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">131</span>, <span class="hljs-number">116</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;slateblue&quot;</span>)<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">60</span>)<br>turtle.circle(-<span class="hljs-number">160</span>, <span class="hljs-number">144</span>)<br>turtle.circle(-<span class="hljs-number">120</span>, <span class="hljs-number">78</span>)<br>turtle.circle(-<span class="hljs-number">242</span>, <span class="hljs-number">30</span>)<br>turtle.circle(-<span class="hljs-number">135</span>, <span class="hljs-number">105</span>)<br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">127</span>, <span class="hljs-number">112</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;orangered&quot;</span>)<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">60</span>)<br>turtle.circle(-<span class="hljs-number">155</span>, <span class="hljs-number">136</span>)<br>turtle.circle(-<span class="hljs-number">116</span>, <span class="hljs-number">86</span>)<br>turtle.circle(-<span class="hljs-number">220</span>, <span class="hljs-number">30</span>)<br>turtle.circle(-<span class="hljs-number">134</span>, <span class="hljs-number">103</span>)<br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">123</span>, <span class="hljs-number">108</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;gold&quot;</span>)<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">60</span>)<br>turtle.circle(-<span class="hljs-number">150</span>, <span class="hljs-number">136</span>)<br>turtle.circle(-<span class="hljs-number">104</span>, <span class="hljs-number">86</span>)<br>turtle.circle(-<span class="hljs-number">220</span>, <span class="hljs-number">30</span>)<br>turtle.circle(-<span class="hljs-number">126</span>, <span class="hljs-number">102</span>)<br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">120</span>, <span class="hljs-number">104</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;greenyellow&quot;</span>)<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">60</span>)<br>turtle.circle(-<span class="hljs-number">145</span>, <span class="hljs-number">136</span>)<br>turtle.circle(-<span class="hljs-number">90</span>, <span class="hljs-number">83</span>)<br>turtle.circle(-<span class="hljs-number">220</span>, <span class="hljs-number">30</span>)<br>turtle.circle(-<span class="hljs-number">120</span>, <span class="hljs-number">100</span>)<br>turtle.penup()<br><br><span class="hljs-comment"># 爱心</span><br>turtle.penup()<br>turtle.goto(<span class="hljs-number">220</span>, <span class="hljs-number">115</span>)<br>turtle.pencolor(<span class="hljs-string">&quot;brown&quot;</span>)<br>turtle.pensize(<span class="hljs-number">1</span>)<br>turtle.fillcolor(<span class="hljs-string">&quot;brown&quot;</span>)<br>turtle.begin_fill()<br>turtle.pendown()<br>turtle.setheading(<span class="hljs-number">36</span>)<br>turtle.circle(-<span class="hljs-number">8</span>, <span class="hljs-number">180</span>)<br>turtle.circle(-<span class="hljs-number">60</span>, <span class="hljs-number">24</span>)<br>turtle.setheading(<span class="hljs-number">110</span>)<br>turtle.circle(-<span class="hljs-number">60</span>, <span class="hljs-number">24</span>)<br>turtle.circle(-<span class="hljs-number">8</span>, <span class="hljs-number">180</span>)<br>turtle.end_fill()<br><br><span class="hljs-comment"># 五环</span><br>turtle.penup()<br>turtle.goto(-<span class="hljs-number">5</span>, -<span class="hljs-number">170</span>)<br>turtle.pendown()<br>turtle.pencolor(<span class="hljs-string">&quot;blue&quot;</span>)<br>turtle.circle(<span class="hljs-number">6</span>)<br>turtle.penup()<br>turtle.goto(<span class="hljs-number">10</span>, -<span class="hljs-number">170</span>)<br>turtle.pendown()<br>turtle.pencolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.circle(<span class="hljs-number">6</span>)<br>turtle.penup()<br>turtle.goto(<span class="hljs-number">25</span>, -<span class="hljs-number">170</span>)<br>turtle.pendown()<br>turtle.pencolor(<span class="hljs-string">&quot;brown&quot;</span>)<br>turtle.circle(<span class="hljs-number">6</span>)<br>turtle.penup()<br>turtle.goto(<span class="hljs-number">2</span>, -<span class="hljs-number">175</span>)<br>turtle.pendown()<br>turtle.pencolor(<span class="hljs-string">&quot;lightgoldenrod&quot;</span>)<br>turtle.circle(<span class="hljs-number">6</span>)<br>turtle.penup()<br>turtle.goto(<span class="hljs-number">16</span>, -<span class="hljs-number">175</span>)<br>turtle.pendown()<br>turtle.pencolor(<span class="hljs-string">&quot;green&quot;</span>)<br>turtle.circle(<span class="hljs-number">6</span>)<br>turtle.penup()<br><br>turtle.pencolor(<span class="hljs-string">&quot;black&quot;</span>)<br>turtle.goto(-<span class="hljs-number">16</span>, -<span class="hljs-number">160</span>)<br>turtle.write(<span class="hljs-string">&quot;BEIJING 2022&quot;</span>, font=(<span class="hljs-string">&#x27;Arial&#x27;</span>, <span class="hljs-number">10</span>, <span class="hljs-string">&#x27;bold italic&#x27;</span>))<br>turtle.hideturtle()<br><br>turtle.done()<br></code></pre></td></tr></table></figure>
+
+<h1 id="opencv-turtle自动绘图"><a href="#opencv-turtle自动绘图" class="headerlink" title="opencv+turtle自动绘图"></a>opencv+turtle自动绘图</h1><h2 id="先看效果"><a href="#先看效果" class="headerlink" title="先看效果"></a>先看效果</h2><p><img src="https://s2.loli.net/2022/02/09/2NgdixPQ3yZKkBC.png" srcset="/img/loading.gif" lazyload alt="image-20220209151707506"></p>
+<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><p>turtle是python的一个很好玩的自动绘图工具。然而，用它来画一幅画需要提供大量的坐标点。有的人为了用它画出一幅好看的画不惜去手工计算图片线稿的描点的位置。心疼一秒。<br>其实我们完全可以用计算机图像识别来自动获取图片边缘的位置坐标，比如Opencv。<br>我们先直接上python的opencv一个基本案例。</p>
+<blockquote>
+<p>记得先安装opencv-python库</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> cv2<br>img = cv2.imread(<span class="hljs-string">&quot;bingdundun.png&quot;</span>)<span class="hljs-comment">#读取一张图片</span><br>cv2.imshow(<span class="hljs-string">&quot;窗口标题&quot;</span>,img)<span class="hljs-comment">#在一个窗口显示图片</span><br></code></pre></td></tr></table></figure>
+
+<p>cv2.imread()是读取一个图像文件，然后将图像的像素信息转化成一个numpy矩阵，并返回<br>cv2.imshow()则是读取一个numpy矩阵信息，将其作为像素信息在新窗口中打印出来。<br>ok，读取图片工作完成了，那我们现在来获取图片的边缘信息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">point=cv2.Canny(img, <span class="hljs-number">000</span>, <span class="hljs-number">200</span>)<br></code></pre></td></tr></table></figure>
+
+<p>这是边缘检测函数，将img图像的边缘像素信息作为numpy矩阵返回，里面的0和200这个参数是阈值范围参数，可自行调节。<br>虽然得到了边缘位置的信息，但这个矩阵信息却是显示的图像的矩阵的旋转矩阵。因此我们还需要对所得矩阵进行旋转，否则可能会得到倒过来的图像。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy<br>point=numpy.rot90(black,k=<span class="hljs-number">3</span>)<br></code></pre></td></tr></table></figure>
+
+<p>numpy.rot90()这个函数是矩阵顺时针旋转90度的函数，k代表旋转的次数，经过我的测试，要旋转3次才矫正(也就是逆时针一次)。<br>得到绘图点的像素信息后，我们开始用turtle进行绘图</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> turtle<br><span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(point)):<br>    <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(point[y])):<br>        <span class="hljs-keyword">if</span> point[y][x]!=<span class="hljs-number">0</span>:<br>            turtle.penup()<br>            turtle.goto(y,x)<br>            turtle.pendown()<br>            turtle.goto(y,x)<br>            turtle.penup()<br></code></pre></td></tr></table></figure>
+
+<p>这里就是直接判断x，y坐标下绘图点矩阵的像素信息是否为0，因为绘图点矩阵是通过canny边缘识别得到的，故除了边缘意外的位置像素值都为0.这样就能描绘出一张图片的线稿了<br>此外还有其他参数可以调节，比如缩放图像尺寸,笔的大小，绘图的中心位置，绘图速度等等。</p>
+<h2 id="完整代码-1"><a href="#完整代码-1" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> cv2<br><span class="hljs-keyword">import</span> turtle<br><span class="hljs-keyword">import</span> numpy<br>img = cv2.imread(<span class="hljs-string">&quot;i.png&quot;</span>)<br>cv2.imshow(<span class="hljs-string">&quot;biaoti&quot;</span>,img)<br>black=cv2.Canny(img, <span class="hljs-number">000</span>, <span class="hljs-number">200</span>)<br>height, width=black.shape[:<span class="hljs-number">2</span>]<br>point = cv2.resize(black, (<span class="hljs-built_in">int</span>(width/<span class="hljs-number">4</span>), <span class="hljs-built_in">int</span>(height/<span class="hljs-number">4</span>)), interpolation=cv2.INTER_CUBIC)<br>point=numpy.rot90(point,k=<span class="hljs-number">3</span>)<br>turtle.setup(<span class="hljs-number">600</span>,<span class="hljs-number">600</span>)<br>x0=<span class="hljs-built_in">int</span>(<span class="hljs-built_in">len</span>(point[<span class="hljs-number">0</span>])/<span class="hljs-number">2</span>)<br>y0=<span class="hljs-built_in">int</span>(<span class="hljs-built_in">len</span>(point)/<span class="hljs-number">2</span>)<br>turtle.pensize(<span class="hljs-number">3</span>)<br><br>turtle.speed(<span class="hljs-number">1000</span>)<br><span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(point),<span class="hljs-number">2</span>):<br>    <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(point[y]),<span class="hljs-number">2</span>):<br>        <span class="hljs-keyword">if</span> point[y][x]!=<span class="hljs-number">0</span>:<br>            <span class="hljs-built_in">print</span>(y,x)<br>            turtle.penup()<br>            turtle.goto(y-y0,x-x0)<br>            turtle.pendown()<br>            turtle.goto(y-y0,x-x0)<br>            turtle.penup()<br><span class="hljs-keyword">while</span> <span class="hljs-number">1</span>:<br>    <span class="hljs-keyword">pass</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="使用opencv找轮廓"><a href="#使用opencv找轮廓" class="headerlink" title="使用opencv找轮廓"></a>使用opencv找轮廓</h1><h2 id="实现效果-1"><a href="#实现效果-1" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="https://s2.loli.net/2022/02/09/QnazJM9qhvcuTij.png" srcset="/img/loading.gif" lazyload alt="image-20220209152121194"></p>
+<h2 id="完整代码-2"><a href="#完整代码-2" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding:utf-8 -*-</span><br><span class="hljs-comment"># __author__ = &quot;mayuke&quot;</span><br><br><span class="hljs-comment"># 导入模块</span><br><span class="hljs-keyword">import</span> turtle<br><span class="hljs-keyword">import</span> cv2 <span class="hljs-keyword">as</span> cv<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><br><span class="hljs-comment"># 读取图片，并设置相关参数</span><br>src = cv.imread(<span class="hljs-string">&quot;img.jpg&quot;</span>)<br><span class="hljs-comment"># print(src.shape)</span><br>cv.imshow(<span class="hljs-string">&#x27;s1&#x27;</span>, src)<br>width = src.shape[<span class="hljs-number">1</span>]<br>hight = src.shape[<span class="hljs-number">0</span>]<br><span class="hljs-built_in">print</span>(width, hight)<br>turtle.setup(width + <span class="hljs-number">15</span>, hight + <span class="hljs-number">15</span>)<br>turtle.bgcolor(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)<br>turtle.pencolor(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)<br><br><span class="hljs-comment"># 用一个函数将图片左上角设置成坐标原点（0,0）</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">y</span>(<span class="hljs-params">x, y</span>):</span><br>    x = x - <span class="hljs-number">1</span> / <span class="hljs-number">2</span> * width<br>    y = -(y - <span class="hljs-number">1</span> / <span class="hljs-number">2</span> * hight)<br>    <span class="hljs-keyword">return</span> x, y<br><br><span class="hljs-comment"># 将图片转成灰度图并进行二值化</span><br>gray = cv.cvtColor(src, cv.COLOR_BGR2GRAY)<br>ret, image = cv.threshold(gray, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>, cv.THRESH_OTSU)<br><br><span class="hljs-comment"># 使用opencv找轮廓</span><br>counters, re = cv.findContours(image, cv.RETR_TREE, cv.CHAIN_APPROX_NONE)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;轮廓个数：&#x27;</span>, <span class="hljs-built_in">len</span>(counters))<br><br><span class="hljs-comment"># 遍历轮廓进行画图</span><br><span class="hljs-keyword">for</span> i, con <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(counters):<br><br>    area = cv.contourArea(con)<br><br>    con = np.reshape(con, (con.shape[<span class="hljs-number">0</span>], <span class="hljs-number">2</span>))<br><br>    turtle.goto(y(con[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], con[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]))<br>    turtle.pendown()<br><br>    biao_x1 = np.argmin(con[:, <span class="hljs-number">0</span>])<br>    x1 = con[biao_x1, <span class="hljs-number">0</span>]<br>    y1 = con[biao_x1, <span class="hljs-number">1</span>]<br>    <span class="hljs-comment"># print(&#x27;x1,y1=&#x27;,x1,y1)</span><br><br>    biao_x2 = np.argmax(con[:, <span class="hljs-number">0</span>])<br>    x2 = con[biao_x2, <span class="hljs-number">0</span>]<br>    y2 = con[biao_x2, <span class="hljs-number">1</span>]<br>    <span class="hljs-comment"># print(&#x27;x2,y2=&#x27;, x2, y2)</span><br><br>    biao_y3 = np.argmin(con[:, <span class="hljs-number">1</span>])<br>    x3 = con[biao_y3, <span class="hljs-number">0</span>]<br>    y3 = con[biao_y3, <span class="hljs-number">1</span>]<br>    <span class="hljs-comment"># print(&#x27;x3,y3=&#x27;, x3, y3)</span><br>    <span class="hljs-comment"># 下边坐标</span><br>    biao_y4 = np.argmin(con[:, <span class="hljs-number">1</span>])<br>    x4 = con[biao_y4, <span class="hljs-number">0</span>]<br>    y4 = con[biao_y4, <span class="hljs-number">1</span>]<br>    <span class="hljs-comment"># print(&#x27;x4,y4=&#x27;, x4, y4)</span><br><br>    x1 = x1<br>    <span class="hljs-comment"># right</span><br>    x2 = x2<br>    <span class="hljs-comment"># up</span><br>    y3 = y3<br>    <span class="hljs-comment"># bottom</span><br>    y4 = y4<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;x1,y1=&#x27;</span>, x1, y1)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;x2,y2=&#x27;</span>, x2, y2)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;x3,y3=&#x27;</span>, x3, y3)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;x4,y4=&#x27;</span>, x4, y4)<br>    <span class="hljs-keyword">if</span> x1 &lt; width <span class="hljs-keyword">and</span> x2 &gt;= <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> y3 &lt; hight <span class="hljs-keyword">and</span> y4 &gt;= <span class="hljs-number">0</span>:<br>        a1 = image[y1, x1] / <span class="hljs-number">255</span><br><br>        a2 = image[y2, x2] / <span class="hljs-number">255</span><br><br>        a3 = image[y3, x3] / <span class="hljs-number">255</span><br><br>        a4 = image[y4, x4] / <span class="hljs-number">255</span><br>    <span class="hljs-keyword">else</span>:<br>        a1 = a2 = a3 = a4 = <span class="hljs-number">0</span><br><br>    a = a1 + a2 + a3 + a4<br><br>    turtle.begin_fill()<br><br>    <span class="hljs-keyword">if</span> a &gt; <span class="hljs-number">5</span>:<br>        turtle.fillcolor(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">elif</span> a &lt;= <span class="hljs-number">5</span>:<br>        turtle.fillcolor(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)<br>    <span class="hljs-comment"># 画图</span><br>    <span class="hljs-keyword">for</span> shu, c <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(con):<br>        turtle.goto(y(c[<span class="hljs-number">0</span>], c[<span class="hljs-number">1</span>]))<br>    turtle.goto(y(con[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], con[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]))<br>    turtle.end_fill()<br>    turtle.penup()<br><br>turtle.mainloop()<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a target="_blank" rel="noopener" href="https://it.sohu.com/a/521259005_121124358">Python绘制冬奥吉祥物“冰墩墩”_turtle_goto_Crossin (sohu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39096769/article/details/105212737">(55条消息) opencv+turtle自动绘图_林雪飞的博客-CSDN博客_opencv 线稿</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45087786/article/details/115445152?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_default&utm_relevant_index=1">(55条消息) python 用turtle自动画图_qq 1735375343的博客-CSDN博客_python自动绘图</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a>
+                    
+                      <a class="hover-with-bg" href="/tags/python/">python</a>
+                    
+                      <a class="hover-with-bg" href="/tags/turtle/">turtle</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/02/08/img%20margin%200%20auto%20%E5%9B%BE%E7%89%87%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E6%97%A0%E6%95%88/">
+                        <span class="hidden-mobile">img margin 0 auto; 图片水平居中布局无效</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"bsazSpg1oz4dmytEUahhi503-gzGzoHsz","appKey":"1GClCXtwE6bfNzVVISE2bWTQ","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
