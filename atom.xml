@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-09T08:54:09.330Z</updated>
+  <updated>2022-02-09T15:20:30.105Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蓝桥杯基础练习python实现</title>
+    <link href="http://example.com/2022/02/09/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-python%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://example.com/2022/02/09/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-python%E5%AE%9E%E7%8E%B0/</id>
+    <published>2022-02-09T15:20:22.000Z</published>
+    <updated>2022-02-09T15:20:30.105Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;BASIC-01-A-B问题&quot;&gt;&lt;a href=&quot;#BASIC-01-A-B问题&quot; class=&quot;headerlink&quot; title=&quot;BASIC-01 A+B问题&quot;&gt;&lt;/a&gt;BASIC-01 A+B问题&lt;/h1&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    
+    <category term="python" scheme="http://example.com/tags/python/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>机器学习四大门派</title>
