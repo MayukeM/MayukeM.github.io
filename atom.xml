@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-09T07:30:02.510Z</updated>
+  <updated>2022-02-09T08:47:01.033Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习四大门派</title>
+    <link href="http://example.com/2022/02/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9B%9B%E5%A4%A7%E9%97%A8%E6%B4%BE/"/>
+    <id>http://example.com/2022/02/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9B%9B%E5%A4%A7%E9%97%A8%E6%B4%BE/</id>
+    <published>2022-02-09T07:32:40.000Z</published>
+    <updated>2022-02-09T08:47:01.033Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;什么是学习？&quot;&gt;&lt;a href=&quot;#什么是学习？&quot; class=&quot;headerlink&quot; title=&quot;什么是学习？&quot;&gt;&lt;/a&gt;什么是学习？&lt;/h1&gt;&lt;p&gt;著名学者赫伯特·西蒙教授（Herbert Simon，1975年图灵奖获得者、1978年诺贝尔经济学奖获得者）曾对“学习”给了一个定义：“如果一个系统，能够通过执行某个过程，就此改进了它的性能，那么这个过程就是学习”。&lt;br&gt;大牛就是大牛，永远都是那么言简意赅，一针见血。从西蒙教授的观点可以看出，&lt;strong&gt;学习的核心目的，就是改善性能&lt;/strong&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="人工智能" scheme="http://example.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    
+    <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>python绘制奥运吉祥物冰墩墩</title>
