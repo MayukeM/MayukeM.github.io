@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-09T15:20:30.105Z</updated>
+  <updated>2022-02-10T07:53:23.123Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深度学习，一种数据重于算法的思维转换</title>
+    <link href="http://example.com/2022/02/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%8C%E4%B8%80%E7%A7%8D%E6%95%B0%E6%8D%AE%E9%87%8D%E4%BA%8E%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%9D%E7%BB%B4%E8%BD%AC%E6%8D%A2/"/>
+    <id>http://example.com/2022/02/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%8C%E4%B8%80%E7%A7%8D%E6%95%B0%E6%8D%AE%E9%87%8D%E4%BA%8E%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%9D%E7%BB%B4%E8%BD%AC%E6%8D%A2/</id>
+    <published>2022-02-10T03:54:58.000Z</published>
+    <updated>2022-02-10T07:53:23.123Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;深度学习所处的知识象限&quot;&gt;&lt;a href=&quot;#深度学习所处的知识象限&quot; class=&quot;headerlink&quot; title=&quot;深度学习所处的知识象限&quot;&gt;&lt;/a&gt;深度学习所处的知识象限&lt;/h1&gt;&lt;p&gt;深度学习：对于可统计的、但不可推理的（即象限Ⅲ），可通过神经网络这种特定的机器学习方法，达到性能提升的目的 &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="人工智能" scheme="http://example.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    
+    <category term="人工智能" scheme="http://example.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="深度学习" scheme="http://example.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>蓝桥杯基础练习python实现</title>

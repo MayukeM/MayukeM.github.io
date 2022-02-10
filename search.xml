@@ -2453,4 +2453,109 @@
         <tag>蓝桥杯</tag>
       </tags>
   </entry>
+  <entry>
+    <title>深度学习，一种数据重于算法的思维转换</title>
+    <url>/2022/02/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%8C%E4%B8%80%E7%A7%8D%E6%95%B0%E6%8D%AE%E9%87%8D%E4%BA%8E%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%9D%E7%BB%B4%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<h1 id="深度学习所处的知识象限"><a href="#深度学习所处的知识象限" class="headerlink" title="深度学习所处的知识象限"></a>深度学习所处的知识象限</h1><p>深度学习：对于可统计的、但不可推理的（即象限Ⅲ），可通过神经网络这种特定的机器学习方法，达到性能提升的目的 </p>
+<span id="more"></span>
+
+<p><img src="https://s2.loli.net/2022/02/10/cJs9AlViDrGe7f2.png" alt="image-20220210123457396"></p>
+<p>深度学习在本质上，就是层数非常多的人工神经网络，深度学习属于统计学习的范畴，统计机器学习的对象，其实就是数据。</p>
+<p>简单来说，深度学习就是一种包含多个隐含层（层数越多即为越深）的多层感知机，深度学习将“特征提取”和“分类”合二为一，即达成所谓的端到端。</p>
+<h1 id="深度学习的感性认知"><a href="#深度学习的感性认知" class="headerlink" title="深度学习的感性认知"></a>深度学习的感性认知</h1><p>把初恋期当作输入，磨合期当中调参，稳定期当作输出</p>
+<p>书画琴棋诗酒花，<br>当年件件不离他。<br>而今七事都更变，<br>柴米油盐酱醋茶。</p>
+<p>这首诗说的是在过日子的洗礼中，各种生活琐事的变迁，恋爱是过日子的一部分，双方需要不断磨合。</p>
+<p><img src="https://s2.loli.net/2022/02/10/7pdxrOg61la9Rej.png" alt="image-20220210123914573"></p>
+<p>调参：磨合。磨合中的权重取舍，就相当于深度学习中隐含层的参数调整</p>
+<h1 id="深度学习发展简史"><a href="#深度学习发展简史" class="headerlink" title="深度学习发展简史"></a>深度学习发展简史</h1><p>无法承受参数之重的全连接前馈网络</p>
+<p><img src="https://s2.loli.net/2022/02/10/Egz8eV74DRivfxp.png" alt="image-20220210124635185"></p>
+<p>1968年，大卫·休伯尔在实验中发现两个有趣的现象</p>
+<p><img src="https://s2.loli.net/2022/02/10/XFf2gKbs3liJBtw.png" alt="image-20220210124829159"></p>
+<ol>
+<li><p>神经元局部感知</p>
+</li>
+<li><p>动物大脑皮层是分级、分层处理信息的</p>
+</li>
+</ol>
+<p><img src="https://s2.loli.net/2022/02/10/5ETxOhvDRzSJbsZ.png" alt="image-20220210124937424"></p>
+<p>它对人工智能的启发意义在于：</p>
+<ol>
+<li>不必考虑使用神经元的”全连接“模式</li>
+<li>神经网络拟合的复杂函数可分级、分层次来完成</li>
+</ol>
+<p>1980年，日本学者福岛邦彦：神经认知机，是一个使用无监督学习训练的神经网络模型，也是卷积神经网络的雏形</p>
+<p><img src="https://s2.loli.net/2022/02/10/YhHbS2qk9TzE5aO.png" alt="image-20220210125503603"></p>
+<p>1989年，Yann LeCun：利用BP算法重大改进 <strong>卷积神经网络</strong></p>
+<p>LeCun把自己研究的网络命名为LeNet，主要用于字符识别</p>
+<p><img src="https://s2.loli.net/2022/02/10/3BHrpi7hVOIaqQL.png" alt="image-20220210130039836"></p>
+<p>20世纪90年代，俄罗斯统计学家V.Vapnik提出支持向量机（SVM）</p>
+<p>2006年，深度学习的开山之作</p>
+<p><img src="https://s2.loli.net/2022/02/10/lgWRF8mASG2unYE.png" alt="image-20220210130338057"></p>
+<p>两个重要结论：</p>
+<ol>
+<li>多层的神经网络具有优秀的特征学习能力，能够学习到数据更本质的特征</li>
+<li>多层神经网络的初始化参数可通过逐层预训练获得</li>
+</ol>
+<h1 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h1><p>所谓卷积是指一个函数和另一个函数在某个维度上的“叠加累计”作用。</p>
+<h2 id="深度学习”层“的内涵"><a href="#深度学习”层“的内涵" class="headerlink" title="深度学习”层“的内涵"></a>深度学习”层“的内涵</h2><p>深度学习中的所谓“层”：就是对数据实施某种加工的过程。我们可以把神经网络层理解为数据过滤器。数据从输入端进来，经过转换，以另一种更有用的模式出去，这个过程叫做数据蒸馏（data distillation）</p>
+<p><img src="https://s2.loli.net/2022/02/10/PrZRFtvY7IKQq8z.png" alt="将复杂高维数据展平的隐喻"></p>
+<h2 id="图像处理中的卷积"><a href="#图像处理中的卷积" class="headerlink" title="图像处理中的卷积"></a>图像处理中的卷积</h2><p>计算机看到的是数字矩阵</p>
+<p><img src="https://s2.loli.net/2022/02/10/KM8CURYFEp5AHoJ.png" alt="image-20220210134419017"></p>
+<h2 id="卷积运算"><a href="#卷积运算" class="headerlink" title="卷积运算"></a>卷积运算</h2><h3 id="1D卷积运算"><a href="#1D卷积运算" class="headerlink" title="1D卷积运算"></a>1D卷积运算</h3><p><img src="https://s2.loli.net/2022/02/10/WBQ5USJRwZ4lk2O.png" alt="image-20220210134655334"></p>
+<h3 id="二维图像数据的卷积"><a href="#二维图像数据的卷积" class="headerlink" title="二维图像数据的卷积"></a>二维图像数据的卷积</h3><p><img src="https://s2.loli.net/2022/02/10/5aGm46kh9Q8WYUt.png" alt="image-20220210134735340"></p>
+<h3 id="3D卷积运算"><a href="#3D卷积运算" class="headerlink" title="3D卷积运算"></a>3D卷积运算</h3><p><img src="https://s2.loli.net/2022/02/10/UitqQzdc2obfj6Y.png" alt="image-20220210134808763"></p>
+<h2 id="卷积在传统图像处理中的应用"><a href="#卷积在传统图像处理中的应用" class="headerlink" title="卷积在传统图像处理中的应用"></a>卷积在传统图像处理中的应用</h2><p><img src="https://s2.loli.net/2022/02/10/8FfhXi5YI249ycp.png" alt="image-20220210134842290"></p>
+<h2 id="用python实现对图像的卷积-滤波"><a href="#用python实现对图像的卷积-滤波" class="headerlink" title="用python实现对图像的卷积(滤波)"></a>用python实现对图像的卷积(滤波)</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">import</span> pylab<br><span class="hljs-keyword">import</span> cv2<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><br>img = plt.imread(<span class="hljs-string">&quot;dog.jpg&quot;</span>)                        <span class="hljs-comment">#在这里读取图片</span><br><br>plt.imshow(img)                                     <span class="hljs-comment">#显示读取的图片</span><br>pylab.show()<br><br>fil = np.array([[ -<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>],                        <span class="hljs-comment">#这个是设置的滤波，也就是卷积核</span><br>                [ -<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>],<br>                [  <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]])<br><br>res = cv2.filter2D(img,-<span class="hljs-number">1</span>,fil)                      <span class="hljs-comment">#使用opencv的卷积函数</span><br><br>plt.imshow(res)                                     <span class="hljs-comment">#显示卷积后的图片</span><br><span class="hljs-comment"># plt.imsave(&quot;dog.jpg&quot;,res)</span><br>pylab.show()<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/02/10/IwZ8rRF9DPNVsSh.png" alt="image-20220210144934290"></p>
+<h1 id="卷积神经网络的结构"><a href="#卷积神经网络的结构" class="headerlink" title="卷积神经网络的结构"></a>卷积神经网络的结构</h1><p><img src="https://s2.loli.net/2022/02/10/7zQn1ati4S6M59L.png" alt="image-20220210150601321"></p>
+<p><img src="https://s2.loli.net/2022/02/10/y7B39FzRVDncSJP.png" alt="image-20220210150540452"></p>
+<h2 id="卷积层"><a href="#卷积层" class="headerlink" title="卷积层"></a>卷积层</h2><p><strong>卷积的目的：作为特征提取器</strong></p>
+<p><strong>用卷积来代替全连接</strong></p>
+<p>卷积层是构建卷积神经网络的<strong>核心层</strong>，它产生了网络中大部分的<strong>计算量</strong>。注意是计算量而不是参数量。</p>
+<p><strong>卷积层的作用：</strong></p>
+<ol>
+<li><p><strong>滤波器的作用或者说是卷积的作用</strong>。卷积层的参数是有一些可学习的滤波器集合构成的。每个滤波器在空间上（宽度和高度）都比较小，<strong>但是深度和输入数据一致</strong>。直观地来说，网络会让滤波器学习到当它看到某些类型的视觉特征时就激活，具体的视觉特征可能是某些方位上的边界，或者在第一层上某些颜色的斑点，甚至可以是网络更高层上的蜂巢状或者车轮状图案。</p>
+</li>
+<li><p><strong>可以被看做是神经元的一个输出</strong>。神经元只观察输入数据中的一小部分，并且和空间上左右两边的所有神经元共享参数（因为这些数字都是使用同一个滤波器得到的结果）。</p>
+</li>
+<li><p><strong>降低参数的数量</strong>。这个由于卷积具有“权值共享”这样的特性，可以降低参数数量，达到降低计算开销，防止由于参数过多而造成过拟合。</p>
+</li>
+</ol>
+<p><strong>感受野（重点理解）:</strong></p>
+<p>在处理图像这样的高维度输入时，让每个神经元都与前一层中的所有神经元进行全连接是不现实的。相反，我们让每个神经元只与输入数据的一个局部区域连接。<strong>该连接的空间大小叫做神经元的感受野</strong>（receptive field），它的尺寸是一个超参数（其实就是滤波器的空间尺寸）。<strong>在深度方向上，这个连接的大小总是和输入量的深度相等</strong>。需要再次强调的是，我们对待空间维度（宽和高）与深度维度是不同的：连接在空间（宽高）上是局部的，但是在深度上总是和输入数据的深度一致，这一点会在下面举例具体说明。</p>
+<p><img src="https://s2.loli.net/2022/02/10/cYusIAJdDnwXK3B.jpg" alt="preview"></p>
+<blockquote>
+<p>在图 2 中展现的卷积神经网络的一部分，其中的红色为输入数据，假设输入数据体尺寸为[32x32x3]（比如CIFAR-10的RGB图像），如果感受野（或滤波器尺寸）是5x5，那么卷积层中的每个神经元会有输入数据体中[5x5x3]区域的权重，共5x5x3=75个权重（还要加一个偏差参数）。注意这个连接在深度维度上的大小必须为3，和输入数据体的深度一致。其中还有一点需要注意，对应一个感受野有75个权重，这75个权重是通过学习进行更新的，所以很大程度上这些权值之间是不相等（也就对于同一个卷积核，它对于与它连接的输入的每一层的权重都是独特的，不是同样的权重重复输入层层数那么多次就可以的）。在这里相当于前面的每一个层对应一个传统意义上的卷积模板，每一层与自己卷积模板做完卷积之后，再将各个层的结果加起来，再加上偏置，注意是<strong>一个偏置</strong>，无论输入输入数据是多少层，一个卷积核就对应一个偏置。</p>
+</blockquote>
+<h2 id="激活层"><a href="#激活层" class="headerlink" title="激活层"></a>激活层</h2><p><strong>激活层：非线性变换  –&gt;  提升神经网络的表达能力</strong></p>
+<p><img src="https://s2.loli.net/2022/02/10/5pKjbLNDvmsURGt.png" alt="image-20220210152721404"></p>
+<h2 id="池化层"><a href="#池化层" class="headerlink" title="池化层"></a>池化层</h2><p>通常在连续的卷积层之间会周期性地插入一个池化层。它的作用是逐渐降低数据体的空间尺寸，这样的话就能减少网络中参数的数量，使得计算资源耗费变少，也能有效控制过拟合。</p>
+<p><img src="https://s2.loli.net/2022/02/10/PLbK8Z9wxiTDFMa.png" alt="image-20220210152926415"></p>
+<p>池化带来的好处：平移不变性（Invariance）</p>
+<h2 id="全连接层"><a href="#全连接层" class="headerlink" title="全连接层"></a>全连接层</h2><p><strong>全连接层:为分类服务</strong></p>
+<p><img src="https://s2.loli.net/2022/02/10/twHBNQMfdJvqiZ6.png" alt="image-20220210153059331"></p>
+<p>CNN的反向传播（BP）过程：</p>
+<p><img src="https://s2.loli.net/2022/02/10/bcOrBU45CjwuyE1.png" alt="image-20220210153306379"></p>
+<h1 id="神经网络的过拟合"><a href="#神经网络的过拟合" class="headerlink" title="神经网络的过拟合"></a>神经网络的过拟合</h1><p>过拟合是指，模型过于表征训练数据，导致在其他数据集上表现下降</p>
+<p><img src="https://s2.loli.net/2022/02/10/Mzk4apBdG87nfJv.png" alt="image-20220210153403043"></p>
+<p><img src="https://s2.loli.net/2022/02/10/IYjfBEcT63iNp52.png" alt="image-20220210153458273"></p>
+<h1 id="基于卷积神经网络的手写数字识别"><a href="#基于卷积神经网络的手写数字识别" class="headerlink" title="基于卷积神经网络的手写数字识别"></a>基于卷积神经网络的手写数字识别</h1><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/env python3</span><br><span class="hljs-comment"># -*- coding: utf-8 -*-</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">Created on Tue May 12 12:56:10 2020</span><br><span class="hljs-string">参考代码：https://www.tensorflow.org/tutorials/quickstart/advanced</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-comment"># （1）读入数据</span><br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf<br><span class="hljs-keyword">import</span> keras <span class="hljs-keyword">as</span> K<br><span class="hljs-comment"># mnist = tf.keras.datasets.mnist</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DataSource</span>():</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span><br>        <span class="hljs-comment"># mnist数据集存储的位置，如何不存在将自动下载</span><br>        data_path = os.path.abspath(os.path.dirname(__file__)) + <span class="hljs-string">&#x27;/data/mnist.npz&#x27;</span><br>        <span class="hljs-comment"># (x_train, y_train), (x_test, y_test) = datasets.mnist.load_data(path=data_path)</span><br>        (x_train, y_train), (x_test, y_test) = K.datasets.mnist.load_data()<br>        <span class="hljs-comment"># 6万张训练图片，1万张测试图片</span><br>        <span class="hljs-comment">#        train_images = train_images.reshape((60000, 28, 28, 1))</span><br>        <span class="hljs-comment">#        test_images = test_images.reshape((10000, 28, 28, 1))</span><br>        x_train = x_train[..., tf.newaxis]<br>        x_test = x_test[..., tf.newaxis]<br>        <span class="hljs-comment"># 像素值映射到 0 - 1 之间</span><br>        x_train, x_test = x_train / <span class="hljs-number">255.0</span>, x_test / <span class="hljs-number">255.0</span><br><br>        self.train_images, self.train_labels = x_train, y_train<br>        self.test_images, self.test_labels = x_test, y_test<br><br>data = DataSource()<br><br><span class="hljs-comment"># (2)搭建模型</span><br><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf<br><span class="hljs-comment"># from tensorflow.keras import datasets, layers, models</span><br><span class="hljs-keyword">from</span> tensorflow.python.keras <span class="hljs-keyword">import</span> layers, models<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CNN</span>():</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span><br>        model = models.Sequential()<br>        <span class="hljs-comment"># 第1层卷积，卷积核大小为3*3，32个，28*28为待训练图片的大小</span><br>        model.add(layers.Conv2D(<span class="hljs-number">32</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">3</span>), activation=<span class="hljs-string">&#x27;relu&#x27;</span>, input_shape=(<span class="hljs-number">28</span>, <span class="hljs-number">28</span>, <span class="hljs-number">1</span>)))<br>        model.add(layers.MaxPooling2D((<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)))<br>        <span class="hljs-comment"># 第2层卷积，卷积核大小为3*3，64个</span><br>        model.add(layers.Conv2D(<span class="hljs-number">64</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">3</span>), activation=<span class="hljs-string">&#x27;relu&#x27;</span>))<br>        model.add(layers.MaxPooling2D((<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)))<br>        <span class="hljs-comment"># 第3层卷积，卷积核大小为3*3，64个 </span><br>        model.add(layers.Conv2D(<span class="hljs-number">64</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">3</span>), activation=<span class="hljs-string">&#x27;relu&#x27;</span>))<br>        <span class="hljs-comment"># 增加一个平坦层，拉平数据</span><br>        model.add(layers.Flatten())<br>        model.add(layers.Dense(<span class="hljs-number">64</span>, activation=<span class="hljs-string">&#x27;relu&#x27;</span>))<br>        model.add(layers.Dense(<span class="hljs-number">10</span>, activation=<span class="hljs-string">&#x27;softmax&#x27;</span>))<br><br>        model.summary()<br><br>        self.model = model<br><br>cnn = CNN()<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2022/02/10/Dmc2pVGOszq16Ia.png" alt="image-20220210155057781"></p>
+<p><img src="https://s2.loli.net/2022/02/10/7O9tEoj3BNPqY61.png" alt="image-20220210155148881"></p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>人工智能极简入门-张玉宏 第七章</p>
+<p><a href="https://www.cnblogs.com/Liu-xiang/p/10259861.html">图像处理中滤波器(卷积核) - Liu_xiang - 博客园 (cnblogs.com)</a></p>
+<p><a href="https://www.cnblogs.com/youmuchen/p/6724780.html">用python实现对图像的卷积(滤波) - swuxyj - 博客园 (cnblogs.com)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/47184529">卷积神经网络（CNN）详解 - 知乎 (zhihu.com)</a></p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>人工智能</tag>
+        <tag>机器学习</tag>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
 </search>
