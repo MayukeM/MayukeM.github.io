@@ -2599,7 +2599,7 @@
     <title>图像处理中的抠图技术image matting</title>
     <url>/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/</url>
     <content><![CDATA[<h1 id="抠图技术（imagematting"><a href="#抠图技术（imagematting" class="headerlink" title="抠图技术（imagematting)"></a>抠图技术（imagematting)</h1><p><a href="https://so.csdn.net/so/search?q=%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86&spm=1001.2101.3001.7020">图像处理</a>中的image matting技术，中文简称抠图技术。Image Matting也是一个基本的计算机视觉问题，有着广泛的应用。</p>
-<p>证件照换背景应该算是最简单的Image Matting，由于证件照背景属性的特殊性，这个抠图很容易可以实现。算法分为几个步骤：</p>
+<p>证件照换背景应该算是最简单的Image Matting，由于证件照背景属性的特殊性，这个抠图很容易可以实现。算法分为几个步骤： </p>
 <span id="more"></span>
 
 <ol>
