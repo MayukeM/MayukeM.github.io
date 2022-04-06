@@ -2585,6 +2585,8 @@
 
 
 
+<figure class="highlight"><table><tr><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>蓝桥杯</category>
@@ -2604,7 +2606,7 @@
 
 <ol>
 <li>读入原始证件照图片</li>
-<li>转换到HSV色彩空间（色调（H），饱和度（S），明度（V）） </li>
+<li>转换到HSV色彩空间（色调（H），饱和度（S），明度（V））</li>
 <li>设置HSV空间的阈值获得图片背景的mask（抠图的结果）</li>
 <li>腐蚀膨胀去除干扰点</li>
 <li>遍历像素点替换背景颜色</li>
@@ -2619,11 +2621,11 @@
 <p>不过纯色背景的情况在现实中太少，应用面狭窄，抠图技术重点在背景是自然图像的复杂图片。</p>
 <p><img src="https://s2.loli.net/2022/04/06/BF2LUxj3PiQqXgI.png" alt="image-20220406170456389"></p>
 <h2 id="复杂图片的image-matting"><a href="#复杂图片的image-matting" class="headerlink" title="复杂图片的image matting"></a>复杂图片的image matting</h2><p>在复杂图片的Image Matting课题上，主要包括经典的传统方法和近年来兴起的深度学习方法。</p>
-<p>在<strong>传统方法</strong>部分，有比较典型的三种经典算法： </p>
+<p>在<strong>传统方法</strong>部分，有比较典型的三种经典算法：</p>
 <p>Bayesian Matting（贝叶斯抠图）</p>
 <p>Closed Form Mating（闭型抠图）</p>
 <p>KNN Matting（K近邻抠图）</p>
-<p>而在<strong>深度学习</strong>方面的主要有 </p>
+<p>而在<strong>深度学习</strong>方面的主要有</p>
 <p>Deep Image Matting</p>
 <p>AlphaGAN Matting</p>
 <h2 id="抠图界的上帝公式"><a href="#抠图界的上帝公式" class="headerlink" title="抠图界的上帝公式"></a>抠图界的上帝公式</h2><p>图像或视频中的前景准确估计问题，在实际应用中具有十分重要的意义。它是图像编辑和电影制作中的一项关键技术。虽然这项古老的技术发展至今已经数十年了，但几乎所有的解决方案都是在想办法做成一件事情，把这个公式“C = αF + (1-α)B”给解出来，这个公式就是1996年Alvy Ray Smith等人的《Blue Screen Matting》的paper中正式定义的Image Matting问题提出的，可以把它称为抠图界的“上帝公式”。</p>

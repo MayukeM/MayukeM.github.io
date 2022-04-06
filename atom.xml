@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-06T10:05:59.060Z</updated>
+  <updated>2022-04-06T10:13:21.999Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/"/>
     <id>http://example.com/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/</id>
     <published>2022-04-06T08:55:23.000Z</published>
-    <updated>2022-04-06T10:05:59.060Z</updated>
+    <updated>2022-04-06T10:13:21.999Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;抠图技术（imagematting&quot;&gt;&lt;a href=&quot;#抠图技术（imagematting&quot; class=&quot;headerlink&quot; title=&quot;抠图技术（imagematting)&quot;&gt;&lt;/a&gt;抠图技术（imagematting)&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://so.csdn.net/so/search?q=%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86&amp;spm=1001.2101.3001.7020&quot;&gt;图像处理&lt;/a&gt;中的image matting技术，中文简称抠图技术。Image Matting也是一个基本的计算机视觉问题，有着广泛的应用。&lt;/p&gt;
@@ -43,7 +43,7 @@
     <link href="http://example.com/2022/04/02/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-Python%E5%AE%9E%E7%8E%B0/"/>
     <id>http://example.com/2022/04/02/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-Python%E5%AE%9E%E7%8E%B0/</id>
     <published>2022-04-02T06:33:00.000Z</published>
-    <updated>2022-04-06T09:51:06.292Z</updated>
+    <updated>2022-04-06T10:14:58.538Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;ALGO-1007-印章&quot;&gt;&lt;a href=&quot;#ALGO-1007-印章&quot; class=&quot;headerlink&quot; title=&quot;ALGO-1007 印章&quot;&gt;&lt;/a&gt;ALGO-1007 印章&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://lx.lanqiao.cn/problem.page?gpid=T3002&quot;&gt;“蓝桥杯”练习系统 (lanqiao.cn)&lt;/a&gt;&lt;/p&gt;
