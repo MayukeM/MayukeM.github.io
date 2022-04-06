@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-10T07:53:23.123Z</updated>
+  <updated>2022-04-06T09:50:31.783Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图像处理中的抠图技术image matting</title>
+    <link href="http://example.com/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/"/>
+    <id>http://example.com/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/</id>
+    <published>2022-04-06T08:55:23.000Z</published>
+    <updated>2022-04-06T09:50:31.783Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;抠图技术（imagematting&quot;&gt;&lt;a href=&quot;#抠图技术（imagematting&quot; class=&quot;headerlink&quot; title=&quot;抠图技术（imagematting)&quot;&gt;&lt;/a&gt;抠图技术（imagematting)&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://so.csdn.net/so/search?q=%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86&amp;spm=1001.2101.3001.7020&quot;&gt;图像处理&lt;/a&gt;中的image matting技术，中文简称抠图技术。Image Matting也是一个基本的计算机视觉问题，有着广泛的应用。&lt;/p&gt;
+&lt;p&gt;证件照换背景应该算是最简单的Image Matting，由于证件照背景属性的特殊性，这个抠图很容易可以实现。算法分为几个步骤：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="图像处理" scheme="http://example.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="图像处理" scheme="http://example.com/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    <category term="抠图技术" scheme="http://example.com/tags/%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>蓝桥杯算法训练-Python实现</title>
+    <link href="http://example.com/2022/04/02/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-Python%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://example.com/2022/04/02/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-Python%E5%AE%9E%E7%8E%B0/</id>
+    <published>2022-04-02T06:33:00.000Z</published>
+    <updated>2022-04-06T09:51:06.292Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;ALGO-1007-印章&quot;&gt;&lt;a href=&quot;#ALGO-1007-印章&quot; class=&quot;headerlink&quot; title=&quot;ALGO-1007 印章&quot;&gt;&lt;/a&gt;ALGO-1007 印章&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://lx.lanqiao.cn/problem.page?gpid=T3002&quot;&gt;“蓝桥杯”练习系统 (lanqiao.cn)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;资源限制&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​        内存限制：256.0MB  C/C++时间限制：1.0s  Java时间限制：3.0s  Python时间限制：5.0s&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问题描述&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　共有n种图案的印章，每种图案的出现概率相同。小A买了m张印章，求小A集齐n种印章的概率。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="蓝桥杯" scheme="http://example.com/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    
+    <category term="python" scheme="http://example.com/tags/python/"/>
+    
+    <category term="蓝桥杯" scheme="http://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>深度学习，一种数据重于算法的思维转换</title>

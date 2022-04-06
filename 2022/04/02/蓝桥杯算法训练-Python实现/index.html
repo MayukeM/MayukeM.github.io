@@ -16,21 +16,43 @@
   <meta name="author" content="myk">
   <meta name="keywords" content="">
   
-    <meta name="description" content="直到这一刻微笑着说话为止，我至少留下了一公升眼泪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://example.com/archives/page/2/index.html">
+    <meta name="description" content="ALGO-1007 印章“蓝桥杯”练习系统 (lanqiao.cn) 资源限制 ​        内存限制：256.0MB  C&#x2F;C++时间限制：1.0s  Java时间限制：3.0s  Python时间限制：5.0s 问题描述 　　共有n种图案的印章，每种图案的出现概率相同。小A买了m张印章，求小A集齐n种印章的概率。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蓝桥杯算法训练-Python实现">
+<meta property="og:url" content="http://example.com/2022/04/02/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-Python%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="直到这一刻微笑着说话为止，我至少留下了一公升眼泪">
+<meta property="og:description" content="ALGO-1007 印章“蓝桥杯”练习系统 (lanqiao.cn) 资源限制 ​        内存限制：256.0MB  C&#x2F;C++时间限制：1.0s  Java时间限制：3.0s  Python时间限制：5.0s 问题描述 　　共有n种图案的印章，每种图案的出现概率相同。小A买了m张印章，求小A集齐n种印章的概率。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/example.png">
+<meta property="article:published_time" content="2022-04-02T06:33:00.000Z">
+<meta property="article:modified_time" content="2022-04-06T09:51:06.292Z">
 <meta property="article:author" content="myk">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="蓝桥杯">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/example.png">
   
   
-  <title>归档 - 我的博客</title>
+  <title>蓝桥杯算法训练-Python实现 - 我的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -58,7 +80,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -206,14 +228,49 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('https://cdn.jsdelivr.net/gh/MayukeM/MayukeM.github.io@master/img/b2.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="归档">
+            <span class="h2" id="subtitle" title="蓝桥杯算法训练-Python实现">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-04-02 14:33" pubdate>
+        2022年4月2日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      377 字
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
 
             
           </div>
@@ -226,91 +283,157 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">蓝桥杯算法训练-Python实现</h1>
+            
+              <p class="note note-info">
                 
+                  本文最后更新于：2022年4月6日 下午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="ALGO-1007-印章"><a href="#ALGO-1007-印章" class="headerlink" title="ALGO-1007 印章"></a>ALGO-1007 印章</h1><p><a target="_blank" rel="noopener" href="http://lx.lanqiao.cn/problem.page?gpid=T3002">“蓝桥杯”练习系统 (lanqiao.cn)</a></p>
+<p><strong>资源限制</strong></p>
+<p>​        内存限制：256.0MB  C/C++时间限制：1.0s  Java时间限制：3.0s  Python时间限制：5.0s</p>
+<p><strong>问题描述</strong></p>
+<p>　　共有n种图案的印章，每种图案的出现概率相同。小A买了m张印章，求小A集齐n种印章的概率。</p>
+<span id="more"></span>
 
-<div class="list-group">
-  <p class="h4">共计 18 篇文章</p>
-  <hr>
-  
-  
-    
-      
-      <p class="h5">2022</p>
-    
-    <a href="/2022/01/28/%E7%AC%94%E8%AE%B0/%E5%90%84%E7%A7%8D%E5%AD%A6%E4%B9%A0%E7%BD%91%E5%9D%80%E6%B1%87%E6%80%BB/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">各种学习网站汇总</span>
-      <time style="float: right;">01-28</time>
-    </a>
-  
-    
-    <a href="/2022/01/27/%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">数据结构预备知识</span>
-      <time style="float: right;">01-27</time>
-    </a>
-  
-    
-    <a href="/2022/01/25/%E7%AC%94%E8%AE%B0/PyCharm%E4%BD%BF%E7%94%A8%E7%A7%98%E7%B1%8D/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">PyCharm使用秘籍</span>
-      <time style="float: right;">01-25</time>
-    </a>
-  
-    
-    <a href="/2022/01/22/%E7%AC%94%E8%AE%B0/GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">GitHub够用教程</span>
-      <time style="float: right;">01-22</time>
-    </a>
-  
-    
-    <a href="/2022/01/20/%E7%AC%94%E8%AE%B0/hexo%E5%BB%BA%E7%AB%99/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">hexo建站</span>
-      <time style="float: right;">01-20</time>
-    </a>
-  
-    
-    <a href="/2022/01/19/%E7%AC%94%E8%AE%B0/hello-world/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hello World</span>
-      <time style="float: right;">01-19</time>
-    </a>
-  
-    
-      
-      <p class="h5">2021</p>
-    
-    <a href="/2021/01/15/%E7%AC%94%E8%AE%B0/windows%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">windows常用快捷键</span>
-      <time style="float: right;">01-15</time>
-    </a>
-  
-    
-    <a href="/2021/01/07/%E7%AC%94%E8%AE%B0/markdown%E8%AF%AD%E6%B3%95/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Markdown语法</span>
-      <time style="float: right;">01-07</time>
-    </a>
-  
-</div>
-
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/archives/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </span>
-  </nav>
+<p><strong>输入格式</strong></p>
+<p>　　一行两个正整数n和m</p>
+<p><strong>输出格式</strong></p>
+<p>　　一个实数P表示答案，保留4位小数。</p>
+<p><strong>样例输入</strong></p>
+<p>​        2 3</p>
+<p><strong>样例输出</strong></p>
+<p>​        0.7500</p>
+<p><strong>数据规模和约定</strong></p>
+<p>​        1≤n，m≤20</p>
+<p>+++</p>
+<p>此题采用动态规划（Dynamic Programming，DP）的方法求解，动态规划的三要素：最优子结构、边界和状态转移函数。</p>
+<p>边界    问题最小子子集的解（初始范围）<br>最优子结构    每个阶段的最优状态可以从之前某个阶段的某个或某些状态直接得到<br>状态转移函数    从一个阶段向另一个阶段过度的具体形式,描述的是两个相邻子问题之间的关系(递推式)<br>对于本题，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 
 
 
 
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/python/">python</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">图像处理中的抠图技术image matting</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/02/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%8C%E4%B8%80%E7%A7%8D%E6%95%B0%E6%8D%AE%E9%87%8D%E4%BA%8E%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%9D%E7%BB%B4%E8%BD%AC%E6%8D%A2/">
+                        <span class="hidden-mobile">深度学习，一种数据重于算法的思维转换</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"bsazSpg1oz4dmytEUahhi503-gzGzoHsz","appKey":"1GClCXtwE6bfNzVVISE2bWTQ","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -417,6 +540,19 @@
   
 
 
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
 
 
 
