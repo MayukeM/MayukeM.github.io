@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-07T07:11:09.935Z</updated>
+  <updated>2022-04-07T07:16:07.165Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="http://example.com/2022/04/06/%E8%9A%81%E7%BE%A4%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/"/>
     <id>http://example.com/2022/04/06/%E8%9A%81%E7%BE%A4%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/</id>
     <published>2022-04-06T10:21:16.000Z</published>
-    <updated>2022-04-07T07:11:09.935Z</updated>
+    <updated>2022-04-07T07:16:07.165Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;蚁群优化算法（Ant-Colony-Optimization）&quot;&gt;&lt;a href=&quot;#蚁群优化算法（Ant-Colony-Optimization）&quot; class=&quot;headerlink&quot; title=&quot;蚁群优化算法（Ant Colony Optimization）&quot;&gt;&lt;/a&gt;蚁群优化算法（Ant Colony Optimization）&lt;/h1&gt;&lt;p&gt;今天给大家介绍的是蚁群优化算法(Ant Colony Optimization), 简称是大写字母ACO，蚁群优化算法（ACO）是一种元启发式算法，元启发式算法是相对于最优化算法提出来的，一个问题的最优化算法可以求得该问题的最优解，而元启发式算法是一个基于直观或经验构造的算法，它可以在可接受的计算时间和空间下给出问题的一个可行解，并且该可行解与最优解的偏离程度不一定可以事先预计。元启发式算法包括禁忌搜索算法、模拟退火算法、遗传算法、蚁群优化算法、粒子群优化算法、人工鱼群算法、人工蜂群算法、人工神经网络算法等。而本次介绍主要关于蚁群算法，介绍的主要内容包括了近似算法之 构造启发式算法和局部搜索算法、ACO元启发式的一个具体版本，它的重点是应用于NP-hard问题，ACO在该问题上的各种历史发展，ACO元启发式如何应用于不同类型的问题，并概括它的成功应用，ACO的最新发展，最后进行总结。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;蚁群优化算法（Ant-Colony-Optimization）&quot;&gt;&lt;a href=&quot;#蚁群优化算法（Ant-Colony-Optimization）&quot; class=&quot;headerlink&quot; title=&quot;蚁群优化算法（Ant Colony Optimization）&quot;&gt;&lt;/a&gt;蚁群优化算法（Ant Colony Optimization）&lt;/h1&gt;&lt;p&gt;今天给大家介绍的是蚁群优化算法(Ant Colony Optimization), 简称是大写字母ACO，蚁群优化算法（ACO）是一种元启发式算法，元启发式算法是相对于最优化算法提出来的，一个问题的最优化算法可以求得该问题的最优解，而元启发式算法是一个基于直观或经验构造的算法，它可以在可接受的计算时间和空间下给出问题的一个可行解，并且该可行解与最优解的偏离程度不一定可以事先预计。元启发式算法包括禁忌搜索算法、模拟退火算法、遗传算法、蚁群优化算法、粒子群优化算法、人工鱼群算法、人工蜂群算法、人工神经网络算法等。而本次介绍主要关于蚁群算法，介绍的主要内容包括了近似算法之 构造启发式算法和局部搜索算法、ACO元启发式的一个具体版本，它的重点是应用于NP-hard问题，ACO在该问题上的各种历史发展，ACO元启发式如何应用于不同类型的问题，并概括它的成功应用，ACO的最新发展，最后进行总结。 &lt;/p&gt;</summary>
     
     
     
