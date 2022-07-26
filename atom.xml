@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-07-26T06:49:27.018Z</updated>
+  <updated>2022-07-26T07:22:27.028Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/"/>
     <id>http://example.com/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/</id>
     <published>2022-04-06T08:55:23.000Z</published>
-    <updated>2022-07-26T06:49:27.018Z</updated>
+    <updated>2022-07-26T07:22:27.028Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;抠图技术（imagematting&quot;&gt;&lt;a href=&quot;#抠图技术（imagematting&quot; class=&quot;headerlink&quot; title=&quot;抠图技术（imagematting)&quot;&gt;&lt;/a&gt;抠图技术（imagematting)&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://so.csdn.net/so/search?q=%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86&amp;spm=1001.2101.3001.7020&quot;&gt;图像处理&lt;/a&gt;中的image matting技术，中文简称抠图技术。Image Matting也是一个基本的计算机视觉问题，有着广泛的应用。&lt;/p&gt;
@@ -43,7 +43,7 @@
     <link href="http://example.com/2022/04/02/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-Python%E5%AE%9E%E7%8E%B0/"/>
     <id>http://example.com/2022/04/02/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83-Python%E5%AE%9E%E7%8E%B0/</id>
     <published>2022-04-02T06:33:00.000Z</published>
-    <updated>2022-04-06T10:14:58.538Z</updated>
+    <updated>2022-07-26T07:22:48.572Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;ALGO-1007-印章&quot;&gt;&lt;a href=&quot;#ALGO-1007-印章&quot; class=&quot;headerlink&quot; title=&quot;ALGO-1007 印章&quot;&gt;&lt;/a&gt;ALGO-1007 印章&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://lx.lanqiao.cn/problem.page?gpid=T3002&quot;&gt;“蓝桥杯”练习系统 (lanqiao.cn)&lt;/a&gt;&lt;/p&gt;
@@ -70,7 +70,7 @@
     <link href="http://example.com/2022/02/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%8C%E4%B8%80%E7%A7%8D%E6%95%B0%E6%8D%AE%E9%87%8D%E4%BA%8E%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%9D%E7%BB%B4%E8%BD%AC%E6%8D%A2/"/>
     <id>http://example.com/2022/02/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%8C%E4%B8%80%E7%A7%8D%E6%95%B0%E6%8D%AE%E9%87%8D%E4%BA%8E%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%9D%E7%BB%B4%E8%BD%AC%E6%8D%A2/</id>
     <published>2022-02-10T03:54:58.000Z</published>
-    <updated>2022-02-10T07:53:23.123Z</updated>
+    <updated>2022-07-26T07:24:21.257Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;深度学习所处的知识象限&quot;&gt;&lt;a href=&quot;#深度学习所处的知识象限&quot; class=&quot;headerlink&quot; title=&quot;深度学习所处的知识象限&quot;&gt;&lt;/a&gt;深度学习所处的知识象限&lt;/h1&gt;&lt;p&gt;深度学习：对于可统计的、但不可推理的（即象限Ⅲ），可通过神经网络这种特定的机器学习方法，达到性能提升的目的 &lt;/p&gt;</summary>
@@ -197,7 +197,7 @@
     <link href="http://example.com/2022/02/08/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
     <id>http://example.com/2022/02/08/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</id>
     <published>2022-02-08T03:29:36.000Z</published>
-    <updated>2022-02-10T11:41:51.737Z</updated>
+    <updated>2022-07-26T07:24:34.218Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;搭建一个简易神经网络&quot;&gt;&lt;a href=&quot;#搭建一个简易神经网络&quot; class=&quot;headerlink&quot; title=&quot;搭建一个简易神经网络&quot;&gt;&lt;/a&gt;搭建一个简易神经网络&lt;/h1&gt;&lt;p&gt;了解神经网络工作方式的最佳途径莫过于亲自创建一个神经网络，本文将利用感知机解决&lt;strong&gt;异或&lt;/strong&gt;问题。&lt;/p&gt;
@@ -298,7 +298,7 @@
     <link href="http://example.com/2022/01/27/%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/"/>
     <id>http://example.com/2022/01/27/%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</id>
     <published>2022-01-27T02:44:59.000Z</published>
-    <updated>2022-01-28T00:48:22.056Z</updated>
+    <updated>2022-07-26T07:24:55.731Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;一、C语言常识&quot;&gt;&lt;a href=&quot;#一、C语言常识&quot; class=&quot;headerlink&quot; title=&quot;一、C语言常识&quot;&gt;&lt;/a&gt;一、C语言常识&lt;/h1&gt;&lt;ul&gt;
@@ -355,7 +355,7 @@
     <link href="http://example.com/2022/01/22/%E7%AC%94%E8%AE%B0/GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://example.com/2022/01/22/%E7%AC%94%E8%AE%B0/GitHub%E5%A4%9F%E7%94%A8%E6%95%99%E7%A8%8B/</id>
     <published>2022-01-22T08:36:26.000Z</published>
-    <updated>2022-01-28T11:03:40.044Z</updated>
+    <updated>2022-07-26T07:25:26.590Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;Github够用教程&quot;&gt;&lt;a href=&quot;#Github够用教程&quot; class=&quot;headerlink&quot; title=&quot;Github够用教程&quot;&gt;&lt;/a&gt;Github够用教程&lt;/h1&gt;&lt;h2 id=&quot;git和Github是什么&quot;&gt;&lt;a href=&quot;#git和Github是什么&quot; class=&quot;headerlink&quot; title=&quot;git和Github是什么&quot;&gt;&lt;/a&gt;git和Github是什么&lt;/h2&gt;&lt;p&gt;git是一个运行在你电脑上的版本控制软件，Github是基于git打造的网站&lt;/p&gt;
@@ -398,7 +398,7 @@
     <link href="http://example.com/2022/01/19/%E7%AC%94%E8%AE%B0/hello-world/"/>
     <id>http://example.com/2022/01/19/%E7%AC%94%E8%AE%B0/hello-world/</id>
     <published>2022-01-19T08:49:02.705Z</published>
-    <updated>2022-01-27T11:59:15.867Z</updated>
+    <updated>2022-07-26T07:25:16.753Z</updated>
     
     
     <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
