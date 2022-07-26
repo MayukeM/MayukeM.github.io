@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-07-26T04:37:35.446Z</updated>
+  <updated>2022-07-26T06:49:27.018Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,30 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>蚁群优化算法</title>
-    <link href="http://example.com/2022/04/06/%E8%9A%81%E7%BE%A4%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/"/>
-    <id>http://example.com/2022/04/06/%E8%9A%81%E7%BE%A4%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/</id>
-    <published>2022-04-06T10:21:16.000Z</published>
-    <updated>2022-07-26T04:37:35.446Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;蚁群优化算法（Ant-Colony-Optimization）&quot;&gt;&lt;a href=&quot;#蚁群优化算法（Ant-Colony-Optimization）&quot; class=&quot;headerlink&quot; title=&quot;蚁群优化算法（Ant Colony Optimization）&quot;&gt;&lt;/a&gt;蚁群优化算法（Ant Colony Optimization）&lt;/h1&gt;&lt;p&gt;今天给大家介绍的是蚁群优化算法(Ant Colony Optimization), 简称是大写字母ACO，蚁群优化算法（ACO）是一种元启发式算法，元启发式算法是相对于最优化算法提出来的，一个问题的最优化算法可以求得该问题的最优解，而元启发式算法是一个基于直观或经验构造的算法，它可以在可接受的计算时间和空间下给出问题的一个可行解，并且该可行解与最优解的偏离程度不一定可以事先预计。元启发式算法包括禁忌搜索算法、模拟退火算法、遗传算法、蚁群优化算法、粒子群优化算法、人工鱼群算法、人工蜂群算法、人工神经网络算法等。而本次介绍主要关于蚁群算法，介绍的主要内容包括了近似算法之 构造启发式算法和局部搜索算法、ACO元启发式的一个具体版本，它的重点是应用于NP-hard问题，ACO在该问题上的各种历史发展，ACO元启发式如何应用于不同类型的问题，并概括它的成功应用，ACO的最新发展，最后进行总结。 &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="最优化理论与方法" scheme="http://example.com/categories/%E6%9C%80%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA%E4%B8%8E%E6%96%B9%E6%B3%95/"/>
-    
-    
-    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>图像处理中的抠图技术image matting</title>
     <link href="http://example.com/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/"/>
     <id>http://example.com/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/</id>
     <published>2022-04-06T08:55:23.000Z</published>
-    <updated>2022-04-06T10:13:21.999Z</updated>
+    <updated>2022-07-26T06:49:27.018Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;抠图技术（imagematting&quot;&gt;&lt;a href=&quot;#抠图技术（imagematting&quot; class=&quot;headerlink&quot; title=&quot;抠图技术（imagematting)&quot;&gt;&lt;/a&gt;抠图技术（imagematting)&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://so.csdn.net/so/search?q=%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86&amp;spm=1001.2101.3001.7020&quot;&gt;图像处理&lt;/a&gt;中的image matting技术，中文简称抠图技术。Image Matting也是一个基本的计算机视觉问题，有着广泛的应用。&lt;/p&gt;
@@ -396,7 +377,7 @@
     <link href="http://example.com/2022/01/20/%E7%AC%94%E8%AE%B0/hexo%E5%BB%BA%E7%AB%99/"/>
     <id>http://example.com/2022/01/20/%E7%AC%94%E8%AE%B0/hexo%E5%BB%BA%E7%AB%99/</id>
     <published>2022-01-20T07:37:11.144Z</published>
-    <updated>2022-02-08T08:02:14.363Z</updated>
+    <updated>2022-07-26T05:55:39.092Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;hexo建站记录&quot;&gt;&lt;a href=&quot;#hexo建站记录&quot; class=&quot;headerlink&quot; title=&quot;hexo建站记录&quot;&gt;&lt;/a&gt;hexo建站记录&lt;/h1&gt;&lt;h2 id=&quot;参考教程&quot;&gt;&lt;a href=&quot;#参考教程&quot; class=&quot;headerlink&quot; title=&quot;参考教程&quot;&gt;&lt;/a&gt;参考教程&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/26625249&quot;&gt;GitHub+Hexo 搭建个人网站详细教程 - 知乎 (zhihu.com)&lt;/a&gt;&lt;/p&gt;
