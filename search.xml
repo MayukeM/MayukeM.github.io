@@ -2789,7 +2789,7 @@
 <p>中文描述为：</p>
 <p><img src="https://s2.loli.net/2022/04/07/cEbUFOAgeqI4dRo.png" alt="image-20220407144216822"></p>
 <p>我们还是拿TSP问题来说，因为蚁群算法的核心思想是“信息素”，所以用蚁群算法求解TSP问题有两个关键步骤：步骤一：根据信息素浓度计算出选择转移到下一个城市的概率，步骤二：更新信息素浓度</p>
-<p>首先设置一些基本参数：设整个蚂蚁群体数量为m，城市数量为n，城市i与城市j之间的距离为dij，t时刻城市i与城市j连接路径上的信息素浓度为<img src="https://s2.loli.net/2022/04/07/DRzYMkbnmiKy5w2.jpg" alt="img">。初始时刻，各个城市连接路径上的信息素浓度相同（因为蚂蚁们都还没开始走），设<img src="https://s2.loli.net/2022/04/07/npJaqmoxFE83A1Z.jpg" alt="img">。</p>
+<p>首先设置一些基本参数：设整个蚂蚁群体数量为m，城市数量为n，城市i与城市j之间的距离为dij，t时刻城市i与城市j连接路径上的信息素浓度为 $\tau_{i j}(t)$ 。初始时刻，各个城市连接路径上的信息素浓度相同（因为蚂蚁们都还没开始走），设$\tau_{i j}(0)=\tau_{0}$。</p>
 <p>蚂蚁k(k=1,2，…,m)根据各个城市间连接路径上的信息素浓度决定其下一个访问城市，设    表示t时刻蚂蚁k从城市i转移到城市j的概率，其计算公式为：</p>
 <p><img src="https://s2.loli.net/2022/04/07/jPuNX8pzKVCavqA.png" alt="image-20220407144507443"></p>
 <p>看中间这个式子表明t时刻蚂蚁k从城市i转移到城市j的概率，其中<img src="https://s2.loli.net/2022/04/07/k1wHFVG2JrT7ZOo.jpg" alt="img">；<img src="https://s2.loli.net/2022/04/07/fEDJ6yvOrwegFVS.jpg" alt="img">为蚂蚁k待访问城市的集合，开始时<img src="https://s2.loli.net/2022/04/07/UtrJDv4kcGo1HzQ.jpg" alt="img">中有（n-1）个元素，即包括除了蚂蚁k出发城市的其他城市，随着时间的推进，<img src="assets/wps2A0D.tmp.jpg" alt="img">中的元素不断减少，直至为空，即表示所有的城市均访问完毕；<img src="https://s2.loli.net/2022/04/07/4pPcmblhZX1rBfu.jpg" alt="img">为信息素重要程度因子，其值越大，表示信息素的浓度在转移中起到的作用越大；<img src="https://s2.loli.net/2022/04/07/OBF95CmlbDuzY28.jpg" alt="img">为<img src="https://s2.loli.net/2022/04/07/P57la8jmYGE4MvJ.jpg" alt="img">的重要程度影响因子，其值越大，表示<img src="https://s2.loli.net/2022/04/07/JaqyWnxlzLTFAMv.jpg" alt="img">在转移中的作用越大，即蚂蚁会以较大的概率转移到距离最短的城市。</p>
