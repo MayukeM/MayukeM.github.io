@@ -294,12 +294,12 @@ sup > a::before,
   color: #ff4500;
 }
 html {
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.02em;
 }
 html,
 body {
-  font-family: var(--font-family-sans-serif);
+  font-family: fangsong;
 }
 html,
 body,
@@ -893,7 +893,7 @@ label {
 .markdown-body {
   font-size: 1rem;
   line-height: 1.6;
-  font-family: var(--font-family-sans-serif);
+  font-family: fangsong;
   margin-bottom: 2rem;
   color: var(--post-text-color);
 }
