@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>我使用过的笔记类软件对比</title>
+    <link href="/2022/07/30/%E6%88%91%E4%BD%BF%E7%94%A8%E8%BF%87%E7%9A%84%E7%AC%94%E8%AE%B0%E7%B1%BB%E8%BD%AF%E4%BB%B6%E5%AF%B9%E6%AF%94/"/>
+    <url>/2022/07/30/%E6%88%91%E4%BD%BF%E7%94%A8%E8%BF%87%E7%9A%84%E7%AC%94%E8%AE%B0%E7%B1%BB%E8%BD%AF%E4%BB%B6%E5%AF%B9%E6%AF%94/</url>
+    
+    <content type="html"><![CDATA[<p>不同软件有不同的使用场景，我可能也没有体验到所有的功能，以下仅代表个人的使用体验</p><table><thead><tr><th>软件</th><th>优点</th><th>缺点</th></tr></thead><tbody><tr><td>手机备忘录</td><td>打开手机可以随身随地记录，打开非常迅速快捷</td><td>用过华为和小米的手机，笔记只能在同一款机型下同步</td></tr><tr><td>记事本</td><td>txt文件 适用于简单的记录</td><td>仅限简单的记录</td></tr><tr><td>word</td><td>办公软件不多说<br>最新的word的全屏模式也很舒服</td><td>没办法形成笔记系统，不能在多文件直接快速切换</td></tr><tr><td>有道云笔记</td><td>我当时发现的第一款云笔记就觉得非常好用<br>云笔记保证了可以在多平台同步</td><td>实在觉得UI设计不太舒服<br>markdown还在左右分栏编辑<br>付费也有</td></tr><tr><td>印象笔记</td><td>看过很多说印象笔记好的<br>也有超多的优点</td><td>觉得想系统的知识体系很耗时间，因为要有自己的分类和编号什么的</td></tr><tr><td>typora</td><td>markdown编辑神器 所见即所得<br>程序员必备</td><td>图片只能在本地，分享不方便<br>图床又很麻烦</td></tr><tr><td>幕布</td><td>笔记采用极简模式</td><td>太简单 也不好看</td></tr><tr><td>OneNote</td><td>这是一款我曾经觉得可以一直不换的笔记软件<br>全平台云端实时同步<br>点击任意位置可进行编辑<br>还能作为白板，无限画布，手写笔记和讲课板书很方便</td><td>没办法代码高亮 不适合程序员<br>编辑排版不太顺手</td></tr><tr><td>石墨文档</td><td>用过表格多人协作</td><td>不喜欢的有些界面</td></tr><tr><td>腾讯文档</td><td>主要用于多人协作表格 表单收集等<br>支持表格隐私保护<br>几百人同时访问一个文档都可以</td><td>适用于特定应用场景</td></tr><tr><td>CSDN</td><td>技术人的交流社区，用写博客的方式记笔记也是很方便的</td><td>包括博客园或者个人博客等，更适合技术上的公开分享</td></tr><tr><td>drawboard pdf</td><td>pdf批注工具 限时优惠的时候白嫖了一下，用于pdf批注非常好用，考研的时候用的多一些</td><td>平板下不了这个软件</td></tr><tr><td>obisdian</td><td>可以说是本地markdown文件的管理器，也就保证了本地安全<br>支持文档间引用 文档关系图<br>开源 强大的插件库</td><td>云同步需要付费 就很难全平台了</td></tr><tr><td>notion</td><td>全网都在抄的笔记软件<br>块级思想block承载一切<br>用好了绝对是个效率神奇</td><td>服务器在国外 华为平板下不了软件<br>团队用付费<br>没有页面内导航，但可以用浏览器插件<br>不支持思维导图</td></tr><tr><td>思源笔记</td><td>功能强大 可以本地部署</td><td>界面还是不太喜欢</td></tr><tr><td>语雀</td><td>一上手就觉得极度舒适<br>支持插入思维导图和白板绘图</td><td>可能语雀的定位是博客 在尝试团队管理的时候很不顺手<br>语雀的工作台很不舒服</td></tr><tr><td>wolai</td><td>深度体验了一个月，甚至我还开了会员，体验很舒适，也用它进行多人协同和管理<br><br>最喜欢的几个功能<br>1.页面双链引用，页面关系图（notion没有），页面跳转<br>2.思维导图在线制作（notion没有），<br>3.公式图片识别自动转latex 很强<br>4.数据表格筛选，多视图，引用数据表格<br>5.页面多人协作，视角跟随，页面评论，项目协作<br>6.允许插入文件，公开分享，下载<br>7.搜索功能，图片OCR，可搜索图片内容8.手机平板电脑实时多端同步<br>9.国内的服务器，不用考虑网络问题（相比notion)<br>10.支持markdown语法，脚注，颜色（相比typora）<br>11.微信剪藏，转发到wolai助手自动分类保存<br>12.支持嵌入腾讯会议，processon等几十款应用<br>13.夜间模式， 标题目录（notion没有），代码高亮</td><td>无法实现文件系统管理<br>可以上传文件只能预览不能在线编辑<br>付费功能使用更佳<br>团队协作权限管理还是有很多痛点<br>希望能增加白板绘图<br>暂不支持数据表格日历视图，正在开发</td></tr><tr><td>FlowUS</td><td>跟wolai差不多，都是类似于notion的笔记软件 使用体验可能要超过wolai<br>亮点：支持文件管理 小组版5人免费 UI体验更舒适 针对学生模板更丰富<br>专业版比wolai便宜，而且存储无限 协作无限</td><td>对比wolai <br>不支持思维导图<br>公式不支持识别生成<br>没有图片OCR<br>好像暂不支持微信剪藏</td></tr><tr><td>钉钉云文档</td><td>在钉钉的平台 说几个亮点<br>集人员沟通 团队管理 文档协作于一身<br>实现了文档管理 在线编辑自己上传的文件 也可以在里面新建文件，文件之间可以双链引用 而且有文档关系图</td><td>钉钉的功能过于强大复杂，不像wolai那么简洁<br>更多面向企业团队的管理是我们学生管理不需要的</td></tr><tr><td>飞书</td><td>没有深度体验过 但是全网在吹 很难与钉钉做一个取舍<br>用好了会比wolai的协作更高效，准备再深度体验一下</td><td>群里等不同于微信的使用习惯，上手还需要适应</td></tr><tr><td>mindmaster</td><td>用思维导图记笔记，功能很强大，考研的时候用的比较多，梳理知识点</td><td>想做一个大图的时候就要付费了</td></tr></tbody></table><p>顺便对比一下在用的文献阅读工具</p><table><thead><tr><th>软件</th><th align="left">优点</th><th align="left">缺点</th></tr></thead><tbody><tr><td>cajViewer</td><td align="left">caj文件快速阅读</td><td align="left">不适合文献管理</td></tr><tr><td>知网研学</td><td align="left">云同步 文献管理 文献笔记<br>文献矩阵</td><td align="left">适合中文文献</td></tr><tr><td>知云文献翻译</td><td align="left">使用稳定 有水印也能稳定选中<br>怕pdf复制有换行 用知云打开就好了</td><td align="left">本地使用</td></tr><tr><td>小绿鲸</td><td align="left">很好的在线阅读文献+翻译工具</td><td align="left">每篇文献不是唯一网址，其他没有深度使用</td></tr><tr><td>readpaper</td><td align="left">在线搜索文献 有pdf可以直接阅读<br>也可以看别人记的笔记<br>选中在线翻译 记笔记 在线同步<br>每篇文章都有唯一网址  在其他地方可以直线访问<br>客户端可以集成搜索引擎</td><td align="left">最近刚成长起来的软件 使用顺手的细节设计和文献矩阵还需要考虑</td></tr><tr><td>mendeley</td><td align="left">在线同步<br>自动提取文献的关键信息<br>与word结合插入参考文献<br>支持搜索到文件里面的内容</td><td align="left">看的时候不能翻译</td></tr><tr><td>网易有道词典</td><td align="left">学生认证可享全文免费翻译，快去白嫖<br>可以语法纠错和润色<br>取词 截屏翻译等都很方便</td><td align="left"></td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随笔</tag>
+      
+      <tag>软件</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>图像处理中的抠图技术image matting</title>
     <link href="/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/"/>
     <url>/2022/04/06/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E6%8A%A0%E5%9B%BE%E6%8A%80%E6%9C%AFimagematting/</url>

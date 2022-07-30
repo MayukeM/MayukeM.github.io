@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-07-26T07:22:27.028Z</updated>
+  <updated>2022-07-30T03:17:02.548Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我使用过的笔记类软件对比</title>
+    <link href="http://example.com/2022/07/30/%E6%88%91%E4%BD%BF%E7%94%A8%E8%BF%87%E7%9A%84%E7%AC%94%E8%AE%B0%E7%B1%BB%E8%BD%AF%E4%BB%B6%E5%AF%B9%E6%AF%94/"/>
+    <id>http://example.com/2022/07/30/%E6%88%91%E4%BD%BF%E7%94%A8%E8%BF%87%E7%9A%84%E7%AC%94%E8%AE%B0%E7%B1%BB%E8%BD%AF%E4%BB%B6%E5%AF%B9%E6%AF%94/</id>
+    <published>2022-07-30T03:08:29.000Z</published>
+    <updated>2022-07-30T03:17:02.548Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;不同软件有不同的使用场景，我可能也没有体验到所有的功能，以下仅代表个人的使用体验&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;软件&lt;/th&gt;
+&lt;th&gt;优点&lt;/th&gt;
+&lt;th&gt;缺点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;手机备忘</summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="http://example.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="软件" scheme="http://example.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>图像处理中的抠图技术image matting</title>
